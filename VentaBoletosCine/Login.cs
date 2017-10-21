@@ -7,14 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace VentaBoletosCine
 {
+
     public partial class Login : Form
     {
+        DBConnection conexionBD;
+        MySqlCommand comando;
+        MySqlDataAdapter adaptadorDatos;
+        MySqlDataReader reader;
+        String query;
+
         public Login()
         {
             InitializeComponent();
+            IniciarConexion();
+        }
+
+        private void IniciarConexion()
+        {
+            conexionBD = DBConnection.Instance();
+            conexionBD.DatabaseName = "bdcine";
+            comando = new MySqlCommand();
+
+            if (conexionBD.IsConnected())
+            {
+                MessageBox.Show("Conexion lograda");
+            }
+            else
+            {
+                MessageBox.Show("Conexion fallida");
+                Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -25,8 +51,24 @@ namespace VentaBoletosCine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Menu ventana = new Menu();
-            ventana.Show();
+            query = "SELECT nombre FROM Miembro WHERE nombre = '"+textBox1.Text+"'";
+            comando = new MySqlCommand(query, conexionBD.Connection);
+
+            try
+            {
+                reader = comando.ExecuteReader();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Has accesado al sistema");
+                }
+
+                Menu ventana = new Menu(conexionBD);
+                ventana.Show();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("No existe");
+            }
             
         }
     }

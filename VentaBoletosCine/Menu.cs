@@ -12,40 +12,43 @@ namespace VentaBoletosCine
 {
     public partial class Menu : Form
     {
-        public Menu()
+        DBConnection conexionBD;
+
+        public Menu(DBConnection conexionBD)
         {
             InitializeComponent();
+            this.conexionBD = conexionBD;
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ventaBoletos  venta = new ventaBoletos();
+            ventaBoletos  venta = new ventaBoletos(conexionBD);
             venta.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Capturista capturista = new Capturista();
+            Capturista capturista = new Capturista(conexionBD);
             capturista.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            membresias mem = new membresias();
+            membresias mem = new membresias(conexionBD);
             mem.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            boleto bole = new boleto();
+            boleto bole = new boleto(conexionBD);
             bole.Show();
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            venLineacs venta = new venLineacs();
+            venLineacs venta = new venLineacs(conexionBD);
             venta.Show();
 
         }
@@ -58,14 +61,14 @@ namespace VentaBoletosCine
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ventaUsuario ventaUsuario = new ventaUsuario();
+            ventaUsuario ventaUsuario = new ventaUsuario(conexionBD);
             ventaUsuario.Show();
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            funcionesSalas funcionesSala = new funcionesSalas();
+            funcionesSalas funcionesSala = new funcionesSalas(conexionBD);
             funcionesSala.Show();
         }
     }

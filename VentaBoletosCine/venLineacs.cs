@@ -12,8 +12,11 @@ namespace VentaBoletosCine
 {
     public partial class venLineacs : Form
     {
-        public venLineacs()
+        DBConnection conexionBD;
+
+        public venLineacs(DBConnection conexion)
         {
+            conexionBD = conexion;
             InitializeComponent();
         }
 

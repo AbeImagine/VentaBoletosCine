@@ -12,8 +12,11 @@ namespace VentaBoletosCine
 {
     public partial class Capturista : Form
     {
-        public Capturista()
+        DBConnection conexionBD;
+
+        public Capturista(DBConnection conexion)
         {
+            conexionBD = conexion;
             InitializeComponent();
         }
 

@@ -12,8 +12,11 @@ namespace VentaBoletosCine
 {
     public partial class ventaUsuario : Form
     {
-        public ventaUsuario()
+        DBConnection conexionBD;
+
+        public ventaUsuario(DBConnection conexion)
         {
+            conexionBD = conexion;
             InitializeComponent();
         }
     }
