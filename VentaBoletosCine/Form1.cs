@@ -19,6 +19,7 @@ namespace VentaBoletosCine
 
         private void Capturista_Load(object sender, EventArgs e)
         {
+            this.DoubleBuffered = true;
             textBox1.Text = "Annabelle 2: La Creación";
             textBox2.Text = "B15";
             textBox3.Text = "TERROR";

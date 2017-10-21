@@ -19,7 +19,7 @@ namespace VentaBoletosCine
 
         private void ventaBoletos_Load(object sender, EventArgs e)
         {
-            
+            this.DoubleBuffered = true;
         }
 
         private void label2_Click(object sender, EventArgs e)
