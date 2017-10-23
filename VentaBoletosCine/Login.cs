@@ -51,7 +51,7 @@ namespace VentaBoletosCine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            query = "SELECT nombre FROM Miembro WHERE nombre = '"+textBox1.Text+"'";
+            query = "SELECT * FROM Miembro WHERE nombre = '"+textBox1.Text+"'";
             comando = new MySqlCommand(query, conexionBD.Connection);
 
             try
@@ -59,11 +59,19 @@ namespace VentaBoletosCine
                 reader = comando.ExecuteReader();
                 if (reader.Read())
                 {
-                    MessageBox.Show("Has accesado al sistema");
+                    if (reader.GetString("contraseña").Equals(textBox2.Text))
+                    {
+                        MessageBox.Show("Has accesado al sistema");
+                        bool b = reader.GetBoolean("administrador");
+                        Menu ventana = new Menu(conexionBD, b);
+                        ventana.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta");
+                    }
                 }
-
-                Menu ventana = new Menu(conexionBD);
-                ventana.Show();
+                reader.Close();
             }
             catch (Exception exception)
             {

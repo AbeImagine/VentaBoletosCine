@@ -14,9 +14,15 @@ namespace VentaBoletosCine
     {
         DBConnection conexionBD;
 
-        public Menu(DBConnection conexionBD)
+        public Menu(DBConnection conexionBD, bool admin)
         {
             InitializeComponent();
+            if (admin == false)
+            {
+                button7.Visible = false;
+                button5.Visible = false;
+                button2.Visible = false;
+            }
             this.conexionBD = conexionBD;
         }
 

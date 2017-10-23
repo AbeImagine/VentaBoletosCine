@@ -37,18 +37,14 @@
             this.cbTipoMemb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,14 +129,7 @@
             this.button1.TabIndex = 35;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.NavajoWhite;
-            this.textBox6.Location = new System.Drawing.Point(593, 434);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(275, 20);
-            this.textBox6.TabIndex = 34;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox5
             // 
@@ -157,18 +146,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(301, 20);
             this.textBox4.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label8.Location = new System.Drawing.Point(362, 434);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(234, 28);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Confirmar Contraseña:";
             // 
             // label7
             // 
@@ -208,11 +185,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(362, 259);
+            this.label4.Location = new System.Drawing.Point(449, 267);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 28);
+            this.label4.Size = new System.Drawing.Size(100, 28);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Apellido Materno";
+            this.label4.Text = "Telefono";
             // 
             // textBox8
             // 
@@ -220,13 +197,6 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(395, 20);
             this.textBox8.TabIndex = 39;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(593, 526);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(275, 20);
-            this.textBox7.TabIndex = 38;
             // 
             // label10
             // 
@@ -240,18 +210,6 @@
             this.label10.TabIndex = 37;
             this.label10.Text = "Teléfono:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gold;
-            this.label9.Location = new System.Drawing.Point(362, 518);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 28);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Fecha de Nacimiento:";
-            // 
             // membresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,14 +217,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(913, 635);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
@@ -298,17 +252,13 @@
         private System.Windows.Forms.ComboBox cbTipoMemb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
     }
 }
