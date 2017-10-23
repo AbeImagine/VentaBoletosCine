@@ -32,13 +32,9 @@ namespace VentaBoletosCine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            comando = new MySqlCommand("INSERT INTO miembro (id_miembro, nombre, telefono, correo, contraseña, administrador) VALUES (3,'"+textBox1.Text+"',"+textBox3.Text+",'"+textBox4.Text+"','"+textBox5.Text+"',"+cbTipoMemb.SelectedIndex+")", conexionBD.Connection);
+            comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador) VALUES ('"+textBox1.Text+"',"+textBox3.Text+",'"+textBox4.Text+"','"+textBox5.Text+"',"+cbTipoMemb.SelectedIndex+")", conexionBD.Connection);
             reader = comando.ExecuteReader();
-
-            if (reader.Read())
-            {
-                MessageBox.Show("Registro exitoso");
-            }
+            MessageBox.Show("Registro exitoso");
         }
     }
 }
