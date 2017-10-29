@@ -77,5 +77,10 @@ namespace VentaBoletosCine
             funcionesSalas funcionesSala = new funcionesSalas(conexionBD);
             funcionesSala.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,7 +45,7 @@ namespace VentaBoletosCine
                 //string connstring = string.Format("Server=localhost; database={0}; UID=UserName; password=your password", databaseName);
                 string connstring = string.Format("Server=localhost; database={0}; UID=Abraham; password=naomi", databaseName);
                 connection = new MySqlConnection(connstring);
-                connection.Open();
+         //       connection.Open();
                 result = true;
             }
 
