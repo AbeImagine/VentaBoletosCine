@@ -79,5 +79,11 @@ namespace VentaBoletosCine
             }
             
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.DoubleBuffered = true;
+
+        }
     }
 }
