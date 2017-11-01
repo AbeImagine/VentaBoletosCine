@@ -17,6 +17,14 @@ namespace VentaBoletosCine
         MySqlDataReader reader;
         MySqlCommand comando;
 
+
+        String nombreMembresia;
+        String telefono;
+        String email;
+        String password;
+
+
+
         public membresias(DBConnection conexion)
         {
             conexionBD = conexion;
@@ -32,9 +40,50 @@ namespace VentaBoletosCine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador) VALUES ('"+textBox1.Text+"',"+textBox3.Text+",'"+textBox4.Text+"','"+textBox5.Text+"',"+cbTipoMemb.SelectedIndex+")", conexionBD.Connection);
-            reader = comando.ExecuteReader();
-            MessageBox.Show("Registro exitoso");
+            
         }
+        {
+            if ((cbTipoMemb.SelectedIndex != -1) &&
+                  (tbNombre.Text != "") &&
+                  (tbApellidoP.Text != "") &&
+                  (tbTelefono.Text != "") &&
+                  (tbEmail.Text != "") &&
+                  (tbPass.Text != "") &&
+                  (tbApellidoM.Text != "") &&
+                  (tbConfPass.Text != "") 
+                )
+                
+            {
+
+                nombreMembresia = Convert.ToString(tbNombre.Text) +
+                              Convert.ToString(" ") +
+                              Convert.ToString(tbApellidoM.Text) +
+                              Convert.ToString(" ") +
+                              Convert.ToString(tbApellidoP);
+                
+                telefono = tbTelefono.Text;
+
+                if (tbPass.Text == tbConfPass.Text)
+                    email = tbEmail.Text;
+                else
+                    MessageBox.Show("Las contraseñas no coinciden");
+            
+
+                comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador) VALUES ('" + tbNombre.Text + "'," + tbTelefono.Text + ",'" + tbEmail.Text + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ")", conexionBD.Connection);
+                reader = comando.ExecuteReader();
+                MessageBox.Show("Registro exitoso");
+            }
+            else
+                MessageBox.Show("No se pueden dejar campos vacios", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

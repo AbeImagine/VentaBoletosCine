@@ -58,8 +58,7 @@ namespace VentaBoletosCine
           *ican los los campos de nombre de usuario y contraseña, también valida que el nombre de usuario
           *y contraseña esten correctos.
          */
-
-        private void button1_Click(object sender, EventArgs e)
+        public void login()
         {
             if ((textBox1.Text != "") &&
                  (textBox2.Text != ""))
@@ -98,11 +97,23 @@ namespace VentaBoletosCine
                                 MessageBoxIcon.Asterisk);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            login();
+        }
+
         
         private void Login_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
+        }
 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                login();
+            }
         }
     }
 }
