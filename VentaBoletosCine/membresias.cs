@@ -36,17 +36,20 @@ namespace VentaBoletosCine
         private void membresias_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
+            maskedTextBox1.Mask = "(###)-(#######)";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
         }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             if ((cbTipoMemb.SelectedIndex != -1) &&
                   (tbNombre.Text != "") &&
                   (tbApellidoP.Text != "") &&
-                  (tbTelefono.Text != "") &&
+                  (maskedTextBox1.Text != "") &&
                   (tbEmail.Text != "") &&
                   (tbPass.Text != "") &&
                   (tbApellidoM.Text != "") &&
@@ -60,8 +63,8 @@ namespace VentaBoletosCine
                               Convert.ToString(tbApellidoM.Text) +
                               Convert.ToString(" ") +
                               Convert.ToString(tbApellidoP);
-                
-                telefono = tbTelefono.Text;
+
+                telefono = maskedTextBox1.Text;
 
                 if (tbPass.Text == tbConfPass.Text)
                     email = tbEmail.Text;
