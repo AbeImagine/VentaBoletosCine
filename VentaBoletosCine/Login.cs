@@ -63,7 +63,9 @@ namespace VentaBoletosCine
             if ((textBox1.Text != "") &&
                  (textBox2.Text != ""))
             {
-                query = "SELECT * FROM Miembro WHERE nombre = '" + textBox1.Text + "'";
+                string usuario = textBox1.Text;
+                string contraseña = textBox2.Text;
+                query = "SELECT * FROM Miembro WHERE usuario = '" + usuario + "'";
                 comando = new MySqlCommand(query, conexionBD.Connection);
 
                 try
@@ -71,7 +73,7 @@ namespace VentaBoletosCine
                     reader = comando.ExecuteReader();
                     if (reader.Read())
                     {
-                        if (reader.GetString("contraseña").Equals(textBox2.Text))
+                        if (reader.GetString("contraseña").Equals(contraseña))
                         {
                             MessageBox.Show("Has accesado al sistema");
                             bool b = reader.GetBoolean("administrador");
@@ -87,7 +89,7 @@ namespace VentaBoletosCine
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show("No existe");
+                    MessageBox.Show(exception.Message);
                 }
             }
             else
@@ -113,6 +115,26 @@ namespace VentaBoletosCine
             if ((int)e.KeyChar == (int)Keys.Enter)
             {
                 login();
+            }
+            if ((int)e.KeyChar == (int)Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

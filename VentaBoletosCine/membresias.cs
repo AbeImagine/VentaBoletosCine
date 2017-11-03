@@ -58,23 +58,29 @@ namespace VentaBoletosCine
                 
             {
 
-                nombreMembresia = Convert.ToString(tbNombre.Text) +
-                              Convert.ToString(" ") +
-                              Convert.ToString(tbApellidoM.Text) +
-                              Convert.ToString(" ") +
-                              Convert.ToString(tbApellidoP);
+                nombreMembresia = tbNombre.Text + " " + tbApellidoM.Text + " " + tbApellidoP;
 
                 telefono = maskedTextBox1.Text;
 
                 if (tbPass.Text == tbConfPass.Text)
+                {
                     email = tbEmail.Text;
+
+                    comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
+                    try
+                    {
+                        reader = comando.ExecuteReader();
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+
+                    MessageBox.Show("Registro exitoso");
+                    reader.Close();
+                }
                 else
                     MessageBox.Show("Las contraseñas no coinciden");
-            
-
-                comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador) VALUES ('" + tbNombre.Text + "'," + tbTelefono.Text + ",'" + tbEmail.Text + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ")", conexionBD.Connection);
-                reader = comando.ExecuteReader();
-                MessageBox.Show("Registro exitoso");
             }
             else
                 MessageBox.Show("No se pueden dejar campos vacios", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -83,6 +89,11 @@ namespace VentaBoletosCine
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

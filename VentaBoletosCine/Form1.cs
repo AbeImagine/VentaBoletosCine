@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace VentaBoletosCine
 {
@@ -17,10 +18,11 @@ namespace VentaBoletosCine
         String nombrePelicula;
         String tipoPelicula;
         String categoriaPelicula;
-        String duracionPelicula;
-        String salas;
+        String duracionPelicula;    
         String creditosRepPelicula;
         String sipnosis;
+        MySqlCommand comando;
+        MySqlDataReader reader;
 
 
         public Capturista(DBConnection conexion)
@@ -32,12 +34,14 @@ namespace VentaBoletosCine
         private void Capturista_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
+            /*
             tbNombre.Text = "Annabelle 2: La Creación";
             tbcategoria.Text = "B15";
             tbTipo.Text = "TERROR";
             tbDuracion.Text = "109 minutos";
             tbSipnosis.Text = "Anabelle 2 sucede varios años después de la trágica muerte de la pequeña hija de un fabricante de muñecas y su esposa, quienes dan albergue en su casa a una monja y a varias niñas de un orfanato clausurado. Al poco tiempo cada uno de ellos se volverá el objetivo de Anabelle, la muñeca poseída creada por el dueño de la casa.";
             tbCreditosRep.Text = " Actores:Talitha Bateman,Stephanie Sigman Directores: David F. Sandberg";
+             */
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -70,7 +74,6 @@ namespace VentaBoletosCine
             tbcategoria.Clear();
             tbTipo.Clear();
             tbDuracion.Clear();
-            tbSalas.Clear();
             tbSipnosis.Clear();
 
         }
@@ -81,7 +84,6 @@ namespace VentaBoletosCine
                 (tbcategoria.Text != "") &&
                 (tbTipo.Text != "") &&
                 (tbDuracion.Text != "") &&
-                (tbSalas.Text != "") &&
                 (tbSipnosis.Text != "")&&
                 (tbCreditosRep.Text !="")
              )
@@ -90,11 +92,25 @@ namespace VentaBoletosCine
                 tipoPelicula = tbTipo.Text;
                 categoriaPelicula = tbcategoria.Text;
                 duracionPelicula = tbDuracion.Text;
-                salas = tbSalas.Text;
                 creditosRepPelicula = tbCreditosRep.Text;
                 sipnosis =tbSipnosis.Text ;
 
                 this.Refresh();
+
+
+                comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
+                try
+                {
+                    reader = comando.ExecuteReader();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
+
+                MessageBox.Show("Registro exitoso");
+                reader.Close();
+
             }
             else
                 MessageBox.Show("Ingrese todos los campos","No se puedo guardar",

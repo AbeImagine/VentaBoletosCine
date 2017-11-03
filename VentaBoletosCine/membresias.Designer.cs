@@ -40,7 +40,7 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbTelefono = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbApellidoM = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +86,7 @@
             // 
             this.tbApellidoP.BackColor = System.Drawing.Color.Wheat;
             this.tbApellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApellidoP.Location = new System.Drawing.Point(211, 249);
+            this.tbApellidoP.Location = new System.Drawing.Point(211, 246);
             this.tbApellidoP.Name = "tbApellidoP";
             this.tbApellidoP.Size = new System.Drawing.Size(301, 24);
             this.tbApellidoP.TabIndex = 24;
@@ -139,7 +140,7 @@
             // 
             this.tbPass.BackColor = System.Drawing.Color.NavajoWhite;
             this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.Location = new System.Drawing.Point(212, 396);
+            this.tbPass.Location = new System.Drawing.Point(211, 439);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(371, 24);
             this.tbPass.TabIndex = 33;
@@ -148,7 +149,7 @@
             // 
             this.tbEmail.BackColor = System.Drawing.Color.NavajoWhite;
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(212, 329);
+            this.tbEmail.Location = new System.Drawing.Point(211, 393);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(301, 24);
             this.tbEmail.TabIndex = 32;
@@ -159,7 +160,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label7.Location = new System.Drawing.Point(14, 385);
+            this.label7.Location = new System.Drawing.Point(11, 439);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 28);
             this.label7.TabIndex = 30;
@@ -170,21 +171,22 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label6.Location = new System.Drawing.Point(12, 296);
+            this.label6.Location = new System.Drawing.Point(14, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(157, 79);
             this.label6.TabIndex = 29;
             this.label6.Text = "Correo Electrónico:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // tbTelefono
+            // tbUsuario
             // 
-            this.tbTelefono.BackColor = System.Drawing.Color.Wheat;
-            this.tbTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTelefono.Location = new System.Drawing.Point(212, 284);
-            this.tbTelefono.Name = "tbTelefono";
-            this.tbTelefono.Size = new System.Drawing.Size(301, 24);
-            this.tbTelefono.TabIndex = 28;
+            this.tbUsuario.BackColor = System.Drawing.Color.Wheat;
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(211, 292);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(301, 24);
+            this.tbUsuario.TabIndex = 28;
             // 
             // label4
             // 
@@ -192,7 +194,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(11, 276);
+            this.label4.Location = new System.Drawing.Point(11, 335);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 28);
             this.label4.TabIndex = 27;
@@ -214,7 +216,7 @@
             // 
             this.tbApellidoM.BackColor = System.Drawing.Color.Wheat;
             this.tbApellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApellidoM.Location = new System.Drawing.Point(211, 215);
+            this.tbApellidoM.Location = new System.Drawing.Point(211, 211);
             this.tbApellidoM.Name = "tbApellidoM";
             this.tbApellidoM.Size = new System.Drawing.Size(301, 24);
             this.tbApellidoM.TabIndex = 40;
@@ -223,7 +225,7 @@
             // 
             this.tbConfPass.BackColor = System.Drawing.Color.NavajoWhite;
             this.tbConfPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbConfPass.Location = new System.Drawing.Point(212, 452);
+            this.tbConfPass.Location = new System.Drawing.Point(211, 489);
             this.tbConfPass.Name = "tbConfPass";
             this.tbConfPass.Size = new System.Drawing.Size(371, 24);
             this.tbConfPass.TabIndex = 43;
@@ -233,7 +235,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label8.Location = new System.Drawing.Point(11, 426);
+            this.label8.Location = new System.Drawing.Point(11, 467);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(157, 65);
             this.label8.TabIndex = 44;
@@ -334,10 +336,22 @@
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.Wheat;
             this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(534, 288);
+            this.maskedTextBox1.Location = new System.Drawing.Point(211, 339);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 24);
+            this.maskedTextBox1.Size = new System.Drawing.Size(143, 24);
             this.maskedTextBox1.TabIndex = 52;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label9.Location = new System.Drawing.Point(14, 288);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 28);
+            this.label9.TabIndex = 53;
+            this.label9.Text = "Usuario:";
             // 
             // membresias
             // 
@@ -345,6 +359,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(977, 635);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -361,7 +376,7 @@
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbTelefono);
+            this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbApellidoP);
@@ -394,7 +409,7 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbTelefono;
+        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbApellidoM;
@@ -409,5 +424,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label9;
     }
 }
