@@ -20,7 +20,7 @@ namespace VentaBoletosCine
         String categoriaPelicula;
         String duracionPelicula;    
         String creditosRepPelicula;
-        String sipnosis;
+        String sinopsis;
         MySqlCommand comando;
         MySqlDataReader reader;
 
@@ -61,7 +61,6 @@ namespace VentaBoletosCine
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             limpiaRegistro();
         }
 
@@ -72,49 +71,74 @@ namespace VentaBoletosCine
         {
             tbNombre.Clear();
             tbcategoria.Clear();
-            tbTipo.Clear();
             tbDuracion.Clear();
             tbSipnosis.Clear();
-
+            tbCreditosRep.Clear();
         }
 
+        /*
+         * Descripcion: Este método guarda el registro en la base de datos
+         */
         private void button1_Click(object sender, EventArgs e)
         {
             if ((tbNombre.Text != "") &&
                 (tbcategoria.Text != "") &&
-                (tbTipo.Text != "") &&
                 (tbDuracion.Text != "") &&
                 (tbSipnosis.Text != "")&&
                 (tbCreditosRep.Text !="")
              )
             {
                 nombrePelicula = tbNombre.Text;
-                tipoPelicula = tbTipo.Text;
                 categoriaPelicula = tbcategoria.Text;
                 duracionPelicula = tbDuracion.Text;
                 creditosRepPelicula = tbCreditosRep.Text;
-                sipnosis =tbSipnosis.Text ;
+                sinopsis =tbSipnosis.Text ;
 
                 this.Refresh();
 
 
-                comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
+                comando = new MySqlCommand("INSERT INTO pelicula (nombre, duracion, genero, sinopsis, reparto) VALUES ('" + nombrePelicula + "'," + duracionPelicula + ",'" + categoriaPelicula + "','" + sinopsis + "','" + creditosRepPelicula + "')", conexionBD.Connection);
                 try
                 {
                     reader = comando.ExecuteReader();
+                    MessageBox.Show("Registro exitoso");
+                    reader.Close();
                 }
                 catch (Exception exc)
                 {
                     MessageBox.Show(exc.Message);
                 }
 
-                MessageBox.Show("Registro exitoso");
-                reader.Close();
-
             }
             else
                 MessageBox.Show("Ingrese todos los campos","No se puedo guardar",
                                 MessageBoxButtons.OK,MessageBoxIcon.Error);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*
+         * Descripcion: Este método muestra los registros de la base de datos
+         */
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from pelicula";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable table = new DataTable();
+            DA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            DataGrid DG = new DataGrid();
+            DG.ShowData(bSource);
+            DG.Show();
+
         }
     }
 }

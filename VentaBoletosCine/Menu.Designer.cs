@@ -72,7 +72,7 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(20, 146);
+            this.button3.Location = new System.Drawing.Point(280, 304);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(254, 150);
             this.button3.TabIndex = 0;
@@ -85,7 +85,7 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(280, 304);
+            this.button4.Location = new System.Drawing.Point(20, 304);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(254, 150);
             this.button4.TabIndex = 4;
@@ -131,7 +131,7 @@
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(20, 302);
+            this.button6.Location = new System.Drawing.Point(20, 148);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(254, 150);
             this.button6.TabIndex = 3;

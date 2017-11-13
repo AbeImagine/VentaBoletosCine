@@ -56,6 +56,7 @@
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -353,12 +354,23 @@
             this.label9.TabIndex = 53;
             this.label9.Text = "Usuario:";
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(701, 425);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(156, 23);
+            this.button6.TabIndex = 54;
+            this.button6.Text = "Mostrar Registros";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // membresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(977, 635);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.pictureBox2);
@@ -425,5 +437,6 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button6;
     }
 }
