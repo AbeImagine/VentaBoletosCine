@@ -171,5 +171,56 @@ namespace VentaBoletosCine
         {
             habilitaBotones();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if ((textBox4.Text != "") &&
+               comboBoxPeliculas.Items[comboBoxPeliculas.SelectedIndex] != null &&
+               comboBoxSala.Items[comboBoxSala.SelectedIndex] != null &&
+               comboBoxHorario.Items[comboBoxHorario.SelectedIndex] != null
+               )
+            {
+                int horario = (int)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
+                int num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
+                int id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
+
+                string commandtxt = "INSERT INTO  (hora, num_sala, id_pelicula) VALUES (" + horario + "," + num_sala + "," + id_pelicula + ")";
+                MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+                try
+                {
+                    MySqlDataReader reader = command.ExecuteReader();
+                    MessageBox.Show("Registro exitoso");
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(e.Message);
+                }
+
+            }
+            else
+                MessageBox.Show("Ingrese todos los datos para poder guardar el registro");
+        }
     }
 }
