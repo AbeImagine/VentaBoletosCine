@@ -45,24 +45,24 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 77);
+            this.button1.Location = new System.Drawing.Point(540, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 55);
+            this.button1.Size = new System.Drawing.Size(254, 150);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Venta de Boletos";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(253, 77);
+            this.button2.Location = new System.Drawing.Point(801, 148);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 55);
+            this.button2.Size = new System.Drawing.Size(254, 146);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Capturista";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -118,7 +118,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(820, 231);
+            this.pictureBox3.Location = new System.Drawing.Point(801, 304);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(235, 205);
             this.pictureBox3.TabIndex = 7;
@@ -156,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1055, 466);
+            this.ClientSize = new System.Drawing.Size(1061, 516);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox3);

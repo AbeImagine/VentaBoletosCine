@@ -296,7 +296,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(701, 335);
+            this.button1.Location = new System.Drawing.Point(701, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 83);
             this.button1.TabIndex = 49;
@@ -356,11 +356,15 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(701, 425);
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(782, 335);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 23);
+            this.button6.Size = new System.Drawing.Size(84, 107);
             this.button6.TabIndex = 54;
             this.button6.Text = "Mostrar Registros";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
