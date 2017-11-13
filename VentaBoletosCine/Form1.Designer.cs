@@ -63,7 +63,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -89,7 +89,7 @@
             this.rectangleShape3,
             this.rectangleShape2,
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(733, 546);
+            this.shapeContainer1.Size = new System.Drawing.Size(784, 583);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
@@ -98,7 +98,7 @@
             this.rectangleShape4.BorderColor = System.Drawing.Color.DodgerBlue;
             this.rectangleShape4.Location = new System.Drawing.Point(499, 269);
             this.rectangleShape4.Name = "rectangleShape4";
-            this.rectangleShape4.Size = new System.Drawing.Size(232, 233);
+            this.rectangleShape4.Size = new System.Drawing.Size(277, 233);
             // 
             // rectangleShape3
             // 
@@ -297,14 +297,14 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 521);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 558);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(733, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(784, 25);
             this.bindingNavigator1.TabIndex = 20;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -320,8 +320,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
             // bindingNavigatorDeleteItem
@@ -404,15 +404,19 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
-            // button5
+            // button6
             // 
-            this.button5.Location = new System.Drawing.Point(504, 453);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 23);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Mostrar Registros";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(666, 306);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(84, 116);
+            this.button6.TabIndex = 55;
+            this.button6.Text = "Mostrar Registros";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Capturista
             // 
@@ -420,8 +424,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(733, 546);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(784, 583);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -490,7 +494,7 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

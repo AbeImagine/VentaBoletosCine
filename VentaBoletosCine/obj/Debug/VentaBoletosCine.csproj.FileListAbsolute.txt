@@ -85,3 +85,4 @@ C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\Venta
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaUsuario.resources
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
+C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
