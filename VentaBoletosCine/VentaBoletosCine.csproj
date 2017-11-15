@@ -56,6 +56,12 @@
     <Compile Include="boleto.Designer.cs">
       <DependentUpon>boleto.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataGrid.Designer.cs">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBconnection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -29,54 +29,33 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(funcionesSalas));
-<<<<<<< HEAD
-=======
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.comboBoxPeliculas = new System.Windows.Forms.ComboBox();
             this.comboBoxHorario = new System.Windows.Forms.ComboBox();
             this.comboBoxSala = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-=======
-            this.button5 = new System.Windows.Forms.Button();
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
-            this.button5 = new System.Windows.Forms.Button();
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(181, 144);
-=======
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(513, 57);
+            this.button1.Location = new System.Drawing.Point(513, 83);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 23);
             this.button1.TabIndex = 77;
@@ -87,18 +66,20 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(513, 86);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(432, 115);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
-            this.button2.TabIndex = 76;
-            this.button2.Text = "Editar";
+            this.button2.Size = new System.Drawing.Size(75, 83);
+            this.button2.TabIndex = 102;
+            this.button2.Text = "Buscar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(513, 143);
+            this.button4.Location = new System.Drawing.Point(513, 135);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(84, 23);
             this.button4.TabIndex = 75;
@@ -130,10 +111,6 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(181, 137);
-<<<<<<< HEAD
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(123, 20);
             this.textBox4.TabIndex = 90;
@@ -145,35 +122,11 @@
             this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.label6.Location = new System.Drawing.Point(17, 142);
-=======
             this.label6.Location = new System.Drawing.Point(17, 137);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
-            this.label6.Location = new System.Drawing.Point(17, 137);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 18);
             this.label6.TabIndex = 89;
             this.label6.Text = "Precio:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(181, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 20);
-            this.textBox2.TabIndex = 88;
-            this.textBox2.Text = "92 min";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(181, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 87;
-            this.textBox1.Text = "Vigilante Oscuro";
             // 
             // label7
             // 
@@ -199,30 +152,13 @@
             this.label9.TabIndex = 85;
             this.label9.Text = "Duración:";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(179, 163);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 20);
-            this.textBox5.TabIndex = 80;
-            this.textBox5.Text = "4";
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.label5.Location = new System.Drawing.Point(17, 175);
-=======
             this.label5.Location = new System.Drawing.Point(17, 166);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
-            this.label5.Location = new System.Drawing.Point(17, 166);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 18);
             this.label5.TabIndex = 79;
@@ -237,36 +173,18 @@
             this.pictureBox1.TabIndex = 91;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(181, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(123, 20);
-            this.textBox3.TabIndex = 93;
-            this.textBox3.Text = "11:00 PM a 18:00 PM";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.label2.Location = new System.Drawing.Point(17, 113);
-=======
             this.label2.Location = new System.Drawing.Point(17, 109);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
-            this.label2.Location = new System.Drawing.Point(17, 109);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 18);
             this.label2.TabIndex = 92;
             this.label2.Text = "Horario:";
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             // comboBoxPeliculas
             // 
             this.comboBoxPeliculas.FormattingEnabled = true;
@@ -278,7 +196,7 @@
             // comboBoxHorario
             // 
             this.comboBoxHorario.FormattingEnabled = true;
-            this.comboBoxHorario.Location = new System.Drawing.Point(181, 113);
+            this.comboBoxHorario.Location = new System.Drawing.Point(181, 110);
             this.comboBoxHorario.Name = "comboBoxHorario";
             this.comboBoxHorario.Size = new System.Drawing.Size(121, 21);
             this.comboBoxHorario.TabIndex = 96;
@@ -286,7 +204,7 @@
             // comboBoxSala
             // 
             this.comboBoxSala.FormattingEnabled = true;
-            this.comboBoxSala.Location = new System.Drawing.Point(181, 175);
+            this.comboBoxSala.Location = new System.Drawing.Point(181, 166);
             this.comboBoxSala.Name = "comboBoxSala";
             this.comboBoxSala.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSala.TabIndex = 97;
@@ -300,23 +218,11 @@
             this.pictureBox2.TabIndex = 98;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(448, 111);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 83);
-            this.button2.TabIndex = 102;
-            this.button2.Text = "Buscar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(448, 22);
+            this.button6.Location = new System.Drawing.Point(432, 22);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 83);
             this.button6.TabIndex = 101;
@@ -329,7 +235,7 @@
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(529, 111);
+            this.button7.Location = new System.Drawing.Point(513, 115);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 83);
             this.button7.TabIndex = 100;
@@ -341,7 +247,7 @@
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(529, 24);
+            this.button8.Location = new System.Drawing.Point(513, 21);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 81);
             this.button8.TabIndex = 99;
@@ -349,67 +255,32 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-=======
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(513, 172);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 23);
-            this.button5.TabIndex = 94;
-            this.button5.Text = "Nuevo";
-            this.button5.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             // 
             // funcionesSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(643, 374);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(618, 374);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.comboBoxSala);
             this.Controls.Add(this.comboBoxHorario);
             this.Controls.Add(this.comboBoxPeliculas);
-=======
-            this.ClientSize = new System.Drawing.Size(618, 374);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox3);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
-            this.ClientSize = new System.Drawing.Size(618, 374);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox3);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
-<<<<<<< HEAD
             this.Controls.Add(this.pictureBox2);
-=======
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.Name = "funcionesSalas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funciones ";
@@ -423,40 +294,27 @@
 
         #endregion
 
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
-<<<<<<< HEAD
-<<<<<<< HEAD
         private System.Windows.Forms.ComboBox comboBoxPeliculas;
         private System.Windows.Forms.ComboBox comboBoxHorario;
         private System.Windows.Forms.ComboBox comboBoxSala;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        //private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-=======
         private System.Windows.Forms.Button button5;
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
-        private System.Windows.Forms.Button button5;
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
+        //private System.Windows.Forms.Button button5;
     }
 }

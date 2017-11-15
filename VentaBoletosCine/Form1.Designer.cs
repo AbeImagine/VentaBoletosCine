@@ -65,13 +65,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
-<<<<<<< HEAD
             this.button6 = new System.Windows.Forms.Button();
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -431,8 +425,6 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
@@ -447,25 +439,15 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             // Capturista
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(784, 583);
             this.Controls.Add(this.button6);
-=======
             this.ClientSize = new System.Drawing.Size(733, 546);
-<<<<<<< HEAD
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -538,13 +520,7 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
-<<<<<<< HEAD
-<<<<<<< HEAD
         private System.Windows.Forms.Button button6;
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
     }
 }
 

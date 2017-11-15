@@ -20,7 +20,7 @@ namespace VentaBoletosCine
         String categoriaPelicula;
         String duracionPelicula;    
         String creditosRepPelicula;
-        String sipnosis;
+        String sinopsis;
         MySqlCommand comando;
         MySqlDataReader reader;
 
@@ -93,31 +93,31 @@ namespace VentaBoletosCine
                 categoriaPelicula = tbcategoria.Text;
                 duracionPelicula = tbDuracion.Text;
                 creditosRepPelicula = tbCreditosRep.Text;
-                sipnosis =tbSipnosis.Text ;
+                sinopsis =tbSipnosis.Text ;
 
                 this.Refresh();
 
+                comando = new MySqlCommand("INSERT INTO pelicula (nombre, duracion, genero, sinopsis, reparto) VALUES ('" + nombrePelicula + "'," + duracionPelicula + ",'" + categoriaPelicula + "','" + sinopsis + "','" + creditosRepPelicula + "')", conexionBD.Connection);
 
-                comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
+                //comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
                 try
                 {
                     reader = comando.ExecuteReader();
+                    MessageBox.Show("Registro exitoso");
+                    reader.Close();
                 }
                 catch (Exception exc)
                 {
                     MessageBox.Show(exc.Message);
                 }
 
-                MessageBox.Show("Registro exitoso");
-                reader.Close();
+                
 
             }
             else
                 MessageBox.Show("Ingrese todos los campos","No se puedo guardar",
                                 MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -161,9 +161,5 @@ namespace VentaBoletosCine
             DG.ShowData(bSource);
             DG.Show();
         }
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
     }
 }

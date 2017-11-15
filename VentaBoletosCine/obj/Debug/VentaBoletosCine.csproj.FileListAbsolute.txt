@@ -85,10 +85,7 @@ C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\Venta
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaUsuario.resources
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
