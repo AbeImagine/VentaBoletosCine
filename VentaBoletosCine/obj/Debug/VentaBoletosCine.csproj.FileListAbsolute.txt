@@ -1,59 +1,7 @@
-G:\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
-G:\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
-G:\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csprojResolveAssemblyReference.cache
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Capturista.resources
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Properties.Resources.resources
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
-G:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
-D:\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
-D:\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
-D:\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csprojResolveAssemblyReference.cache
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Capturista.resources
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Properties.Resources.resources
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
-D:\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csprojResolveAssemblyReference.cache
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Capturista.resources
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.membresias.resources
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Menu.resources
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Properties.Resources.resources
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.boleto.resources
-C:\Users\Emmanuel\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.venLineacs.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csprojResolveAssemblyReference.cache
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.boleto.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Capturista.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Login.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.membresias.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Menu.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Properties.Resources.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.venLineacs.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaUsuario.resources
-G:\Nueva carpeta\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.funcionesSalas.resources
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
-C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
-C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\MySql.Data.dll
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csprojResolveAssemblyReference.cache
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.boleto.resources
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Capturista.resources
@@ -66,26 +14,5 @@ C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\Ven
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaUsuario.resources
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
-C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\MySql.Data.dll
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csprojResolveAssemblyReference.cache
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.boleto.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Capturista.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.funcionesSalas.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Login.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.membresias.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Menu.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Properties.Resources.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.venLineacs.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaUsuario.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
-C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
-=======
->>>>>>> parent of 7a0f7db... Implementacion final de inserción
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb

@@ -41,7 +41,7 @@ namespace VentaBoletosCine
                     while (text != null)
                     {
                         comboBoxSala.Items.Add(text);
-                        text = null;
+                        //text = null;
                         i++;
                         text = reader.GetString(i);
                     }
@@ -211,9 +211,9 @@ namespace VentaBoletosCine
         private void button8_Click(object sender, EventArgs e)
         {
             if ((textBox4.Text != "") &&
-               comboBoxPeliculas.Items[comboBoxPeliculas.SelectedIndex] != null &&
-               comboBoxSala.Items[comboBoxSala.SelectedIndex] != null &&
-               comboBoxHorario.Items[comboBoxHorario.SelectedIndex] != null
+               comboBoxPeliculas.SelectedIndex != -1 &&
+               comboBoxSala.SelectedIndex != -1 &&
+               comboBoxHorario.SelectedIndex != -1
                )
             {
                 int horario = (int)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
