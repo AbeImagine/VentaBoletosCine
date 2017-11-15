@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbcategoria = new System.Windows.Forms.TextBox();
+            this.tbTipo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tbDuracion = new System.Windows.Forms.TextBox();
             this.tbSipnosis = new System.Windows.Forms.RichTextBox();
             this.tbCreditosRep = new System.Windows.Forms.RichTextBox();
@@ -63,7 +65,10 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
             this.button6 = new System.Windows.Forms.Button();
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -155,7 +160,7 @@
             this.label2.BackColor = System.Drawing.Color.DodgerBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(29, 184);
+            this.label2.Location = new System.Drawing.Point(29, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 4;
@@ -167,7 +172,7 @@
             this.label3.BackColor = System.Drawing.Color.DodgerBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(29, 211);
+            this.label3.Location = new System.Drawing.Point(29, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 18);
             this.label3.TabIndex = 5;
@@ -179,7 +184,7 @@
             this.label4.BackColor = System.Drawing.Color.DodgerBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(29, 336);
+            this.label4.Location = new System.Drawing.Point(29, 377);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 44);
             this.label4.TabIndex = 6;
@@ -201,10 +206,30 @@
             this.tbcategoria.Size = new System.Drawing.Size(152, 24);
             this.tbcategoria.TabIndex = 8;
             // 
+            // tbTipo
+            // 
+            this.tbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTipo.Location = new System.Drawing.Point(137, 179);
+            this.tbTipo.Name = "tbTipo";
+            this.tbTipo.Size = new System.Drawing.Size(152, 24);
+            this.tbTipo.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(33, 181);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 18);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Tipo:";
+            // 
             // tbDuracion
             // 
             this.tbDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDuracion.Location = new System.Drawing.Point(137, 178);
+            this.tbDuracion.Location = new System.Drawing.Point(137, 210);
             this.tbDuracion.Name = "tbDuracion";
             this.tbDuracion.Size = new System.Drawing.Size(152, 24);
             this.tbDuracion.TabIndex = 11;
@@ -212,7 +237,7 @@
             // tbSipnosis
             // 
             this.tbSipnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSipnosis.Location = new System.Drawing.Point(137, 208);
+            this.tbSipnosis.Location = new System.Drawing.Point(137, 246);
             this.tbSipnosis.Name = "tbSipnosis";
             this.tbSipnosis.Size = new System.Drawing.Size(232, 122);
             this.tbSipnosis.TabIndex = 13;
@@ -221,7 +246,7 @@
             // tbCreditosRep
             // 
             this.tbCreditosRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCreditosRep.Location = new System.Drawing.Point(137, 336);
+            this.tbCreditosRep.Location = new System.Drawing.Point(137, 374);
             this.tbCreditosRep.Name = "tbCreditosRep";
             this.tbCreditosRep.Size = new System.Drawing.Size(172, 56);
             this.tbCreditosRep.TabIndex = 15;
@@ -277,7 +302,6 @@
             this.button4.Text = "Buscar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // bindingNavigator1
             // 
@@ -404,6 +428,7 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
+<<<<<<< HEAD
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
@@ -418,14 +443,20 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
             // Capturista
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(784, 583);
             this.Controls.Add(this.button6);
+=======
+            this.ClientSize = new System.Drawing.Size(733, 546);
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -436,6 +467,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tbSipnosis);
             this.Controls.Add(this.tbDuracion);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tbTipo);
             this.Controls.Add(this.tbcategoria);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.label4);
@@ -471,6 +504,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbcategoria;
+        private System.Windows.Forms.TextBox tbTipo;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbDuracion;
         private System.Windows.Forms.RichTextBox tbSipnosis;
         private System.Windows.Forms.RichTextBox tbCreditosRep;
@@ -494,7 +529,10 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
+<<<<<<< HEAD
         private System.Windows.Forms.Button button6;
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
     }
 }
 

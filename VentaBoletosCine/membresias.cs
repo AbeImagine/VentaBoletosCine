@@ -70,14 +70,14 @@ namespace VentaBoletosCine
                     try
                     {
                         reader = comando.ExecuteReader();
-                        MessageBox.Show("Registro exitoso");
-                        reader.Close();
                     }
                     catch (Exception exc)
                     {
                         MessageBox.Show(exc.Message);
                     }
 
+                    MessageBox.Show("Registro exitoso");
+                    reader.Close();
                 }
                 else
                     MessageBox.Show("Las contraseñas no coinciden");
@@ -95,27 +95,6 @@ namespace VentaBoletosCine
 
         private void label6_Click(object sender, EventArgs e)
         {
-
-        }
-
-        /*
-         * Descripcion: Este método muestra los registros de la base de datos
-         */
-        private void button6_Click(object sender, EventArgs e)
-        {
-            MySqlDataAdapter DA = new MySqlDataAdapter();
-            string sqlSelectAll = "SELECT * from miembro";
-            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
-
-            DataTable table = new DataTable();
-            DA.Fill(table);
-
-            BindingSource bSource = new BindingSource();
-            bSource.DataSource = table;
-
-            DataGrid DG = new DataGrid();
-            DG.ShowData(bSource);
-            DG.Show();
 
         }
 
