@@ -140,5 +140,22 @@ namespace VentaBoletosCine
             DG.Show();
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from pelicula";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable table = new DataTable();
+            DA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            DataGrid DG = new DataGrid();
+            DG.ShowData(bSource);
+            DG.Show();
+        }
     }
 }
