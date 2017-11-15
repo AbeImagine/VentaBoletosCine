@@ -66,7 +66,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.button6 = new System.Windows.Forms.Button();
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -429,6 +432,7 @@
             this.pictureBox2.TabStop = false;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
@@ -445,6 +449,8 @@
             // 
 =======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
             // Capturista
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -456,6 +462,9 @@
             this.Controls.Add(this.button6);
 =======
             this.ClientSize = new System.Drawing.Size(733, 546);
+<<<<<<< HEAD
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
+=======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.button4);
@@ -530,7 +539,10 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.Button button6;
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
     }

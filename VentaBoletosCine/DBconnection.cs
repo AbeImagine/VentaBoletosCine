@@ -44,7 +44,11 @@ namespace VentaBoletosCine
                     result = false;
                 //string connstring = string.Format("Server=localhost; database={0}; UID=UserName; password=your password", databaseName);
 <<<<<<< HEAD
+<<<<<<< HEAD
                 string connstring = string.Format("Server=localhost; database={0}; UID=root; password=3MM@nu3l", databaseName);
+=======
+                string connstring = string.Format("Server=localhost; database={0}; UID=root; password=''", databaseName);
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
                 string connstring = string.Format("Server=localhost; database={0}; UID=root; password=''", databaseName);
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción

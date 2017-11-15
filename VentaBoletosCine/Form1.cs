@@ -117,6 +117,7 @@ namespace VentaBoletosCine
                                 MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -160,6 +161,8 @@ namespace VentaBoletosCine
             DG.ShowData(bSource);
             DG.Show();
         }
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
     }

@@ -49,6 +49,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.comboBoxPeliculas = new System.Windows.Forms.ComboBox();
             this.comboBoxHorario = new System.Windows.Forms.ComboBox();
             this.comboBoxSala = new System.Windows.Forms.ComboBox();
@@ -57,6 +58,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+=======
+            this.button5 = new System.Windows.Forms.Button();
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
             this.button5 = new System.Windows.Forms.Button();
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
@@ -126,6 +130,9 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(181, 137);
+<<<<<<< HEAD
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
+=======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(123, 20);
@@ -139,7 +146,11 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label6.Location = new System.Drawing.Point(17, 142);
+=======
+            this.label6.Location = new System.Drawing.Point(17, 137);
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
             this.label6.Location = new System.Drawing.Point(17, 137);
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
@@ -204,7 +215,11 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label5.Location = new System.Drawing.Point(17, 175);
+=======
+            this.label5.Location = new System.Drawing.Point(17, 166);
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
             this.label5.Location = new System.Drawing.Point(17, 166);
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
@@ -237,7 +252,11 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(17, 113);
+=======
+            this.label2.Location = new System.Drawing.Point(17, 109);
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
             this.label2.Location = new System.Drawing.Point(17, 109);
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
@@ -246,6 +265,7 @@
             this.label2.TabIndex = 92;
             this.label2.Text = "Horario:";
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // comboBoxPeliculas
             // 
@@ -330,6 +350,8 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
 =======
+=======
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -339,6 +361,9 @@
             this.button5.TabIndex = 94;
             this.button5.Text = "Nuevo";
             this.button5.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
+=======
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
             // 
             // funcionesSalas
@@ -346,6 +371,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(643, 374);
             this.Controls.Add(this.button2);
@@ -355,6 +381,11 @@
             this.Controls.Add(this.comboBoxSala);
             this.Controls.Add(this.comboBoxHorario);
             this.Controls.Add(this.comboBoxPeliculas);
+=======
+            this.ClientSize = new System.Drawing.Size(618, 374);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox3);
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
             this.ClientSize = new System.Drawing.Size(618, 374);
             this.Controls.Add(this.button5);
@@ -412,6 +443,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.ComboBox comboBoxPeliculas;
         private System.Windows.Forms.ComboBox comboBoxHorario;
         private System.Windows.Forms.ComboBox comboBoxSala;
@@ -420,6 +452,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+=======
+        private System.Windows.Forms.Button button5;
+>>>>>>> parent of 7a0f7db... Implementacion final de inserción
 =======
         private System.Windows.Forms.Button button5;
 >>>>>>> parent of 7a0f7db... Implementacion final de inserción
