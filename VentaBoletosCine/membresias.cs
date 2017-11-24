@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+using System.Globalization;
+using System.Text.RegularExpressions;
+
+
 namespace VentaBoletosCine
 {
     public partial class membresias : Form
@@ -23,7 +27,8 @@ namespace VentaBoletosCine
         String email;
         String password;
 
-
+        //Variable para comprobar que el email es verdadero 
+        bool invalid = false;
 
         public membresias(DBConnection conexion)
         {
@@ -64,7 +69,19 @@ namespace VentaBoletosCine
 
                 if (tbPass.Text == tbConfPass.Text)
                 {
-                    email = tbEmail.Text;
+
+                    if ( this.IsValidEmail( Convert.ToString(email)) == true)
+                    {
+                        MessageBox.Show("Correo electrónico aceptado", "Información", 
+                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        email = tbEmail.Text;
+                    }
+                    else
+                        MessageBox.Show("Correo electrónico no aceptado", "Información", 
+                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    
 
                     comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
                     try
@@ -108,6 +125,71 @@ namespace VentaBoletosCine
             DG.Show();
         }
 
-        
+/*
+ * Descripcion: Comprueba que una cadena si tiene un formato de email revisando los dominios
+ * de correos electronicos queexisten actualmente  
+ */ 
+        public bool IsValidEmail(string strIn)
+        {
+            invalid = false;
+            if (String.IsNullOrEmpty(strIn))
+                return false;
+
+            // Usamos IdnMapping para convertir los dominios de email
+            try
+            {
+                strIn = Regex.Replace(strIn, @"(@)(.+)$", this.DomainMapper,
+                                      RegexOptions.None, TimeSpan.FromMilliseconds(200));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                
+                return false;
+            }
+
+            if (invalid)
+            {
+
+                return false;
+            }
+
+            // Regresamos true si es verdadero el formato para email
+            try
+            {
+                return Regex.IsMatch(strIn,
+                      @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                      @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                      RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+
+                return false;
+            }
+        }
+
+        /*
+         * Descripcion:  Hace un mapeo de los dominios de correos electronicos para comprobar
+         * que el cliente haya igresado un correo que todavía sigue dando servio conexion 
+         * a los usuarios 
+         */
+
+        private string DomainMapper(Match match)
+        {
+            
+            IdnMapping idn = new IdnMapping();
+
+            string domainName = match.Groups[2].Value;
+            try{
+                domainName = idn.GetAscii(domainName);
+            }
+            catch (ArgumentException)
+            {
+                invalid = true;
+            }
+
+            return match.Groups[1].Value + domainName;
+        }
+
     }
 }

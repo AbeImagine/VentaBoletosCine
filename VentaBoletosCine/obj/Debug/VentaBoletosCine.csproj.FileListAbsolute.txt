@@ -16,3 +16,6 @@ C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\Ven
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
+C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
+C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
+C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
