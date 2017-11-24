@@ -56,6 +56,7 @@
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(300, 145);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label5
             // 
@@ -355,18 +355,13 @@
             // 
             // button6
             // 
-            /*this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(782, 335);
+            this.button6.Location = new System.Drawing.Point(701, 445);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 107);
+            this.button6.Size = new System.Drawing.Size(156, 23);
             this.button6.TabIndex = 54;
-            this.button6.Text = "Mostrar Registros";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.Text = "Mostrar registros";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-             */
             // 
             // membresias
             // 
@@ -374,6 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(977, 635);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.pictureBox2);
@@ -440,5 +436,6 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button6;
     }
 }

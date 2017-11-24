@@ -86,6 +86,7 @@ namespace VentaBoletosCine
             }
         }
 
+        /*
         private void button5_Click(object sender, EventArgs e)
         {
             if( (textBox4.Text != "" )&&
@@ -116,7 +117,7 @@ namespace VentaBoletosCine
             MessageBox.Show("Ingrese todos los datos para poder guardar el registro");
 
         }
-
+        */
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar)&& e.KeyChar !='\b')
@@ -125,8 +126,6 @@ namespace VentaBoletosCine
             }
             else
                 MessageBox.Show("Ingrese solamente numeros ");
-
-
         }
 
         /*
@@ -140,10 +139,10 @@ namespace VentaBoletosCine
             //this.textBox3.TabIndex = 2;
             this.textBox4.TabIndex = 3;
             //this.textBox5.TabIndex = 4;
-            this.button1.TabIndex = 5;
+            //this.button1.TabIndex = 5;
             this.button2.TabIndex = 5;
-            this.button3.TabIndex = 5;
-            this.button4.TabIndex = 5;
+            //this.button3.TabIndex = 5;
+            //this.button4.TabIndex = 5;
             
         }
 
@@ -237,6 +236,38 @@ namespace VentaBoletosCine
             }
             else
                 MessageBox.Show("Ingrese todos los datos para poder guardar el registro");
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from funcion";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable table = new DataTable();
+            DA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            DataGrid DG = new DataGrid();
+            DG.ShowData(bSource);
+            DG.Show();
         }
     }
 }

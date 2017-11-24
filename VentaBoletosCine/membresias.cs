@@ -58,7 +58,7 @@ namespace VentaBoletosCine
                 
             {
 
-                nombreMembresia = tbNombre.Text + " " + tbApellidoM.Text + " " + tbApellidoP;
+                nombreMembresia = tbNombre.Text + " " + tbApellidoM.Text + " " + tbApellidoP.Text;
 
                 telefono = maskedTextBox1.Text;
 
@@ -70,32 +70,42 @@ namespace VentaBoletosCine
                     try
                     {
                         reader = comando.ExecuteReader();
+                        MessageBox.Show("Registro exitoso");
+                        reader.Close();
                     }
                     catch (Exception exc)
                     {
                         MessageBox.Show(exc.Message);
                     }
-
-                    MessageBox.Show("Registro exitoso");
-                    reader.Close();
                 }
                 else
                     MessageBox.Show("Las contraseñas no coinciden");
             }
             else
                 MessageBox.Show("No se pueden dejar campos vacios", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
-            
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from miembro";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable table = new DataTable();
+            DA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            DataGrid DG = new DataGrid();
+            DG.ShowData(bSource);
+            DG.Show();
         }
 
         

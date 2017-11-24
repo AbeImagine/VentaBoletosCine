@@ -72,24 +72,21 @@ namespace VentaBoletosCine
         {
             tbNombre.Clear();
             tbcategoria.Clear();
-            tbTipo.Clear();
             tbDuracion.Clear();
             tbSipnosis.Clear();
-
+            tbCreditosRep.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if ((tbNombre.Text != "") &&
                 (tbcategoria.Text != "") &&
-                (tbTipo.Text != "") &&
                 (tbDuracion.Text != "") &&
                 (tbSipnosis.Text != "")&&
                 (tbCreditosRep.Text !="")
              )
             {
                 nombrePelicula = tbNombre.Text;
-                tipoPelicula = tbTipo.Text;
                 categoriaPelicula = tbcategoria.Text;
                 duracionPelicula = tbDuracion.Text;
                 creditosRepPelicula = tbCreditosRep.Text;

@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(funcionesSalas));
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,20 +45,10 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(513, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 23);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -75,26 +62,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(513, 135);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 23);
-            this.button4.TabIndex = 75;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(513, 115);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 23);
-            this.button3.TabIndex = 74;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -222,9 +189,9 @@
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(432, 22);
+            this.button6.Location = new System.Drawing.Point(432, 25);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 83);
+            this.button6.Size = new System.Drawing.Size(75, 80);
             this.button6.TabIndex = 101;
             this.button6.Text = "Nuevo";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -242,12 +209,13 @@
             this.button7.Text = "Eliminar";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(513, 21);
+            this.button8.Location = new System.Drawing.Point(513, 24);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 81);
             this.button8.TabIndex = 99;
@@ -256,12 +224,23 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(432, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 23);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "Mostrar registros";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // funcionesSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(618, 374);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -277,10 +256,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Name = "funcionesSalas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funciones ";
@@ -294,10 +270,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
@@ -315,6 +288,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
         //private System.Windows.Forms.Button button5;
     }
 }
