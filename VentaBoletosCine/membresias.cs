@@ -42,6 +42,15 @@ namespace VentaBoletosCine
         {
             this.DoubleBuffered = true;
             maskedTextBox1.Mask = "(###)-(#######)";
+            tbApellidoM.CharacterCasing = CharacterCasing.Upper;
+            tbApellidoP.CharacterCasing = CharacterCasing.Upper;
+            tbNombre.CharacterCasing = CharacterCasing.Upper;
+
+            tbApellidoM.MaxLength = 10;
+            tbApellidoP.MaxLength = 10;
+            tbNombre.MaxLength = 10; ;
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -189,6 +198,29 @@ namespace VentaBoletosCine
             }
 
             return match.Groups[1].Value + domainName;
+        }
+
+        private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ( ( !char.IsLetter(e.KeyChar) ) )
+                MessageBox.Show("Solo esta permitido ingresar letras");
+        }
+
+        private void tbApellidoM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar)))
+                MessageBox.Show("Solo esta permitido ingresar letras");
+        }
+
+        private void tbApellidoP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar)))
+                MessageBox.Show("Solo esta permitido ingresar letras");
+        }
+
+        private void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
 
     }

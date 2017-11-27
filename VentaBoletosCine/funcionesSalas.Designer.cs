@@ -57,7 +57,7 @@
             this.button2.Location = new System.Drawing.Point(432, 115);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 83);
-            this.button2.TabIndex = 102;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Buscar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
@@ -79,8 +79,8 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(181, 137);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(123, 20);
-            this.textBox4.TabIndex = 90;
+            this.textBox4.Size = new System.Drawing.Size(121, 20);
+            this.textBox4.TabIndex = 2;
             this.textBox4.Text = "$50.00";
             // 
             // label6
@@ -158,7 +158,7 @@
             this.comboBoxPeliculas.Location = new System.Drawing.Point(181, 83);
             this.comboBoxPeliculas.Name = "comboBoxPeliculas";
             this.comboBoxPeliculas.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPeliculas.TabIndex = 95;
+            this.comboBoxPeliculas.TabIndex = 0;
             // 
             // comboBoxHorario
             // 
@@ -166,7 +166,7 @@
             this.comboBoxHorario.Location = new System.Drawing.Point(181, 110);
             this.comboBoxHorario.Name = "comboBoxHorario";
             this.comboBoxHorario.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxHorario.TabIndex = 96;
+            this.comboBoxHorario.TabIndex = 1;
             // 
             // comboBoxSala
             // 
@@ -174,7 +174,7 @@
             this.comboBoxSala.Location = new System.Drawing.Point(181, 166);
             this.comboBoxSala.Name = "comboBoxSala";
             this.comboBoxSala.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSala.TabIndex = 97;
+            this.comboBoxSala.TabIndex = 3;
             // 
             // pictureBox2
             // 
@@ -192,7 +192,7 @@
             this.button6.Location = new System.Drawing.Point(432, 25);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 80);
-            this.button6.TabIndex = 101;
+            this.button6.TabIndex = 4;
             this.button6.Text = "Nuevo";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
@@ -205,7 +205,7 @@
             this.button7.Location = new System.Drawing.Point(513, 115);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 83);
-            this.button7.TabIndex = 100;
+            this.button7.TabIndex = 7;
             this.button7.Text = "Eliminar";
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button7.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.button8.Location = new System.Drawing.Point(513, 24);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 81);
-            this.button8.TabIndex = 99;
+            this.button8.TabIndex = 5;
             this.button8.Text = "Guardar";
             this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button8.UseVisualStyleBackColor = true;
@@ -226,11 +226,13 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(432, 213);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 23);
-            this.button1.TabIndex = 103;
+            this.button1.Size = new System.Drawing.Size(156, 74);
+            this.button1.TabIndex = 8;
             this.button1.Text = "Mostrar registros";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

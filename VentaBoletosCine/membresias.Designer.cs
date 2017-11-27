@@ -89,16 +89,19 @@
             this.tbApellidoP.Location = new System.Drawing.Point(211, 246);
             this.tbApellidoP.Name = "tbApellidoP";
             this.tbApellidoP.Size = new System.Drawing.Size(301, 24);
-            this.tbApellidoP.TabIndex = 24;
+            this.tbApellidoP.TabIndex = 3;
+            this.tbApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoP_KeyPress);
             // 
             // tbNombre
             // 
             this.tbNombre.BackColor = System.Drawing.Color.NavajoWhite;
+            this.tbNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombre.Location = new System.Drawing.Point(211, 176);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(289, 24);
-            this.tbNombre.TabIndex = 23;
+            this.tbNombre.TabIndex = 1;
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label2
             // 
@@ -121,7 +124,7 @@
             this.cbTipoMemb.Location = new System.Drawing.Point(327, 104);
             this.cbTipoMemb.Name = "cbTipoMemb";
             this.cbTipoMemb.Size = new System.Drawing.Size(222, 29);
-            this.cbTipoMemb.TabIndex = 21;
+            this.cbTipoMemb.TabIndex = 0;
             this.cbTipoMemb.Text = "Sin seleccionar";
             // 
             // label1
@@ -143,7 +146,7 @@
             this.tbPass.Location = new System.Drawing.Point(211, 439);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(371, 24);
-            this.tbPass.TabIndex = 33;
+            this.tbPass.TabIndex = 7;
             // 
             // tbEmail
             // 
@@ -152,7 +155,7 @@
             this.tbEmail.Location = new System.Drawing.Point(211, 393);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(301, 24);
-            this.tbEmail.TabIndex = 32;
+            this.tbEmail.TabIndex = 6;
             // 
             // label7
             // 
@@ -186,7 +189,7 @@
             this.tbUsuario.Location = new System.Drawing.Point(211, 292);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(301, 24);
-            this.tbUsuario.TabIndex = 28;
+            this.tbUsuario.TabIndex = 4;
             // 
             // label4
             // 
@@ -219,7 +222,8 @@
             this.tbApellidoM.Location = new System.Drawing.Point(211, 211);
             this.tbApellidoM.Name = "tbApellidoM";
             this.tbApellidoM.Size = new System.Drawing.Size(301, 24);
-            this.tbApellidoM.TabIndex = 40;
+            this.tbApellidoM.TabIndex = 2;
+            this.tbApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoM_KeyPress);
             // 
             // tbConfPass
             // 
@@ -228,7 +232,7 @@
             this.tbConfPass.Location = new System.Drawing.Point(211, 489);
             this.tbConfPass.Name = "tbConfPass";
             this.tbConfPass.Size = new System.Drawing.Size(371, 24);
-            this.tbConfPass.TabIndex = 43;
+            this.tbConfPass.TabIndex = 8;
             // 
             // label8
             // 
@@ -249,7 +253,7 @@
             this.button4.Location = new System.Drawing.Point(701, 246);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 83);
-            this.button4.TabIndex = 48;
+            this.button4.TabIndex = 11;
             this.button4.Text = "Buscar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
@@ -261,7 +265,7 @@
             this.button3.Location = new System.Drawing.Point(701, 157);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 83);
-            this.button3.TabIndex = 47;
+            this.button3.TabIndex = 9;
             this.button3.Text = "Nuevo";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
@@ -273,7 +277,7 @@
             this.button2.Location = new System.Drawing.Point(782, 246);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 83);
-            this.button2.TabIndex = 46;
+            this.button2.TabIndex = 12;
             this.button2.Text = "Eliminar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
@@ -285,7 +289,7 @@
             this.button5.Location = new System.Drawing.Point(782, 159);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 81);
-            this.button5.TabIndex = 45;
+            this.button5.TabIndex = 10;
             this.button5.Text = "Guardar";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.UseVisualStyleBackColor = true;
@@ -298,7 +302,7 @@
             this.button1.Location = new System.Drawing.Point(701, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 83);
-            this.button1.TabIndex = 49;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Editar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -339,7 +343,8 @@
             this.maskedTextBox1.Location = new System.Drawing.Point(211, 339);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(143, 24);
-            this.maskedTextBox1.TabIndex = 52;
+            this.maskedTextBox1.TabIndex = 5;
+            this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox1_KeyDown);
             // 
             // label9
             // 
@@ -355,11 +360,13 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(701, 445);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(782, 350);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 23);
-            this.button6.TabIndex = 54;
+            this.button6.Size = new System.Drawing.Size(75, 83);
+            this.button6.TabIndex = 14;
             this.button6.Text = "Mostrar registros";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 

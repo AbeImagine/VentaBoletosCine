@@ -24,5 +24,10 @@ namespace VentaBoletosCine
         {
             this.DoubleBuffered = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

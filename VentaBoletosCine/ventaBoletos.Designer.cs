@@ -81,9 +81,9 @@
             this.radioButton44 = new System.Windows.Forms.RadioButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbFecha = new System.Windows.Forms.TextBox();
+            this.tbHora = new System.Windows.Forms.TextBox();
+            this.tbNumBoleto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
@@ -610,32 +610,32 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "Número Asiento:";
             // 
-            // textBox3
+            // tbFecha
             // 
-            this.textBox3.Location = new System.Drawing.Point(662, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 20);
-            this.textBox3.TabIndex = 52;
-            this.textBox3.Text = "20 de Septiembre de 2017";
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.tbFecha.Location = new System.Drawing.Point(662, 184);
+            this.tbFecha.Name = "tbFecha";
+            this.tbFecha.Size = new System.Drawing.Size(152, 20);
+            this.tbFecha.TabIndex = 52;
+            this.tbFecha.Text = "20 de Septiembre de 2017";
+            this.tbFecha.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox2
+            // tbHora
             // 
-            this.textBox2.Location = new System.Drawing.Point(662, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 20);
-            this.textBox2.TabIndex = 51;
-            this.textBox2.Text = "8:00 pm";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.tbHora.Location = new System.Drawing.Point(662, 158);
+            this.tbHora.Name = "tbHora";
+            this.tbHora.Size = new System.Drawing.Size(152, 20);
+            this.tbHora.TabIndex = 51;
+            this.tbHora.Text = "8:00 pm";
+            this.tbHora.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // tbNumBoleto
             // 
-            this.textBox1.Location = new System.Drawing.Point(662, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 50;
-            this.textBox1.Text = "3000";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbNumBoleto.Location = new System.Drawing.Point(662, 135);
+            this.tbNumBoleto.Name = "tbNumBoleto";
+            this.tbNumBoleto.Size = new System.Drawing.Size(152, 20);
+            this.tbNumBoleto.TabIndex = 50;
+            this.tbNumBoleto.Text = "3000";
+            this.tbNumBoleto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -884,9 +884,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbFecha);
+            this.Controls.Add(this.tbHora);
+            this.Controls.Add(this.tbNumBoleto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Nombre);
@@ -1002,9 +1002,9 @@
         private System.Windows.Forms.RadioButton radioButton44;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbFecha;
+        private System.Windows.Forms.TextBox tbHora;
+        private System.Windows.Forms.TextBox tbNumBoleto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Nombre;

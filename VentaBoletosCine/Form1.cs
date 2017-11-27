@@ -31,8 +31,23 @@ namespace VentaBoletosCine
             InitializeComponent();
         }
 
+        /*
+         * Descripcion: Este metodo sirve para configurar la longitud de los datos
+         * que se almacenan en la base de datos
+         */
+        public void configuraTamTexBox()
+        {
+            tbNombre.MaxLength = 14;
+            tbDuracion.MaxLength = 3;
+            tbSipnosis.MaxLength = 40;
+            tbcategoria.MaxLength = 10;
+            tbCreditosRep.MaxLength = 40;
+            
+        }
         private void Capturista_Load(object sender, EventArgs e)
         {
+
+            configuraTamTexBox();
             this.DoubleBuffered = true;
             /*
             tbNombre.Text = "Annabelle 2: La Creación";
@@ -56,7 +71,7 @@ namespace VentaBoletosCine
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            limpiaRegistro();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -19,3 +19,6 @@ C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\Ven
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
 C:\Users\Emma\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe.config
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.exe
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.pdb

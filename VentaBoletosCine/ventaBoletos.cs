@@ -20,8 +20,23 @@ namespace VentaBoletosCine
             InitializeComponent();
         }
 
+        public int generaNumBoleto()
+        {
+            Random random = new Random();
+
+            int numBoleto = random.Next(); ;
+
+            return numBoleto;
+
+        }
+
         private void ventaBoletos_Load(object sender, EventArgs e)
         {
+            tbFecha.ReadOnly = true;
+            tbHora.ReadOnly = true;
+            tbNumBoleto.ReadOnly = true;
+
+
             this.DoubleBuffered = true;
         }
 

@@ -64,6 +64,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.minutos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -191,7 +192,7 @@
             this.tbNombre.Location = new System.Drawing.Point(137, 115);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(152, 24);
-            this.tbNombre.TabIndex = 7;
+            this.tbNombre.TabIndex = 0;
             // 
             // tbcategoria
             // 
@@ -199,15 +200,15 @@
             this.tbcategoria.Location = new System.Drawing.Point(137, 148);
             this.tbcategoria.Name = "tbcategoria";
             this.tbcategoria.Size = new System.Drawing.Size(152, 24);
-            this.tbcategoria.TabIndex = 8;
+            this.tbcategoria.TabIndex = 1;
             // 
             // tbDuracion
             // 
             this.tbDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDuracion.Location = new System.Drawing.Point(137, 180);
             this.tbDuracion.Name = "tbDuracion";
-            this.tbDuracion.Size = new System.Drawing.Size(152, 24);
-            this.tbDuracion.TabIndex = 11;
+            this.tbDuracion.Size = new System.Drawing.Size(107, 24);
+            this.tbDuracion.TabIndex = 2;
             // 
             // tbSipnosis
             // 
@@ -215,7 +216,7 @@
             this.tbSipnosis.Location = new System.Drawing.Point(137, 210);
             this.tbSipnosis.Name = "tbSipnosis";
             this.tbSipnosis.Size = new System.Drawing.Size(232, 122);
-            this.tbSipnosis.TabIndex = 13;
+            this.tbSipnosis.TabIndex = 3;
             this.tbSipnosis.Text = "";
             // 
             // tbCreditosRep
@@ -224,7 +225,7 @@
             this.tbCreditosRep.Location = new System.Drawing.Point(137, 338);
             this.tbCreditosRep.Name = "tbCreditosRep";
             this.tbCreditosRep.Size = new System.Drawing.Size(172, 56);
-            this.tbCreditosRep.TabIndex = 15;
+            this.tbCreditosRep.TabIndex = 4;
             this.tbCreditosRep.Text = "";
             // 
             // button1
@@ -234,7 +235,7 @@
             this.button1.Location = new System.Drawing.Point(585, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 81);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Guardar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -247,7 +248,7 @@
             this.button2.Location = new System.Drawing.Point(585, 364);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 83);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Eliminar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
@@ -260,7 +261,7 @@
             this.button3.Location = new System.Drawing.Point(504, 275);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 83);
-            this.button3.TabIndex = 18;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Nuevo";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = true;
@@ -273,7 +274,7 @@
             this.button4.Location = new System.Drawing.Point(504, 364);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 83);
-            this.button4.TabIndex = 19;
+            this.button4.TabIndex = 7;
             this.button4.Text = "Buscar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
@@ -319,8 +320,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
             // bindingNavigatorDeleteItem
@@ -411,11 +412,23 @@
             this.button6.Location = new System.Drawing.Point(666, 306);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(84, 116);
-            this.button6.TabIndex = 55;
+            this.button6.TabIndex = 9;
             this.button6.Text = "Mostrar Registros";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // minutos
+            // 
+            this.minutos.AutoSize = true;
+            this.minutos.BackColor = System.Drawing.Color.DodgerBlue;
+            this.minutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minutos.ForeColor = System.Drawing.Color.Black;
+            this.minutos.Location = new System.Drawing.Point(250, 183);
+            this.minutos.Name = "minutos";
+            this.minutos.Size = new System.Drawing.Size(68, 18);
+            this.minutos.TabIndex = 21;
+            this.minutos.Text = "minutos";
             // 
             // Capturista
             // 
@@ -424,6 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(761, 546);
+            this.Controls.Add(this.minutos);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.button4);
@@ -494,6 +508,7 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label minutos;
     }
 }
 
