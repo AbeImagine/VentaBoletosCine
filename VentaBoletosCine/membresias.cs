@@ -202,7 +202,7 @@ namespace VentaBoletosCine
 
         private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ( ( !char.IsLetter(e.KeyChar) ) )
+            if ( ( !char.IsLetter(e.KeyChar) )) 
                 MessageBox.Show("Solo esta permitido ingresar letras");
         }
 
@@ -220,7 +220,20 @@ namespace VentaBoletosCine
 
         private void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
+            
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tbApellidoM.Clear();
+            tbEmail.Clear();
+            tbConfPass.Clear();
+            tbNombre.Clear();
+            tbUsuario.Clear();
+            tbApellidoP.Clear();
+            tbConfPass.Clear();
+            maskedTextBox1.Clear();
+           
         }
 
     }

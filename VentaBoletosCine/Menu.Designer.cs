@@ -52,7 +52,7 @@
             this.button1.Location = new System.Drawing.Point(540, 304);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(254, 150);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -64,7 +64,7 @@
             this.button2.Location = new System.Drawing.Point(801, 148);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(254, 146);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -90,7 +90,7 @@
             this.button4.Location = new System.Drawing.Point(280, 304);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(254, 150);
-            this.button4.TabIndex = 4;
+            this.button4.TabIndex = 5;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -103,7 +103,7 @@
             this.button5.Location = new System.Drawing.Point(540, 148);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(254, 146);
-            this.button5.TabIndex = 1;
+            this.button5.TabIndex = 2;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -136,7 +136,7 @@
             this.button6.Location = new System.Drawing.Point(20, 302);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(254, 150);
-            this.button6.TabIndex = 3;
+            this.button6.TabIndex = 4;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -149,7 +149,7 @@
             this.button7.Location = new System.Drawing.Point(280, 148);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(254, 150);
-            this.button7.TabIndex = 2;
+            this.button7.TabIndex = 1;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
