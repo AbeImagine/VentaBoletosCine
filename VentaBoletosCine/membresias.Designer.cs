@@ -57,6 +57,10 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +95,7 @@
             this.tbApellidoP.Size = new System.Drawing.Size(301, 24);
             this.tbApellidoP.TabIndex = 3;
             this.tbApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoP_KeyPress);
+            this.tbApellidoP.Leave += new System.EventHandler(this.tbApellidoP_Leave);
             // 
             // tbNombre
             // 
@@ -102,6 +107,7 @@
             this.tbNombre.Size = new System.Drawing.Size(289, 24);
             this.tbNombre.TabIndex = 1;
             this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
+            this.tbNombre.Leave += new System.EventHandler(this.tbNombre_Leave);
             // 
             // label2
             // 
@@ -126,6 +132,7 @@
             this.cbTipoMemb.Size = new System.Drawing.Size(222, 29);
             this.cbTipoMemb.TabIndex = 0;
             this.cbTipoMemb.Text = "Sin seleccionar";
+            this.cbTipoMemb.SelectionChangeCommitted += new System.EventHandler(this.cbTipoMemb_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -156,6 +163,8 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(301, 24);
             this.tbEmail.TabIndex = 6;
+            this.tbEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmail_KeyPress);
+            this.tbEmail.Leave += new System.EventHandler(this.tbEmail_Leave);
             // 
             // label7
             // 
@@ -190,6 +199,8 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(301, 24);
             this.tbUsuario.TabIndex = 4;
+            this.tbUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUsuario_KeyPress);
+            this.tbUsuario.Leave += new System.EventHandler(this.tbUsuario_Leave);
             // 
             // label4
             // 
@@ -224,6 +235,7 @@
             this.tbApellidoM.Size = new System.Drawing.Size(301, 24);
             this.tbApellidoM.TabIndex = 2;
             this.tbApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoM_KeyPress);
+            this.tbApellidoM.Leave += new System.EventHandler(this.tbApellidoM_Leave);
             // 
             // tbConfPass
             // 
@@ -233,6 +245,7 @@
             this.tbConfPass.Name = "tbConfPass";
             this.tbConfPass.Size = new System.Drawing.Size(371, 24);
             this.tbConfPass.TabIndex = 8;
+            this.tbConfPass.Leave += new System.EventHandler(this.tbConfPass_Leave);
             // 
             // label8
             // 
@@ -371,12 +384,56 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button9
+            // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button9.Location = new System.Drawing.Point(823, 450);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(32, 46);
+            this.button9.TabIndex = 57;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button8.Location = new System.Drawing.Point(782, 450);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(32, 46);
+            this.button8.TabIndex = 56;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button7.Location = new System.Drawing.Point(744, 450);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(32, 46);
+            this.button7.TabIndex = 55;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button10.Location = new System.Drawing.Point(704, 450);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(32, 46);
+            this.button10.TabIndex = 54;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
             // membresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(977, 635);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.maskedTextBox1);
@@ -445,5 +502,9 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button10;
     }
 }

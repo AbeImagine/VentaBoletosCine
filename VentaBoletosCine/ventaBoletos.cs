@@ -41,6 +41,8 @@ namespace VentaBoletosCine
 
             return numBoleto;
 
+            
+
         }
 
         private void ventaBoletos_Load(object sender, EventArgs e)
@@ -51,11 +53,12 @@ namespace VentaBoletosCine
             tbFecha.ReadOnly = true;
             tbHora.ReadOnly = true;
             tbNumBoleto.ReadOnly = true;
-
+            tbNumasiento.Text = "Sin seleccionar";
 
             this.DoubleBuffered = true;
             tbFecha.Text = DateTime.Now.ToShortTimeString();
             tbHora.Text = DateTime.Now.ToShortDateString();
+            llenaLista();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -106,8 +109,11 @@ namespace VentaBoletosCine
 
         private void button3_Click(object sender, EventArgs e)
         {
-            limpiaRegistro(); 
-
+            limpiaRegistro();
+            boleto boleto = new boleto(conexionBD);
+            boleto.eventoPasaNumBoleto += new boleto.delegadoPasaDato(BuscaAsiento);
+            boleto.ShowDialog();
+            
 
             
         }
@@ -160,50 +166,21 @@ namespace VentaBoletosCine
             listaetiquetas.Add(lb38);
             listaetiquetas.Add(lb39);
             listaetiquetas.Add(lb40);
-
-            listaetiquetas.Add(lb41);
-            listaetiquetas.Add(lb42);
-            listaetiquetas.Add(lb43);
-            listaetiquetas.Add(lb44);
         }
 
+        /*
+         *Descripcion: Cambia de color la etiqueta que representa el numero de asiento  
+         */
         public void BuscaAsiento(int numAsiento)
         {
-            listaetiquetas[numAsiento].BackColor = Color.DarkRed;
+            listaetiquetas[numAsiento].BackColor = Color.Red;
+            tbNumasiento.Text = Convert.ToString( numAsiento+1 );
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
-            llenaLista();
-
-            string cad;
-            tbNumasiento.Text = "4";
-            cad = tbNumasiento.Text;
-
-
-            BuscaAsiento(30);
-           
-
             
-        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
         }
     }
 }

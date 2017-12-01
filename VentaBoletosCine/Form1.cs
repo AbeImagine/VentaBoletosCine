@@ -16,7 +16,6 @@ namespace VentaBoletosCine
         DBConnection conexionBD;
 
         String nombrePelicula;
-        String tipoPelicula;
         String categoriaPelicula;
         String duracionPelicula;    
         String creditosRepPelicula;
@@ -25,6 +24,12 @@ namespace VentaBoletosCine
         MySqlDataReader reader;
 
 
+        String cuentaDuracion="";
+        String cuentaNombre="";
+        String cuentaGenero="";
+        String cuentaSinopsis="";
+        String cuentaCredReparto="";
+        
         public Capturista(DBConnection conexion)
         {
             conexionBD = conexion;
@@ -39,9 +44,9 @@ namespace VentaBoletosCine
         {
             tbNombre.MaxLength = 14;
             tbDuracion.MaxLength = 3;
-            tbSipnosis.MaxLength = 40;
-            tbcategoria.MaxLength = 10;
-            tbCreditosRep.MaxLength = 40;
+            tbSipnosis.MaxLength = 100;
+            tbcategoria.MaxLength = 16;
+            tbCreditosRep.MaxLength = 50;
             
         }
         private void Capturista_Load(object sender, EventArgs e)
@@ -173,5 +178,99 @@ namespace VentaBoletosCine
             DG.ShowData(bSource);
             DG.Show();
         }
+
+        private void tbNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        
+
+        
+
+        private void tbDuracion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo esta permitido ingresar números");
+                e.Handled = true;
+                return;
+            }
+            cuentaDuracion = tbDuracion.Text;
+        }
+
+        private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            cuentaNombre = tbNombre.Text;
+        }
+
+        private void tbcategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            cuentaGenero = tbcategoria.Text;
+
+
+        }
+
+        private void tbSipnosis_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            cuentaSinopsis = tbSipnosis.Text;
+            
+        }
+
+        private void tbSipnosis_Leave(object sender, EventArgs e)
+        {
+            int contSip = cuentaSinopsis.Length;
+
+            if (contSip >= tbSipnosis.MaxLength - 2)
+            {
+                MessageBox.Show("Solo esta permitido ingresar " + Convert.ToString(tbSipnosis.MaxLength-2)+ " cáracteres");
+                tbSipnosis.Focus();
+            }
+            
+        }
+
+        private void tbCreditosRep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            cuentaCredReparto = tbCreditosRep.Text;
+            
+        }
+
+        private void tbCreditosRep_Leave(object sender, EventArgs e)
+        {
+            int contCreditos = cuentaCredReparto.Length;
+
+            if ( contCreditos >=  tbCreditosRep.MaxLength - 2)
+            {
+                MessageBox.Show("Solo esta permitido ingresar " + Convert.ToString( tbCreditosRep.MaxLength-2 ) + " cáracteres");
+                tbCreditosRep.Focus();
+            }
+        }
+
+        
     }
 }

@@ -26,6 +26,15 @@ namespace VentaBoletosCine
         String telefono;
         String email;
         String password;
+        
+        String cuentaNombre ="";
+        String cuentaApellidoM="";
+        String cuentaApellidoP="";
+        String cuentaEmail="";
+        String cuentaUsuario="";
+
+        List<int> lista ;
+
 
         //Variable para comprobar que el email es verdadero 
         bool invalid = false;
@@ -36,6 +45,9 @@ namespace VentaBoletosCine
             InitializeComponent();
             cbTipoMemb.Items.Add("Administrador");
             cbTipoMemb.Items.Add("Regular");
+
+            lista = new List<int>();
+
         }
 
         private void membresias_Load(object sender, EventArgs e)
@@ -46,11 +58,27 @@ namespace VentaBoletosCine
             tbApellidoP.CharacterCasing = CharacterCasing.Upper;
             tbNombre.CharacterCasing = CharacterCasing.Upper;
 
-            tbApellidoM.MaxLength = 10;
-            tbApellidoP.MaxLength = 10;
-            tbNombre.MaxLength = 10; ;
+            tbApellidoM.MaxLength = 12;
+            tbApellidoP.MaxLength = 12;
+            tbNombre.MaxLength = 12; ;
+            tbUsuario.MaxLength = 10;
 
+            activaDesactivaTextbox(false);
             
+        }
+
+
+        public void activaDesactivaTextbox(bool interruptor)
+        {
+            tbApellidoM.Enabled = interruptor;
+            tbEmail.Enabled = interruptor;
+            tbPass.Enabled = interruptor;
+            tbConfPass.Enabled = interruptor;
+            tbNombre.Enabled = interruptor;
+            tbUsuario.Enabled = interruptor;
+            tbApellidoP.Enabled = interruptor;
+            tbConfPass.Enabled = interruptor;
+            maskedTextBox1.Enabled = interruptor;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,25 +100,14 @@ namespace VentaBoletosCine
                 
             {
 
-                nombreMembresia = tbNombre.Text + " " + tbApellidoM.Text + " " + tbApellidoP.Text;
+                nombreMembresia = tbNombre.Text + " " + tbApellidoP.Text + " " + tbApellidoM.Text;
 
                 telefono = maskedTextBox1.Text;
+                email = tbEmail.Text;
+                password = tbPass.Text;
+               
 
-                if (tbPass.Text == tbConfPass.Text)
-                {
-
-                    if ( this.IsValidEmail( Convert.ToString(email)) == true)
-                    {
-                        MessageBox.Show("Correo electrónico aceptado", "Información", 
-                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        email = tbEmail.Text;
-                    }
-                    else
-                        MessageBox.Show("Correo electrónico no aceptado", "Información", 
-                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    
+                  
 
                     comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
                     try
@@ -103,9 +120,7 @@ namespace VentaBoletosCine
                     {
                         MessageBox.Show(exc.Message);
                     }
-                }
-                else
-                    MessageBox.Show("Las contraseñas no coinciden");
+                
             }
             else
                 MessageBox.Show("No se pueden dejar campos vacios", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -202,38 +217,212 @@ namespace VentaBoletosCine
 
         private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ( ( !char.IsLetter(e.KeyChar) )) 
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
                 MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            cuentaNombre = tbNombre.Text;
         }
 
         private void tbApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)))
+
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
                 MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            else
+                cuentaApellidoM = tbApellidoM.Text;
+            
+
         }
 
         private void tbApellidoP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)))
-                MessageBox.Show("Solo esta permitido ingresar letras");
-        }
 
+
+            if ((!char.IsLetter(e.KeyChar)) && ( e.KeyChar != (char)Keys.Back))
+               
+            {
+                MessageBox.Show("Solo esta permitido ingresar letras");
+                e.Handled = true;
+                return;
+            }
+            else
+                cuentaApellidoP = tbApellidoP.Text; 
+
+            
+        }
+        /*
+         * Descripcion : Verifica que solo ingresen numeros al telefono 
+         */
         private void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             
+            if ((!char.IsNumber( (char)e.KeyData )) && ( e.KeyCode != Keys.Back))
+            {
+                MessageBox.Show("Solo esta permitido ingresar números");
+                e.Handled = true;
+                return;
+            }
+
+            
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
+            limpiaTodo();
+            activaDesactivaTextbox(false);
+
+        }
+
+        /*
+         * Descripcion: Limpia todos los textbox, texbox masked y demas elementos 
+         */
+        public void limpiaTodo()
+        {
             tbApellidoM.Clear();
             tbEmail.Clear();
+            tbPass.Clear();
             tbConfPass.Clear();
             tbNombre.Clear();
             tbUsuario.Clear();
             tbApellidoP.Clear();
             tbConfPass.Clear();
             maskedTextBox1.Clear();
+            cbTipoMemb.Text = "Sin seleccionar";
            
+        }
+
+
+        /*
+       * Descripcion: Revisa que el nombre no sea menor de letres caracteres 
+       */
+        private void tbNombre_Leave(object sender, EventArgs e)
+        {
+            int contNombre = cuentaNombre.Length;
+
+            if ((contNombre < 3))
+            {
+                MessageBox.Show("Nombre demasiado corto");
+                tbNombre.Focus();
+                 
+            }
+        }
+
+        /*
+         * Descripcion: Revisa que el apellido Materno no sea menor de letres caracteres 
+         */
+        private void tbApellidoM_Leave(object sender, EventArgs e)
+        {
+            int contApellidoM = cuentaApellidoM.Length;
+
+            if ((contApellidoM <= 3))
+            {
+                MessageBox.Show("Apellido materno demasiado corto");
+                tbApellidoM.Focus();
+            }
+
+        }
+
+        private void tbApellidoP_Leave(object sender, EventArgs e)
+        {
+            int contApellidoP = cuentaApellidoP.Length;
+
+            if ((contApellidoP <= 3))
+            {
+                MessageBox.Show("Apellido paterno demasiado corto");
+                tbApellidoP.Focus();
+
+            }
+
+
+        }
+
+        private void tbUsuario_Leave(object sender, EventArgs e)
+        {
+            int contUsuario = cuentaUsuario.Length;
+
+            if ((contUsuario <= 3))
+            {
+                MessageBox.Show("Nombre de usuario demasiado corto");
+                tbUsuario.Focus();
+
+            }
+        }
+
+        private void tbUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (!char.IsNumber(e.KeyChar)))
+            {
+                MessageBox.Show("Solo esta permitido ingresar letras y numeros");
+                e.Handled = true;
+                return;
+            }
+            else
+                cuentaUsuario = tbUsuario.Text;
+            
+        }
+
+        private void tbConfPass_Leave(object sender, EventArgs e)
+        {
+
+            if (String.Compare(tbPass.Text, tbConfPass.Text) == 1)
+            {
+                MessageBox.Show("Contraseñas no coinciden");
+            }
+            else
+                MessageBox.Show("Contraseñas aceptadas");
+
+        }
+
+        private void tbEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                cuentaEmail = tbEmail.Text;
+        }
+
+        private void tbEmail_Leave(object sender, EventArgs e)
+        {
+            int contEmail = cuentaEmail.Length;
+
+            if ((contEmail <= 3) || (contEmail <= 4))
+            {
+                MessageBox.Show("e-mail demasiado corto");
+                tbEmail.Focus();
+
+            }
+            else
+            {
+                if (this.IsValidEmail(Convert.ToString( tbEmail.Text )) == false)
+                {
+                    MessageBox.Show("Correo electrónico no aceptado, ingrese otro", "Información",
+                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    tbEmail.Focus();
+
+                }
+                
+                    
+                    
+
+            }
+
+
+        }
+
+        private void cbTipoMemb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cbTipoMemb.ValueMember != "Sin seleccionar")
+            {
+                activaDesactivaTextbox(true);
+            }
+            else
+                activaDesactivaTextbox(false);
         }
 
     }

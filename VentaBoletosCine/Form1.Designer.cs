@@ -32,14 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Capturista));
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape4 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.Nombre = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbcategoria = new System.Windows.Forms.TextBox();
             this.tbDuracion = new System.Windows.Forms.TextBox();
@@ -64,9 +58,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.minutos = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // shapeContainer1
@@ -76,7 +76,6 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape4,
-            this.rectangleShape3,
             this.rectangleShape2,
             this.rectangleShape1});
             this.shapeContainer1.Size = new System.Drawing.Size(761, 546);
@@ -85,29 +84,21 @@
             // 
             // rectangleShape4
             // 
+            this.rectangleShape4.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape4.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.rectangleShape4.Location = new System.Drawing.Point(499, 269);
+            this.rectangleShape4.Location = new System.Drawing.Point(499, 256);
             this.rectangleShape4.Name = "rectangleShape4";
-            this.rectangleShape4.Size = new System.Drawing.Size(277, 233);
-            // 
-            // rectangleShape3
-            // 
-            this.rectangleShape3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.rectangleShape3.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape3.BorderColor = System.Drawing.Color.Transparent;
-            this.rectangleShape3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.rectangleShape3.Location = new System.Drawing.Point(482, 31);
-            this.rectangleShape3.Name = "rectangleShape3";
-            this.rectangleShape3.Size = new System.Drawing.Size(249, 228);
+            this.rectangleShape4.Size = new System.Drawing.Size(277, 246);
             // 
             // rectangleShape2
             // 
             this.rectangleShape2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.rectangleShape2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rectangleShape2.BackgroundImage")));
             this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.rectangleShape2.Location = new System.Drawing.Point(17, 29);
+            this.rectangleShape2.Location = new System.Drawing.Point(17, 57);
             this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(474, 477);
+            this.rectangleShape2.Size = new System.Drawing.Size(721, 442);
             // 
             // rectangleShape1
             // 
@@ -115,107 +106,55 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(75, 23);
             // 
-            // Nombre
-            // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.BackColor = System.Drawing.Color.DodgerBlue;
-            this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.ForeColor = System.Drawing.Color.Black;
-            this.Nombre.Location = new System.Drawing.Point(29, 118);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(73, 18);
-            this.Nombre.TabIndex = 2;
-            this.Nombre.Text = "Nombre:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(29, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Genero:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(29, 180);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Duración:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(29, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 18);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Sinopsis";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(29, 341);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 44);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Créditos y Reparto:";
-            // 
             // tbNombre
             // 
             this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombre.Location = new System.Drawing.Point(137, 115);
+            this.tbNombre.Location = new System.Drawing.Point(137, 102);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(152, 24);
             this.tbNombre.TabIndex = 0;
+            this.tbNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNombre_KeyDown);
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // tbcategoria
             // 
             this.tbcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbcategoria.Location = new System.Drawing.Point(137, 148);
+            this.tbcategoria.Location = new System.Drawing.Point(137, 158);
             this.tbcategoria.Name = "tbcategoria";
             this.tbcategoria.Size = new System.Drawing.Size(152, 24);
             this.tbcategoria.TabIndex = 1;
+            this.tbcategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbcategoria_KeyPress);
             // 
             // tbDuracion
             // 
             this.tbDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDuracion.Location = new System.Drawing.Point(137, 180);
+            this.tbDuracion.Location = new System.Drawing.Point(137, 217);
             this.tbDuracion.Name = "tbDuracion";
             this.tbDuracion.Size = new System.Drawing.Size(107, 24);
             this.tbDuracion.TabIndex = 2;
+            this.tbDuracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDuracion_KeyPress);
             // 
             // tbSipnosis
             // 
             this.tbSipnosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSipnosis.Location = new System.Drawing.Point(137, 210);
+            this.tbSipnosis.Location = new System.Drawing.Point(137, 275);
             this.tbSipnosis.Name = "tbSipnosis";
-            this.tbSipnosis.Size = new System.Drawing.Size(232, 122);
+            this.tbSipnosis.Size = new System.Drawing.Size(330, 73);
             this.tbSipnosis.TabIndex = 3;
             this.tbSipnosis.Text = "";
+            this.tbSipnosis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSipnosis_KeyPress);
+            this.tbSipnosis.Leave += new System.EventHandler(this.tbSipnosis_Leave);
             // 
             // tbCreditosRep
             // 
             this.tbCreditosRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCreditosRep.Location = new System.Drawing.Point(137, 338);
+            this.tbCreditosRep.Location = new System.Drawing.Point(137, 377);
             this.tbCreditosRep.Name = "tbCreditosRep";
-            this.tbCreditosRep.Size = new System.Drawing.Size(172, 56);
+            this.tbCreditosRep.Size = new System.Drawing.Size(302, 59);
             this.tbCreditosRep.TabIndex = 4;
             this.tbCreditosRep.Text = "";
+            this.tbCreditosRep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCreditosRep_KeyPress);
+            this.tbCreditosRep.Leave += new System.EventHandler(this.tbCreditosRep_Leave);
             // 
             // button1
             // 
@@ -412,12 +351,61 @@
             this.minutos.AutoSize = true;
             this.minutos.BackColor = System.Drawing.Color.DodgerBlue;
             this.minutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minutos.ForeColor = System.Drawing.Color.Black;
-            this.minutos.Location = new System.Drawing.Point(250, 183);
+            this.minutos.ForeColor = System.Drawing.Color.White;
+            this.minutos.Location = new System.Drawing.Point(250, 220);
             this.minutos.Name = "minutos";
             this.minutos.Size = new System.Drawing.Size(68, 18);
             this.minutos.TabIndex = 21;
             this.minutos.Text = "minutos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(571, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 229);
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.Location = new System.Drawing.Point(507, 448);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(32, 46);
+            this.button5.TabIndex = 23;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button7.Location = new System.Drawing.Point(547, 448);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(32, 46);
+            this.button7.TabIndex = 24;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button8.Location = new System.Drawing.Point(585, 448);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(32, 46);
+            this.button8.TabIndex = 25;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button9.Location = new System.Drawing.Point(626, 448);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(32, 46);
+            this.button9.TabIndex = 26;
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // Capturista
             // 
@@ -426,6 +414,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(761, 546);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.minutos);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.bindingNavigator1);
@@ -439,11 +432,6 @@
             this.Controls.Add(this.tbDuracion);
             this.Controls.Add(this.tbcategoria);
             this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Nombre);
             this.Controls.Add(this.shapeContainer1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Capturista";
@@ -454,6 +442,7 @@
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,11 +452,6 @@
 
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
-        private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.TextBox tbcategoria;
         private System.Windows.Forms.TextBox tbDuracion;
@@ -490,11 +474,15 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label minutos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 
