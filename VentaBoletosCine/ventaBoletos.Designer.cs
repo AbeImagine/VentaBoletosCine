@@ -54,7 +54,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbTotal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbDuracion = new System.Windows.Forms.TextBox();
             this.tbNombrePeli = new System.Windows.Forms.TextBox();
@@ -107,11 +107,11 @@
             this.lb37 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.tbEfectivo = new System.Windows.Forms.TextBox();
+            this.bt500 = new System.Windows.Forms.Button();
+            this.bt200 = new System.Windows.Forms.Button();
+            this.bt100 = new System.Windows.Forms.Button();
+            this.bt50 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -313,6 +313,7 @@
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(142, 63);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(152, 31);
             this.textBox5.TabIndex = 64;
             this.textBox5.Text = "$0.00";
@@ -329,14 +330,15 @@
             this.label3.TabIndex = 63;
             this.label3.Text = "Cambio:";
             // 
-            // textBox6
+            // tbTotal
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(142, 32);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(152, 31);
-            this.textBox6.TabIndex = 62;
-            this.textBox6.Text = "$0.00";
+            this.tbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTotal.Location = new System.Drawing.Point(142, 32);
+            this.tbTotal.Name = "tbTotal";
+            this.tbTotal.ReadOnly = true;
+            this.tbTotal.Size = new System.Drawing.Size(152, 31);
+            this.tbTotal.TabIndex = 62;
+            this.tbTotal.Text = "$0.00";
             // 
             // label4
             // 
@@ -917,9 +919,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbEfectivo);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.tbTotal);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Location = new System.Drawing.Point(685, 568);
@@ -939,50 +941,55 @@
             this.label8.TabIndex = 65;
             this.label8.Text = "Efectivo:";
             // 
-            // textBox1
+            // tbEfectivo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(142, 1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 31);
-            this.textBox1.TabIndex = 66;
-            this.textBox1.Text = "$0.00";
+            this.tbEfectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEfectivo.Location = new System.Drawing.Point(142, 1);
+            this.tbEfectivo.Name = "tbEfectivo";
+            this.tbEfectivo.ReadOnly = true;
+            this.tbEfectivo.Size = new System.Drawing.Size(152, 31);
+            this.tbEfectivo.TabIndex = 66;
+            this.tbEfectivo.Text = "$0.00";
             // 
-            // button4
+            // bt500
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.Location = new System.Drawing.Point(49, 585);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 68);
-            this.button4.TabIndex = 115;
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt500.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt500.BackgroundImage")));
+            this.bt500.Location = new System.Drawing.Point(7, 585);
+            this.bt500.Name = "bt500";
+            this.bt500.Size = new System.Drawing.Size(139, 68);
+            this.bt500.TabIndex = 115;
+            this.bt500.UseVisualStyleBackColor = true;
+            this.bt500.Click += new System.EventHandler(this.bt500_Click);
             // 
-            // button6
+            // bt200
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.Location = new System.Drawing.Point(194, 585);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 68);
-            this.button6.TabIndex = 116;
-            this.button6.UseVisualStyleBackColor = true;
+            this.bt200.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt200.BackgroundImage")));
+            this.bt200.Location = new System.Drawing.Point(152, 585);
+            this.bt200.Name = "bt200";
+            this.bt200.Size = new System.Drawing.Size(139, 68);
+            this.bt200.TabIndex = 116;
+            this.bt200.UseVisualStyleBackColor = true;
+            this.bt200.Click += new System.EventHandler(this.bt200_Click);
             // 
-            // button7
+            // bt100
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.Location = new System.Drawing.Point(339, 586);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(139, 68);
-            this.button7.TabIndex = 117;
-            this.button7.UseVisualStyleBackColor = true;
+            this.bt100.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt100.BackgroundImage")));
+            this.bt100.Location = new System.Drawing.Point(297, 586);
+            this.bt100.Name = "bt100";
+            this.bt100.Size = new System.Drawing.Size(139, 68);
+            this.bt100.TabIndex = 117;
+            this.bt100.UseVisualStyleBackColor = true;
+            this.bt100.Click += new System.EventHandler(this.bt100_Click);
             // 
-            // button8
+            // bt50
             // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.Location = new System.Drawing.Point(484, 587);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(139, 68);
-            this.button8.TabIndex = 118;
-            this.button8.UseVisualStyleBackColor = true;
+            this.bt50.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt50.BackgroundImage")));
+            this.bt50.Location = new System.Drawing.Point(442, 587);
+            this.bt50.Name = "bt50";
+            this.bt50.Size = new System.Drawing.Size(139, 68);
+            this.bt50.TabIndex = 118;
+            this.bt50.UseVisualStyleBackColor = true;
+            this.bt50.Click += new System.EventHandler(this.bt50_Click);
             // 
             // ventaBoletos
             // 
@@ -990,10 +997,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1006, 684);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.bt50);
+            this.Controls.Add(this.bt100);
+            this.Controls.Add(this.bt200);
+            this.Controls.Add(this.bt500);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb40);
             this.Controls.Add(this.lb39);
@@ -1093,7 +1100,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbDuracion;
         private System.Windows.Forms.TextBox tbNombrePeli;
@@ -1150,11 +1157,11 @@
         private System.Windows.Forms.Label lb37;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox tbEfectivo;
+        private System.Windows.Forms.Button bt500;
+        private System.Windows.Forms.Button bt200;
+        private System.Windows.Forms.Button bt100;
+        private System.Windows.Forms.Button bt50;
 
     }
 }

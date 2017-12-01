@@ -17,7 +17,9 @@ namespace VentaBoletosCine
         DBConnection conexionBD;
 
         int numAsiento;
-
+        float efectivo = 0;
+        float total;
+       
         public ventaBoletos(DBConnection conexion)
         {
             listaetiquetas = new List<Label>();
@@ -181,6 +183,95 @@ namespace VentaBoletosCine
         {
             
 
+        }
+
+        private void bt500_Click(object sender, EventArgs e)
+        {
+            if (total != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    efectivo = 500;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    efectivo = 0;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+            }
+            else
+                MessageBox.Show("No se ha registrado ningún boleto");
+
+
+            
+            
+
+
+
+        }
+
+        private void bt200_Click(object sender, EventArgs e)
+        {
+            if (total != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    efectivo = 200;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    efectivo = 0;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+            }
+            else
+                MessageBox.Show("No se ha registrado ningún boleto");
+        }
+
+        private void bt100_Click(object sender, EventArgs e)
+        {
+            if (total != 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    efectivo = 100;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    efectivo = 0;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+            }
+            else
+                MessageBox.Show("No se ha registrado ningún boleto");
+
+        }
+
+        private void bt50_Click(object sender, EventArgs e)
+        {
+            if (total != 0)
+            {
+
+                DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    efectivo = 50;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    efectivo = 0;
+                    tbEfectivo.Text = Convert.ToString(efectivo);
+                }
+            }
+            else
+                MessageBox.Show("No se ha registrado ningún boleto");
         }
     }
 }
