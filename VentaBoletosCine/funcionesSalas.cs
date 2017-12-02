@@ -210,9 +210,9 @@ namespace VentaBoletosCine
         private void button8_Click(object sender, EventArgs e)
         {
             if ((textBox4.Text != "") &&
-               comboBoxPeliculas.SelectedIndex != -1 &&
-               comboBoxSala.SelectedIndex != -1 &&
-               comboBoxHorario.SelectedIndex != -1
+               (comboBoxPeliculas.Text !="") &&
+               (comboBoxSala.Text !="") &&
+               (comboBoxHorario.Text != "")
                )
             {
                 int horario = (int)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
@@ -254,6 +254,23 @@ namespace VentaBoletosCine
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlDataAdapter DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from funcion";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable table = new DataTable();
+            DA.Fill(table);
+
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = table;
+
+            DataGrid DG = new DataGrid();
+            DG.ShowData(bSource);
+            DG.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             MySqlDataAdapter DA = new MySqlDataAdapter();
             string sqlSelectAll = "SELECT * from funcion";

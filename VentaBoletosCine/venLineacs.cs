@@ -24,5 +24,11 @@ namespace VentaBoletosCine
         {
             this.DoubleBuffered = true;
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            ventaBoletos ventaBoletos = new ventaBoletos(conexionBD);
+            ventaBoletos.ShowDialog();
+        }
     }
 }

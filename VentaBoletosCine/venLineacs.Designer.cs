@@ -54,7 +54,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbSucursal = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lbP16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPelicula3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPelicula2)).BeginInit();
@@ -245,12 +244,14 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(743, 169);
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(591, 165);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegresar.Size = new System.Drawing.Size(108, 33);
             this.btnRegresar.TabIndex = 35;
-            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.Text = "Aceptar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // label2
             // 
@@ -329,22 +330,10 @@
             this.cbSucursal.BackColor = System.Drawing.Color.OldLace;
             this.cbSucursal.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSucursal.FormattingEnabled = true;
-            this.cbSucursal.Location = new System.Drawing.Point(484, 168);
+            this.cbSucursal.Location = new System.Drawing.Point(348, 169);
             this.cbSucursal.Name = "cbSucursal";
             this.cbSucursal.Size = new System.Drawing.Size(237, 25);
             this.cbSucursal.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(224, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 28);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Seleccione una sucursal:";
             // 
             // venLineacs
             // 
@@ -377,7 +366,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cbSucursal);
-            this.Controls.Add(this.label1);
             this.Name = "venLineacs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta en línea";
@@ -420,6 +408,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbSucursal;
-        private System.Windows.Forms.Label label1;
     }
 }

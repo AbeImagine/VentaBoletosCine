@@ -16,10 +16,12 @@ namespace VentaBoletosCine
         List<Label> listaetiquetas;
         DBConnection conexionBD;
 
-        int numAsiento;
-        float efectivo = 0;
-        float total;
-       
+        
+        double efectivo = 0;
+        double total=0;
+        double precioBotelo = 50;
+        double cambio = 0;
+
         public ventaBoletos(DBConnection conexion)
         {
             listaetiquetas = new List<Label>();
@@ -42,7 +44,7 @@ namespace VentaBoletosCine
             int numBoleto = random.Next(); ;
 
             return numBoleto;
-
+            
             
 
         }
@@ -50,11 +52,14 @@ namespace VentaBoletosCine
         private void ventaBoletos_Load(object sender, EventArgs e)
         {
 
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             timer1.Start();
 
             tbFecha.ReadOnly = true;
             tbHora.ReadOnly = true;
             tbNumBoleto.ReadOnly = true;
+            tbNumBoleto.Text = "Sin número";
             tbNumasiento.Text = "Sin seleccionar";
 
             this.DoubleBuffered = true;
@@ -101,7 +106,7 @@ namespace VentaBoletosCine
          */
         public void limpiaRegistro()
         {
-            comboBox1.Text = "Número de Sala";
+            cbNumSala.Text = "Número de Sala";
             tbDuracion.Clear();
             tbNombrePeli.Clear();
             tbNumasiento.Clear();
@@ -177,55 +182,86 @@ namespace VentaBoletosCine
         {
             listaetiquetas[numAsiento].BackColor = Color.Red;
             tbNumasiento.Text = Convert.ToString( numAsiento+1 );
+            tbNumBoleto.Text  = Convert.ToString(generaNumBoleto()) ;
+              
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            dataGridView1.Rows.Add(tbNumBoleto.Text, tbNumasiento.Text, cbNumSala.Text, tbPrecio.Text);
+            total = (dataGridView1.Rows.Count - 1) * precioBotelo;
+            tbTotal.Text = Convert.ToString(total.ToString("C"));
+
+            if (total == 0)
+            {
+                cambio = 0;
+                tbCambio.Text = Convert.ToString(cambio.ToString("C"));
+            }
+
 
         }
 
         private void bt500_Click(object sender, EventArgs e)
         {
-            if (total != 0)
+            if (total >=50 || total>=500)
             {
+                efectivo = 500;
                 DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 if (dialogResult == DialogResult.Yes)
                 {
-                    efectivo = 500;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    checaTotal();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
                     efectivo = 0;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 }
             }
             else
                 MessageBox.Show("No se ha registrado ningún boleto");
-
-
-            
-            
-
-
-
         }
+
+        public void checaTotal()
+        {
+
+            tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
+            cambio = efectivo - total;
+            tbCambio.Text = Convert.ToString(cambio.ToString("C"));
+            total = total - efectivo;
+            if (total <= 0)
+            {
+                total = 0;
+                dataGridView1.Rows.Clear();
+                efectivo = 0;
+                tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
+            }
+            tbTotal.Text = Convert.ToString(total.ToString("C"));
+
+            if (cambio < 0 || cambio <= 0)
+            {
+                cambio = 0;
+                tbCambio.Text = Convert.ToString( cambio.ToString("C"));
+            }
+        }
+
 
         private void bt200_Click(object sender, EventArgs e)
         {
-            if (total != 0)
+            if (total >= 50 )
             {
+                efectivo = 200;
                 DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 if (dialogResult == DialogResult.Yes)
                 {
-                    efectivo = 200;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+
+                    checaTotal();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
                     efectivo = 0;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    tbEfectivo.Text = Convert.ToString(efectivo.ToString("C") );
                 }
             }
             else
@@ -234,18 +270,19 @@ namespace VentaBoletosCine
 
         private void bt100_Click(object sender, EventArgs e)
         {
-            if (total != 0)
+            if (total >= 50)
             {
+                efectivo = 100;
                 DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 if (dialogResult == DialogResult.Yes)
                 {
-                    efectivo = 100;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    checaTotal();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
                     efectivo = 0;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 }
             }
             else
@@ -255,23 +292,56 @@ namespace VentaBoletosCine
 
         private void bt50_Click(object sender, EventArgs e)
         {
-            if (total != 0)
-            {
-
+           if (total != 0)
+           {
+                efectivo = 50;
                 DialogResult dialogResult = MessageBox.Show("¿Desea realizar esta operación?", "Información", MessageBoxButtons.YesNo);
+                tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 if (dialogResult == DialogResult.Yes)
                 {
-                    efectivo = 50;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    checaTotal();
                 }
                 else if (dialogResult == DialogResult.No)
                 {
                     efectivo = 0;
-                    tbEfectivo.Text = Convert.ToString(efectivo);
+                    tbEfectivo.Text = Convert.ToString( efectivo.ToString("C"));
                 }
             }
             else
                 MessageBox.Show("No se ha registrado ningún boleto");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 1)
+            {
+                MessageBox.Show("No se ha registrado ningun boleto");
+            }
+            else
+            {
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                total = (dataGridView1.Rows.Count - 1) * precioBotelo;
+                tbTotal.Text = Convert.ToString( total.ToString("C"));
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 1)
+            {
+                MessageBox.Show("No se ha registrado ningun boleto");
+            }
+            else
+            {
+                
+              
+                   
+            }
         }
     }
 }
