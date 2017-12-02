@@ -165,14 +165,7 @@ namespace VentaBoletosCine
 
             listaetiquetas.Add(lb31);
             listaetiquetas.Add(lb32);
-            listaetiquetas.Add(lb33);
-            listaetiquetas.Add(lb34);
-            listaetiquetas.Add(lb35);
-            listaetiquetas.Add(lb36);
-            listaetiquetas.Add(lb37);
-            listaetiquetas.Add(lb38);
-            listaetiquetas.Add(lb39);
-            listaetiquetas.Add(lb40);
+
         }
 
         /*

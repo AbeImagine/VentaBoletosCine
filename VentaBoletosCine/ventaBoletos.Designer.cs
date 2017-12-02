@@ -93,18 +93,10 @@
             this.lb28 = new System.Windows.Forms.Label();
             this.lb27 = new System.Windows.Forms.Label();
             this.lb26 = new System.Windows.Forms.Label();
-            this.lb36 = new System.Windows.Forms.Label();
-            this.lb35 = new System.Windows.Forms.Label();
-            this.lb34 = new System.Windows.Forms.Label();
-            this.lb33 = new System.Windows.Forms.Label();
             this.lb32 = new System.Windows.Forms.Label();
             this.lb31 = new System.Windows.Forms.Label();
             this.lb30 = new System.Windows.Forms.Label();
             this.lb29 = new System.Windows.Forms.Label();
-            this.lb40 = new System.Windows.Forms.Label();
-            this.lb39 = new System.Windows.Forms.Label();
-            this.lb38 = new System.Windows.Forms.Label();
-            this.lb37 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.tbEfectivo = new System.Windows.Forms.TextBox();
@@ -112,10 +104,34 @@
             this.bt200 = new System.Windows.Forms.Button();
             this.bt100 = new System.Windows.Forms.Button();
             this.bt50 = new System.Windows.Forms.Button();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -775,54 +791,6 @@
             this.lb26.TabIndex = 99;
             this.lb26.Text = "26";
             // 
-            // lb36
-            // 
-            this.lb36.AutoSize = true;
-            this.lb36.BackColor = System.Drawing.Color.Navy;
-            this.lb36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb36.ForeColor = System.Drawing.Color.White;
-            this.lb36.Location = new System.Drawing.Point(449, 477);
-            this.lb36.Name = "lb36";
-            this.lb36.Size = new System.Drawing.Size(38, 25);
-            this.lb36.TabIndex = 109;
-            this.lb36.Text = "36";
-            // 
-            // lb35
-            // 
-            this.lb35.AutoSize = true;
-            this.lb35.BackColor = System.Drawing.Color.Navy;
-            this.lb35.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb35.ForeColor = System.Drawing.Color.White;
-            this.lb35.Location = new System.Drawing.Point(395, 478);
-            this.lb35.Name = "lb35";
-            this.lb35.Size = new System.Drawing.Size(38, 25);
-            this.lb35.TabIndex = 108;
-            this.lb35.Text = "35";
-            // 
-            // lb34
-            // 
-            this.lb34.AutoSize = true;
-            this.lb34.BackColor = System.Drawing.Color.Navy;
-            this.lb34.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb34.ForeColor = System.Drawing.Color.White;
-            this.lb34.Location = new System.Drawing.Point(340, 476);
-            this.lb34.Name = "lb34";
-            this.lb34.Size = new System.Drawing.Size(38, 25);
-            this.lb34.TabIndex = 107;
-            this.lb34.Text = "34";
-            // 
-            // lb33
-            // 
-            this.lb33.AutoSize = true;
-            this.lb33.BackColor = System.Drawing.Color.Navy;
-            this.lb33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb33.ForeColor = System.Drawing.Color.White;
-            this.lb33.Location = new System.Drawing.Point(285, 476);
-            this.lb33.Name = "lb33";
-            this.lb33.Size = new System.Drawing.Size(38, 25);
-            this.lb33.TabIndex = 106;
-            this.lb33.Text = "33";
-            // 
             // lb32
             // 
             this.lb32.AutoSize = true;
@@ -870,54 +838,6 @@
             this.lb29.Size = new System.Drawing.Size(38, 25);
             this.lb29.TabIndex = 102;
             this.lb29.Text = "29";
-            // 
-            // lb40
-            // 
-            this.lb40.AutoSize = true;
-            this.lb40.BackColor = System.Drawing.Color.Navy;
-            this.lb40.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb40.ForeColor = System.Drawing.Color.White;
-            this.lb40.Location = new System.Drawing.Point(177, 524);
-            this.lb40.Name = "lb40";
-            this.lb40.Size = new System.Drawing.Size(38, 25);
-            this.lb40.TabIndex = 113;
-            this.lb40.Text = "40";
-            // 
-            // lb39
-            // 
-            this.lb39.AutoSize = true;
-            this.lb39.BackColor = System.Drawing.Color.Navy;
-            this.lb39.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb39.ForeColor = System.Drawing.Color.White;
-            this.lb39.Location = new System.Drawing.Point(123, 525);
-            this.lb39.Name = "lb39";
-            this.lb39.Size = new System.Drawing.Size(38, 25);
-            this.lb39.TabIndex = 112;
-            this.lb39.Text = "39";
-            // 
-            // lb38
-            // 
-            this.lb38.AutoSize = true;
-            this.lb38.BackColor = System.Drawing.Color.Navy;
-            this.lb38.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb38.ForeColor = System.Drawing.Color.White;
-            this.lb38.Location = new System.Drawing.Point(68, 523);
-            this.lb38.Name = "lb38";
-            this.lb38.Size = new System.Drawing.Size(38, 25);
-            this.lb38.TabIndex = 111;
-            this.lb38.Text = "38";
-            // 
-            // lb37
-            // 
-            this.lb37.AutoSize = true;
-            this.lb37.BackColor = System.Drawing.Color.Navy;
-            this.lb37.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb37.ForeColor = System.Drawing.Color.White;
-            this.lb37.Location = new System.Drawing.Point(14, 523);
-            this.lb37.Name = "lb37";
-            this.lb37.Size = new System.Drawing.Size(38, 25);
-            this.lb37.TabIndex = 110;
-            this.lb37.Text = "37";
             // 
             // panel1
             // 
@@ -994,25 +914,161 @@
             this.bt50.UseVisualStyleBackColor = true;
             this.bt50.Click += new System.EventHandler(this.bt50_Click);
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox11.Location = new System.Drawing.Point(182, 526);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox11.TabIndex = 142;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox12.Location = new System.Drawing.Point(130, 527);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox12.TabIndex = 141;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox13.Location = new System.Drawing.Point(74, 526);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox13.TabIndex = 140;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox14.BackgroundImage")));
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox14.Location = new System.Drawing.Point(15, 527);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox14.TabIndex = 139;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox7.Location = new System.Drawing.Point(467, 525);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox7.TabIndex = 138;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox8.Location = new System.Drawing.Point(415, 526);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox8.TabIndex = 137;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox9.Location = new System.Drawing.Point(359, 525);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox9.TabIndex = 136;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox10.Location = new System.Drawing.Point(300, 526);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox10.TabIndex = 135;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox6.Location = new System.Drawing.Point(451, 480);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox6.TabIndex = 134;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Location = new System.Drawing.Point(403, 480);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox5.TabIndex = 133;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Location = new System.Drawing.Point(348, 479);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox4.TabIndex = 132;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Navy;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Location = new System.Drawing.Point(287, 480);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 27);
+            this.pictureBox3.TabIndex = 131;
+            this.pictureBox3.TabStop = false;
+            // 
             // ventaBoletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1006, 684);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bt50);
             this.Controls.Add(this.bt100);
             this.Controls.Add(this.bt200);
             this.Controls.Add(this.bt500);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lb40);
-            this.Controls.Add(this.lb39);
-            this.Controls.Add(this.lb38);
-            this.Controls.Add(this.lb37);
-            this.Controls.Add(this.lb36);
-            this.Controls.Add(this.lb35);
-            this.Controls.Add(this.lb34);
-            this.Controls.Add(this.lb33);
             this.Controls.Add(this.lb32);
             this.Controls.Add(this.lb31);
             this.Controls.Add(this.lb30);
@@ -1076,6 +1132,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1144,18 +1212,10 @@
         private System.Windows.Forms.Label lb28;
         private System.Windows.Forms.Label lb27;
         private System.Windows.Forms.Label lb26;
-        private System.Windows.Forms.Label lb36;
-        private System.Windows.Forms.Label lb35;
-        private System.Windows.Forms.Label lb34;
-        private System.Windows.Forms.Label lb33;
         private System.Windows.Forms.Label lb32;
         private System.Windows.Forms.Label lb31;
         private System.Windows.Forms.Label lb30;
         private System.Windows.Forms.Label lb29;
-        private System.Windows.Forms.Label lb40;
-        private System.Windows.Forms.Label lb39;
-        private System.Windows.Forms.Label lb38;
-        private System.Windows.Forms.Label lb37;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbEfectivo;
@@ -1163,6 +1223,18 @@
         private System.Windows.Forms.Button bt200;
         private System.Windows.Forms.Button bt100;
         private System.Windows.Forms.Button bt50;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
 
     }
 }
