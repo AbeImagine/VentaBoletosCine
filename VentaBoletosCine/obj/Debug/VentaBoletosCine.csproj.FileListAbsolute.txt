@@ -39,3 +39,5 @@ C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\V
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\MySql.Data.dll
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml

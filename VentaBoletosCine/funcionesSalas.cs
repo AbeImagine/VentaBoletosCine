@@ -22,6 +22,7 @@ namespace VentaBoletosCine
             InitializeComponent();
             FillComboBoxPelicula();
             FillComboBoxSala();
+            FillComboBoxHorario();
         }
 
         private void FillComboBoxSala()
@@ -32,25 +33,17 @@ namespace VentaBoletosCine
             try
             {
                 reader = command.ExecuteReader();
-
-                if (reader.Read())
+                int text;
+                while (reader.Read())
                 {
-                    string text;
-                    int i = 0;
-                    text = reader.GetString(i);
-                    while (text != null)
-                    {
-                        comboBoxSala.Items.Add(text);
-                        //text = null;
-                        i++;
-                        text = reader.GetString(i);
-                    }
+                    text = reader.GetInt32(0);
+                    comboBoxSala.Items.Add(text);
                 }
                 reader.Close();
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
                 reader.Close();
             }
         }
@@ -64,25 +57,30 @@ namespace VentaBoletosCine
             {
                 reader = command.ExecuteReader();
 
-                if (reader.Read())
+                string text;
+                while (reader.Read())
                 {
-                    string text;
-                    int i = 0;
-                    text = reader.GetString(i);
-                    while (text != null)
-                    {
-                        comboBoxPeliculas.Items.Add(text);
-                        text = null;
-                        i++;
-                        text = reader.GetString(i);
-                    }
+                    text = reader.GetString(0);
+                    comboBoxPeliculas.Items.Add(text);
                 }
+
                 reader.Close();
             }
             catch (Exception e)
             {
-                //MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
                 reader.Close();
+            }
+        }
+
+        private void FillComboBoxHorario()
+        {
+            int aux = 10;
+            string saux;
+            for (int i = 0; i < 5; i++)
+            {
+                saux = (i * aux) + ":00";
+                comboBoxHorario.Items.Add(saux);
             }
         }
 
@@ -215,11 +213,12 @@ namespace VentaBoletosCine
                (comboBoxHorario.Text != "")
                )
             {
-                int horario = (int)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
+                string horario = (string)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
                 int num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
                 int id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
+                int precio = int.Parse(textBox4.Text);
 
-                string commandtxt = "INSERT INTO  (hora, num_sala, id_pelicula) VALUES (" + horario + "," + num_sala + "," + id_pelicula + ")";
+                string commandtxt = "INSERT INTO funcion (hora, num_sala, id_pelicula, precio) VALUES ('" + horario + "'," + num_sala + "," + id_pelicula + "," + precio + ")";
                 MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
 
                 try
@@ -228,9 +227,9 @@ namespace VentaBoletosCine
                     MessageBox.Show("Registro exitoso");
                     reader.Close();
                 }
-                catch (Exception ex)
+                catch (Exception exception)
                 {
-                    //MessageBox.Show(e.Message);
+                    MessageBox.Show(exception.Message);
                 }
 
             }
