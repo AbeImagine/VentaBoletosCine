@@ -142,6 +142,7 @@
             this.tbSipnosis.Size = new System.Drawing.Size(330, 73);
             this.tbSipnosis.TabIndex = 3;
             this.tbSipnosis.Text = "";
+            this.tbSipnosis.TextChanged += new System.EventHandler(this.tbSipnosis_TextChanged);
             this.tbSipnosis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSipnosis_KeyPress);
             this.tbSipnosis.Leave += new System.EventHandler(this.tbSipnosis_Leave);
             // 
@@ -248,8 +249,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
             // bindingNavigatorDeleteItem

@@ -78,14 +78,17 @@ namespace VentaBoletosCine
                             MessageBox.Show("Has accesado al sistema");
                             bool b = reader.GetBoolean("administrador");
                             Menu ventana = new Menu(conexionBD, b);
-                            ventana.Show();
+                            this.Hide();
+                            reader.Close();
+                            ventana.ShowDialog();
+                            this.Show();
+                            this.Focus();
                         }
                         else
                         {
                             MessageBox.Show("Contraseña incorrecta");
                         }
                     }
-                    reader.Close();
                 }
                 catch (Exception exception)
                 {

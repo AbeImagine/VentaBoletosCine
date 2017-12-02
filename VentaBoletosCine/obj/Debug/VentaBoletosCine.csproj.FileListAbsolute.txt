@@ -41,3 +41,4 @@ C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\M
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Buscador.resources

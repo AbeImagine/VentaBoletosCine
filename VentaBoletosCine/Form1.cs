@@ -226,7 +226,7 @@ namespace VentaBoletosCine
         private void tbSipnosis_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) || e.KeyChar != (char)Keys.Space))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -250,14 +250,13 @@ namespace VentaBoletosCine
 
         private void tbCreditosRep_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) || e.KeyChar != (char)Keys.Space))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
                 return;
             }
             cuentaCredReparto = tbCreditosRep.Text;
-            
         }
 
         private void tbCreditosRep_Leave(object sender, EventArgs e)
@@ -269,6 +268,11 @@ namespace VentaBoletosCine
                 MessageBox.Show("Solo esta permitido ingresar " + Convert.ToString( tbCreditosRep.MaxLength-2 ) + " cáracteres");
                 tbCreditosRep.Focus();
             }
+        }
+
+        private void tbSipnosis_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         

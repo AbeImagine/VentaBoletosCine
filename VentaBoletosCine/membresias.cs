@@ -20,7 +20,9 @@ namespace VentaBoletosCine
         DBConnection conexionBD;
         MySqlDataReader reader;
         MySqlCommand comando;
+        MySqlDataAdapter DA;
 
+        DataGridView table;
 
         String nombreMembresia;
         String telefono;
@@ -43,11 +45,22 @@ namespace VentaBoletosCine
         {
             conexionBD = conexion;
             InitializeComponent();
-            cbTipoMemb.Items.Add("Administrador");
             cbTipoMemb.Items.Add("Regular");
+            cbTipoMemb.Items.Add("Administrador");
+            table = new DataGridView();
 
             lista = new List<int>();
 
+
+            DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from miembro";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable dataTable = new DataTable();
+            BindingSource bS = new BindingSource();
+            DA.Fill(dataTable);
+            bS.DataSource = dataTable;
+            table.DataSource = bS;
         }
 
         private void membresias_Load(object sender, EventArgs e)
@@ -97,7 +110,6 @@ namespace VentaBoletosCine
                   (tbApellidoM.Text != "") &&
                   (tbConfPass.Text != "") 
                 )
-                
             {
 
                 nombreMembresia = tbNombre.Text + " " + tbApellidoP.Text + " " + tbApellidoM.Text;
@@ -105,10 +117,6 @@ namespace VentaBoletosCine
                 telefono = maskedTextBox1.Text;
                 email = tbEmail.Text;
                 password = tbPass.Text;
-               
-
-                  
-
                     comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
                     try
                     {
@@ -134,25 +142,15 @@ namespace VentaBoletosCine
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MySqlDataAdapter DA = new MySqlDataAdapter();
-            string sqlSelectAll = "SELECT * from miembro";
-            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
-
-            DataTable table = new DataTable();
-            DA.Fill(table);
-
-            BindingSource bSource = new BindingSource();
-            bSource.DataSource = table;
-
             DataGrid DG = new DataGrid();
-            DG.ShowData(bSource);
+            DG.ShowData((BindingSource)table.DataSource);
             DG.Show();
         }
 
-/*
- * Descripcion: Comprueba que una cadena si tiene un formato de email revisando los dominios
- * de correos electronicos queexisten actualmente  
- */ 
+        /*
+         * Descripcion: Comprueba que una cadena si tiene un formato de email revisando los dominios
+         * de correos electronicos que existen actualmente  
+         */ 
         public bool IsValidEmail(string strIn)
         {
             invalid = false;
@@ -423,6 +421,30 @@ namespace VentaBoletosCine
             }
             else
                 activaDesactivaTextbox(false);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Buscador busca;
+            busca = new Buscador(conexionBD, "miembro");
+            busca.LlenarComboBox((BindingSource)table.DataSource);
+            busca.ShowDialog();
+            if (busca.id != -1)
+            {
+                LlenaCampos(busca.id);
+            }
+        }
+
+        private void LlenaCampos(int id)
+        {
+            /*
+            string nombres = (string)(table.Rows[id].Cells[1].Value);
+            string[] separacion = nombres.Split(' ');
+            tbNombre.Text = separacion[0];
+            tbApellidoP.Text = separacion[1];
+            tbApellidoM.Text = separacion[2];
+             */
+            
         }
 
     }

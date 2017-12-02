@@ -55,6 +55,12 @@
     <Compile Include="boleto.Designer.cs">
       <DependentUpon>boleto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscador.Designer.cs">
+      <DependentUpon>Buscador.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataGrid.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="boleto.resx">
       <DependentUpon>boleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscador.resx">
+      <DependentUpon>Buscador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

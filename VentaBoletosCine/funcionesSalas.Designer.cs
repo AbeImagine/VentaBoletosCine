@@ -85,7 +85,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(121, 20);
             this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "$50.00";
             // 
             // label6
             // 

@@ -15,14 +15,17 @@ namespace VentaBoletosCine
     {
         DBConnection conexionBD;
         MySqlDataReader reader;
+        int precio;
 
         public funcionesSalas(DBConnection conexion)
         {
+            precio = 50;
             conexionBD = conexion;
             InitializeComponent();
             FillComboBoxPelicula();
             FillComboBoxSala();
             FillComboBoxHorario();
+            textBox4.Text = precio.ToString("C");
         }
 
         private void FillComboBoxSala()
@@ -216,7 +219,7 @@ namespace VentaBoletosCine
                 string horario = (string)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
                 int num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
                 int id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
-                int precio = int.Parse(textBox4.Text);
+                //int precio = int.Parse(textBox4.Text);
 
                 string commandtxt = "INSERT INTO funcion (hora, num_sala, id_pelicula, precio) VALUES ('" + horario + "'," + num_sala + "," + id_pelicula + "," + precio + ")";
                 MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);

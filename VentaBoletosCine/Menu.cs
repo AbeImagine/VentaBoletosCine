@@ -30,32 +30,47 @@ namespace VentaBoletosCine
         private void button1_Click(object sender, EventArgs e)
         {
             ventaBoletos  venta = new ventaBoletos(conexionBD);
-            venta.Show();
+            this.Hide();
+            venta.ShowDialog();
+            this.Show();
+            this.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Capturista capturista = new Capturista(conexionBD);
-            capturista.Show();
+            this.Hide();
+            capturista.ShowDialog();
+            this.Show();
+            this.Focus();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             membresias mem = new membresias(conexionBD);
-            mem.Show();
+            this.Hide();
+            mem.ShowDialog();
+            this.Show();
+            this.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             boleto bole = new boleto(conexionBD);
-            bole.Show();
+            this.Hide();
+            bole.ShowDialog();
+            this.Show();
+            this.Focus();
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             venLineacs venta = new venLineacs(conexionBD);
-            venta.Show();
+            this.Hide();
+            venta.ShowDialog();
+            this.Show();
+            this.Focus();
 
         }
 
@@ -68,14 +83,20 @@ namespace VentaBoletosCine
         private void button6_Click(object sender, EventArgs e)
         {
             ventaUsuario ventaUsuario = new ventaUsuario(conexionBD);
-            ventaUsuario.Show();
+            this.Hide();
+            ventaUsuario.ShowDialog();
+            this.Show();
+            this.Focus();
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             funcionesSalas funcionesSala = new funcionesSalas(conexionBD);
-            funcionesSala.Show();
+            this.Hide();
+            funcionesSala.ShowDialog();
+            this.Show();
+            this.Focus();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

@@ -80,7 +80,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label5.Location = new System.Drawing.Point(11, 241);
+            this.label5.Location = new System.Drawing.Point(11, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 28);
             this.label5.TabIndex = 25;
@@ -90,7 +90,7 @@
             // 
             this.tbApellidoP.BackColor = System.Drawing.Color.Wheat;
             this.tbApellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApellidoP.Location = new System.Drawing.Point(211, 246);
+            this.tbApellidoP.Location = new System.Drawing.Point(211, 211);
             this.tbApellidoP.Name = "tbApellidoP";
             this.tbApellidoP.Size = new System.Drawing.Size(301, 24);
             this.tbApellidoP.TabIndex = 3;
@@ -220,7 +220,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label3.Location = new System.Drawing.Point(12, 207);
+            this.label3.Location = new System.Drawing.Point(11, 246);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 28);
             this.label3.TabIndex = 41;
@@ -230,7 +230,7 @@
             // 
             this.tbApellidoM.BackColor = System.Drawing.Color.Wheat;
             this.tbApellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbApellidoM.Location = new System.Drawing.Point(211, 211);
+            this.tbApellidoM.Location = new System.Drawing.Point(211, 250);
             this.tbApellidoM.Name = "tbApellidoM";
             this.tbApellidoM.Size = new System.Drawing.Size(301, 24);
             this.tbApellidoM.TabIndex = 2;
@@ -270,6 +270,7 @@
             this.button4.Text = "Buscar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
