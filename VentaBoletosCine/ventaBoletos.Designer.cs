@@ -46,7 +46,7 @@
             this.Nombre = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.cbNumSala = new System.Windows.Forms.ComboBox();
+            this.cbIdFunc = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -270,15 +270,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // cbNumSala
+            // cbIdFunc
             // 
-            this.cbNumSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNumSala.FormattingEnabled = true;
-            this.cbNumSala.Location = new System.Drawing.Point(530, 252);
-            this.cbNumSala.Name = "cbNumSala";
-            this.cbNumSala.Size = new System.Drawing.Size(190, 26);
-            this.cbNumSala.TabIndex = 59;
-            this.cbNumSala.Text = "Número de  Sala";
+            this.cbIdFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbIdFunc.FormattingEnabled = true;
+            this.cbIdFunc.Location = new System.Drawing.Point(530, 252);
+            this.cbIdFunc.Name = "cbIdFunc";
+            this.cbIdFunc.Size = new System.Drawing.Size(190, 26);
+            this.cbIdFunc.TabIndex = 59;
+            this.cbIdFunc.Text = "Número de  función";
+            this.cbIdFunc.SelectedIndexChanged += new System.EventHandler(this.cbNumSala_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -1109,7 +1110,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cbNumSala);
+            this.Controls.Add(this.cbIdFunc);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tbNumasiento);
@@ -1165,7 +1166,7 @@
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox cbNumSala;
+        private System.Windows.Forms.ComboBox cbIdFunc;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox tbCambio;
         private System.Windows.Forms.Label label3;

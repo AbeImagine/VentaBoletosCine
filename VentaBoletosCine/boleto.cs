@@ -23,10 +23,11 @@ namespace VentaBoletosCine
         public event delegadoPasaDato eventoPasaNumBoleto;
 
 
-        public boleto(DBConnection conexion)
+        public boleto(DBConnection conexion, List<Label> lista)
         {
             conexion = conexionBD;
             listaAsientos = new List<Button>();
+            listaColoresAsientos = lista;
 
             InitializeComponent();
         }

@@ -15,6 +15,7 @@ namespace VentaBoletosCine
     {
         DBConnection conexionBD;
         MySqlDataReader reader;
+        Funcion funcion;
         int precio;
 
         public funcionesSalas(DBConnection conexion)
@@ -210,31 +211,25 @@ namespace VentaBoletosCine
 
         private void button8_Click(object sender, EventArgs e)
         {
+            funcion = new Funcion();
+
             if ((textBox4.Text != "") &&
                (comboBoxPeliculas.Text !="") &&
                (comboBoxSala.Text !="") &&
                (comboBoxHorario.Text != "")
                )
             {
-                string horario = (string)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
-                int num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
-                int id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
-                //int precio = int.Parse(textBox4.Text);
+                funcion.hora = (string)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
+                funcion.num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
+                funcion.id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
+                funcion.precio = precio;
 
-                string commandtxt = "INSERT INTO funcion (hora, num_sala, id_pelicula, precio) VALUES ('" + horario + "'," + num_sala + "," + id_pelicula + "," + precio + ")";
-                MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
-
-                try
+                if (funcion.Registrar(conexionBD) == true)
                 {
-                    MySqlDataReader reader = command.ExecuteReader();
                     MessageBox.Show("Registro exitoso");
-                    reader.Close();
                 }
-                catch (Exception exception)
-                {
-                    MessageBox.Show(exception.Message);
-                }
-
+                else
+                    MessageBox.Show("Error en el registro");
             }
             else
                 MessageBox.Show("Ingrese todos los datos para poder guardar el registro");

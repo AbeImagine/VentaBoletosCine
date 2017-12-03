@@ -56,9 +56,9 @@ namespace VentaBoletosCine
 
         private void button3_Click(object sender, EventArgs e)
         {
-            boleto bole = new boleto(conexionBD);
+            //boleto bole = new boleto(conexionBD);
             this.Hide();
-            bole.ShowDialog();
+            //bole.ShowDialog();
             this.Show();
             this.Focus();
 

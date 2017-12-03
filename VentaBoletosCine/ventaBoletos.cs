@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace VentaBoletosCine
 {
@@ -15,6 +16,10 @@ namespace VentaBoletosCine
 
         List<Label> listaetiquetas;
         DBConnection conexionBD;
+        MySqlDataReader reader;
+        private Funcion func;
+        private Pelicula peli;
+        private Venta venta;
 
         
         double efectivo = 0;
@@ -35,18 +40,39 @@ namespace VentaBoletosCine
 
             // Enable timer.
             timer1.Enabled = true;
+
+            FillComboBoxFunc();
+        }
+
+        private void FillComboBoxFunc()
+        {
+            string commandtxt = "SELECT id_funcion from funcion";
+
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                reader = command.ExecuteReader();
+                int id_func;
+                while (reader.Read())
+                {
+                    id_func = reader.GetInt32(0);
+                    cbIdFunc.Items.Add(id_func);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                reader.Close();
+            }
         }
 
         public int generaNumBoleto()
         {
             Random random = new Random();
-
             int numBoleto = random.Next(); ;
-
             return numBoleto;
-            
-            
-
         }
 
         private void ventaBoletos_Load(object sender, EventArgs e)
@@ -97,8 +123,8 @@ namespace VentaBoletosCine
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            tbFecha.Text = DateTime.Now.ToShortTimeString();
-            tbHora.Text = DateTime.Now.ToShortDateString();
+            tbFecha.Text = DateTime.Now.ToShortDateString();
+            tbHora.Text = DateTime.Now.ToShortTimeString();
         }
 
         /*
@@ -106,7 +132,7 @@ namespace VentaBoletosCine
          */
         public void limpiaRegistro()
         {
-            cbNumSala.Text = "Número de Sala";
+            cbIdFunc.Text = "Número de función";
             tbDuracion.Clear();
             tbNombrePeli.Clear();
             tbNumasiento.Clear();
@@ -116,13 +142,9 @@ namespace VentaBoletosCine
 
         private void button3_Click(object sender, EventArgs e)
         {
-            limpiaRegistro();
-            boleto boleto = new boleto(conexionBD);
+            boleto boleto = new boleto(conexionBD, listaetiquetas);
             boleto.eventoPasaNumBoleto += new boleto.delegadoPasaDato(BuscaAsiento);
             boleto.ShowDialog();
-            
-
-            
         }
 
         /*
@@ -173,15 +195,22 @@ namespace VentaBoletosCine
          */
         public void BuscaAsiento(int numAsiento)
         {
-            listaetiquetas[numAsiento].BackColor = Color.Red;
-            tbNumasiento.Text = Convert.ToString( numAsiento+1 );
-            tbNumBoleto.Text  = Convert.ToString(generaNumBoleto()) ;
+            if (listaetiquetas[numAsiento].BackColor == Color.Red)
+            {
+                MessageBox.Show("Asiento ocupado");
+            }
+            else
+            {
+                listaetiquetas[numAsiento].BackColor = Color.Red;
+                tbNumasiento.Text = Convert.ToString(numAsiento + 1);
+                tbNumBoleto.Text = Convert.ToString(generaNumBoleto());
+            }
               
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(tbNumBoleto.Text, tbNumasiento.Text, cbNumSala.Text, tbPrecio.Text);
+            dataGridView1.Rows.Add(tbNumBoleto.Text, tbNumasiento.Text, cbIdFunc.Text, tbPrecio.Text);
             total = (dataGridView1.Rows.Count - 1) * precioBotelo;
             tbTotal.Text = Convert.ToString(total.ToString("C"));
 
@@ -217,13 +246,21 @@ namespace VentaBoletosCine
 
         public void checaTotal()
         {
-
+            int precioTotal = (int)total;
+            venta = new Venta();
             tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
             cambio = efectivo - total;
             tbCambio.Text = Convert.ToString(cambio.ToString("C"));
             total = total - efectivo;
             if (total <= 0)
             {
+                /*
+                venta.id_funcion = func.id_funcion;
+                venta.precio = precioTotal;
+                ui
+                venta.Registrar(conexionBD);
+                 */
+
                 total = 0;
                 dataGridView1.Rows.Clear();
                 efectivo = 0;
@@ -275,7 +312,7 @@ namespace VentaBoletosCine
                 else if (dialogResult == DialogResult.No)
                 {
                     efectivo = 0;
-                    tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
+                    //tbEfectivo.Text = Convert.ToString(efectivo.ToString("C"));
                 }
             }
             else
@@ -331,10 +368,32 @@ namespace VentaBoletosCine
             }
             else
             {
-                
-              
-                   
             }
+        }
+
+        private void cbNumSala_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            func = new Funcion();
+            peli = new Pelicula();
+
+            int id_func = (int)(cbIdFunc.Items[cbIdFunc.SelectedIndex]);
+
+            if (func.Recuperar(conexionBD, id_func) == true)
+            {
+                if (peli.Recuperar(conexionBD, func.id_pelicula) == true)
+                {
+                    //MessageBox.Show("Registro exitoso");
+                    func.pelicula = peli;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se pudo recuperar la información");
+            }
+
+            tbDuracion.Text = func.pelicula.duracion.ToString();
+            tbNombrePeli.Text = func.pelicula.nombre;
+            tbPrecio.Text = func.precio.ToString();
         }
     }
 }
