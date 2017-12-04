@@ -21,6 +21,8 @@ namespace VentaBoletosCine
         private Pelicula peli;
         private Venta venta;
         private Usuario user;
+        private List<Asiento> asientos;
+        private List<Asiento> asientosAReservar;
 
         
         double efectivo = 0;
@@ -30,6 +32,8 @@ namespace VentaBoletosCine
 
         public ventaBoletos(DBConnection conexion, Usuario us)
         {
+            asientos = new List<Asiento>();
+            asientosAReservar = new List<Asiento>();
             user = us;
             listaetiquetas = new List<Label>();
 
@@ -157,6 +161,7 @@ namespace VentaBoletosCine
 
         private void button3_Click(object sender, EventArgs e)
         {
+            cbIdFunc.Enabled = true;
             boleto boleto = new boleto(conexionBD, listaetiquetas);
             boleto.eventoPasaNumBoleto += new boleto.delegadoPasaDato(BuscaAsiento);
             boleto.ShowDialog();
@@ -216,11 +221,27 @@ namespace VentaBoletosCine
             }
             else
             {
+                asientosAReservar.Add(asientos[numAsiento]);
                 listaetiquetas[numAsiento].BackColor = Color.Red;
                 tbNumasiento.Text = Convert.ToString(numAsiento + 1);
                 tbNumBoleto.Text = Convert.ToString(generaNumBoleto());
+                btRegistrar.Enabled = true;
+                btAgregar.Enabled = false;
             }
               
+        }
+
+        public void OcuparAsiento(int numAsiento)
+        {
+            if (listaetiquetas[numAsiento].BackColor == Color.Red)
+            {
+                //MessageBox.Show("Asiento ocupado");
+            }
+            else
+            {
+                listaetiquetas[numAsiento].BackColor = Color.Red;
+            }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -235,7 +256,9 @@ namespace VentaBoletosCine
                 tbCambio.Text = Convert.ToString(cambio.ToString("C"));
             }
 
-
+            btRegistrar.Enabled = false;
+            btAgregar.Enabled = true;
+            btCancelar.Enabled = true;
         }
 
         private void bt500_Click(object sender, EventArgs e)
@@ -273,7 +296,17 @@ namespace VentaBoletosCine
                 venta.precio = precioTotal;
                 venta.usuario = user.nombreUsusario;
                 venta.Registrar(conexionBD);
-
+                foreach (Asiento a in asientosAReservar)
+                {
+                    a.disponible = false;
+                    if (a.Ocupar(conexionBD) == true)
+                        MessageBox.Show("Asiento reservado");
+                    else
+                    {
+                        MessageBox.Show("Error en reservación");
+                    }
+                }
+                asientosAReservar.Clear();
                 total = 0;
                 dataGridView1.Rows.Clear();
                 efectivo = 0;
@@ -286,6 +319,8 @@ namespace VentaBoletosCine
                 cambio = 0;
                 tbCambio.Text = Convert.ToString( cambio.ToString("C"));
             }
+
+            cbIdFunc.Enabled = true;
         }
 
 
@@ -367,8 +402,9 @@ namespace VentaBoletosCine
             }
             else
             {
-                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
-                total = (dataGridView1.Rows.Count - 1) * precioBotelo;
+                asientosAReservar.Clear();
+                dataGridView1.Rows.Clear();
+                total = 0;
                 tbTotal.Text = Convert.ToString( total.ToString("C"));
             }
         }
@@ -387,6 +423,8 @@ namespace VentaBoletosCine
         private void cbNumSala_SelectedIndexChanged(object sender, EventArgs e)
         {
             CambiarControles(true);
+            btRegistrar.Enabled = false;
+            btCancelar.Enabled = false;
             func = new Funcion();
             peli = new Pelicula();
 
@@ -396,8 +434,8 @@ namespace VentaBoletosCine
             {
                 if (peli.Recuperar(conexionBD, func.id_pelicula) == true)
                 {
-                    //MessageBox.Show("Registro exitoso");
                     func.pelicula = peli;
+                    OcuparAsientos();
                 }
             }
             else
@@ -408,6 +446,21 @@ namespace VentaBoletosCine
             tbDuracion.Text = func.pelicula.duracion.ToString();
             tbNombrePeli.Text = func.pelicula.nombre;
             tbPrecio.Text = func.precio.ToString();
+
+            cbIdFunc.Enabled = false;
+
+        }
+
+        private void OcuparAsientos()
+        {
+            asientos.Clear();
+            asientos = func.RecuperarAsientos(conexionBD);
+
+            for (int i = 0; i < asientos.Count; i++)
+            {
+                if(asientos[i].disponible == false)
+                    OcuparAsiento(asientos[i].num_asiento);
+            }
         }
     }
 }

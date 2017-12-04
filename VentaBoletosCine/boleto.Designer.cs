@@ -32,12 +32,6 @@
             this.button43 = new System.Windows.Forms.Button();
             this.bt27 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
-            this.bt38 = new System.Windows.Forms.Button();
-            this.bt37 = new System.Windows.Forms.Button();
-            this.bt36 = new System.Windows.Forms.Button();
-            this.bt35 = new System.Windows.Forms.Button();
-            this.bt34 = new System.Windows.Forms.Button();
-            this.bt33 = new System.Windows.Forms.Button();
             this.bt32 = new System.Windows.Forms.Button();
             this.bt31 = new System.Windows.Forms.Button();
             this.bt30 = new System.Windows.Forms.Button();
@@ -72,8 +66,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.bt39 = new System.Windows.Forms.Button();
-            this.bt40 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,78 +106,6 @@
             this.button41.TabIndex = 95;
             this.button41.Text = "38";
             this.button41.UseVisualStyleBackColor = true;
-            // 
-            // bt38
-            // 
-            this.bt38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt38.Location = new System.Drawing.Point(429, 382);
-            this.bt38.Margin = new System.Windows.Forms.Padding(5);
-            this.bt38.Name = "bt38";
-            this.bt38.Size = new System.Drawing.Size(48, 40);
-            this.bt38.TabIndex = 94;
-            this.bt38.Text = "38";
-            this.bt38.UseVisualStyleBackColor = true;
-            this.bt38.Click += new System.EventHandler(this.bt38_Click);
-            // 
-            // bt37
-            // 
-            this.bt37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt37.Location = new System.Drawing.Point(371, 382);
-            this.bt37.Margin = new System.Windows.Forms.Padding(5);
-            this.bt37.Name = "bt37";
-            this.bt37.Size = new System.Drawing.Size(48, 40);
-            this.bt37.TabIndex = 93;
-            this.bt37.Text = "37";
-            this.bt37.UseVisualStyleBackColor = true;
-            this.bt37.Click += new System.EventHandler(this.bt37_Click);
-            // 
-            // bt36
-            // 
-            this.bt36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt36.Location = new System.Drawing.Point(313, 382);
-            this.bt36.Margin = new System.Windows.Forms.Padding(5);
-            this.bt36.Name = "bt36";
-            this.bt36.Size = new System.Drawing.Size(48, 40);
-            this.bt36.TabIndex = 92;
-            this.bt36.Text = "36";
-            this.bt36.UseVisualStyleBackColor = true;
-            this.bt36.Click += new System.EventHandler(this.bt36_Click);
-            // 
-            // bt35
-            // 
-            this.bt35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt35.Location = new System.Drawing.Point(255, 382);
-            this.bt35.Margin = new System.Windows.Forms.Padding(5);
-            this.bt35.Name = "bt35";
-            this.bt35.Size = new System.Drawing.Size(48, 40);
-            this.bt35.TabIndex = 91;
-            this.bt35.Text = "35";
-            this.bt35.UseVisualStyleBackColor = true;
-            this.bt35.Click += new System.EventHandler(this.bt35_Click);
-            // 
-            // bt34
-            // 
-            this.bt34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt34.Location = new System.Drawing.Point(734, 334);
-            this.bt34.Margin = new System.Windows.Forms.Padding(5);
-            this.bt34.Name = "bt34";
-            this.bt34.Size = new System.Drawing.Size(48, 40);
-            this.bt34.TabIndex = 90;
-            this.bt34.Text = "34";
-            this.bt34.UseVisualStyleBackColor = true;
-            this.bt34.Click += new System.EventHandler(this.bt34_Click);
-            // 
-            // bt33
-            // 
-            this.bt33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt33.Location = new System.Drawing.Point(678, 334);
-            this.bt33.Margin = new System.Windows.Forms.Padding(5);
-            this.bt33.Name = "bt33";
-            this.bt33.Size = new System.Drawing.Size(48, 40);
-            this.bt33.TabIndex = 89;
-            this.bt33.Text = "33";
-            this.bt33.UseVisualStyleBackColor = true;
-            this.bt33.Click += new System.EventHandler(this.bt33_Click);
             // 
             // bt32
             // 
@@ -588,30 +508,6 @@
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(882, 219);
             // 
-            // bt39
-            // 
-            this.bt39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt39.Location = new System.Drawing.Point(487, 382);
-            this.bt39.Margin = new System.Windows.Forms.Padding(5);
-            this.bt39.Name = "bt39";
-            this.bt39.Size = new System.Drawing.Size(48, 40);
-            this.bt39.TabIndex = 103;
-            this.bt39.Text = "39";
-            this.bt39.UseVisualStyleBackColor = true;
-            this.bt39.Click += new System.EventHandler(this.bt39_Click);
-            // 
-            // bt40
-            // 
-            this.bt40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt40.Location = new System.Drawing.Point(545, 382);
-            this.bt40.Margin = new System.Windows.Forms.Padding(5);
-            this.bt40.Name = "bt40";
-            this.bt40.Size = new System.Drawing.Size(48, 40);
-            this.bt40.TabIndex = 104;
-            this.bt40.Text = "40";
-            this.bt40.UseVisualStyleBackColor = true;
-            this.bt40.Click += new System.EventHandler(this.bt40_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -643,18 +539,10 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(894, 508);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bt40);
-            this.Controls.Add(this.bt39);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button43);
             this.Controls.Add(this.bt27);
             this.Controls.Add(this.button41);
-            this.Controls.Add(this.bt38);
-            this.Controls.Add(this.bt37);
-            this.Controls.Add(this.bt36);
-            this.Controls.Add(this.bt35);
-            this.Controls.Add(this.bt34);
-            this.Controls.Add(this.bt33);
             this.Controls.Add(this.bt32);
             this.Controls.Add(this.bt31);
             this.Controls.Add(this.bt30);
@@ -703,12 +591,6 @@
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.Button bt27;
         private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button bt38;
-        private System.Windows.Forms.Button bt37;
-        private System.Windows.Forms.Button bt36;
-        private System.Windows.Forms.Button bt35;
-        private System.Windows.Forms.Button bt34;
-        private System.Windows.Forms.Button bt33;
         private System.Windows.Forms.Button bt32;
         private System.Windows.Forms.Button bt31;
         private System.Windows.Forms.Button bt30;
@@ -743,8 +625,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
-        private System.Windows.Forms.Button bt39;
-        private System.Windows.Forms.Button bt40;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
 

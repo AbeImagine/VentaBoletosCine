@@ -167,6 +167,7 @@
             // 
             this.tbNumasiento.Location = new System.Drawing.Point(689, 367);
             this.tbNumasiento.Name = "tbNumasiento";
+            this.tbNumasiento.ReadOnly = true;
             this.tbNumasiento.Size = new System.Drawing.Size(125, 20);
             this.tbNumasiento.TabIndex = 54;
             this.tbNumasiento.Text = "4";
@@ -272,13 +273,13 @@
             // 
             // cbIdFunc
             // 
+            this.cbIdFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbIdFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbIdFunc.FormattingEnabled = true;
             this.cbIdFunc.Location = new System.Drawing.Point(530, 252);
             this.cbIdFunc.Name = "cbIdFunc";
             this.cbIdFunc.Size = new System.Drawing.Size(190, 26);
             this.cbIdFunc.TabIndex = 59;
-            this.cbIdFunc.Text = "Número de  función";
             this.cbIdFunc.SelectedIndexChanged += new System.EventHandler(this.cbNumSala_SelectedIndexChanged);
             // 
             // dataGridView1
@@ -375,6 +376,7 @@
             // 
             this.tbDuracion.Location = new System.Drawing.Point(691, 315);
             this.tbDuracion.Name = "tbDuracion";
+            this.tbDuracion.ReadOnly = true;
             this.tbDuracion.Size = new System.Drawing.Size(123, 20);
             this.tbDuracion.TabIndex = 69;
             this.tbDuracion.Text = "60 min";
@@ -383,6 +385,7 @@
             // 
             this.tbNombrePeli.Location = new System.Drawing.Point(691, 292);
             this.tbNombrePeli.Name = "tbNombrePeli";
+            this.tbNombrePeli.ReadOnly = true;
             this.tbNombrePeli.Size = new System.Drawing.Size(123, 20);
             this.tbNombrePeli.TabIndex = 68;
             this.tbNombrePeli.Text = "Cantinflas";
@@ -415,6 +418,7 @@
             // 
             this.tbPrecio.Location = new System.Drawing.Point(691, 341);
             this.tbPrecio.Name = "tbPrecio";
+            this.tbPrecio.ReadOnly = true;
             this.tbPrecio.Size = new System.Drawing.Size(123, 20);
             this.tbPrecio.TabIndex = 71;
             this.tbPrecio.Text = "$50.00";

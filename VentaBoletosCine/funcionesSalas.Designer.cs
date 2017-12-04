@@ -160,6 +160,7 @@
             // 
             // comboBoxPeliculas
             // 
+            this.comboBoxPeliculas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPeliculas.FormattingEnabled = true;
             this.comboBoxPeliculas.Location = new System.Drawing.Point(181, 83);
             this.comboBoxPeliculas.Name = "comboBoxPeliculas";
@@ -168,6 +169,7 @@
             // 
             // comboBoxHorario
             // 
+            this.comboBoxHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxHorario.FormattingEnabled = true;
             this.comboBoxHorario.Location = new System.Drawing.Point(181, 110);
             this.comboBoxHorario.Name = "comboBoxHorario";
@@ -176,6 +178,7 @@
             // 
             // comboBoxSala
             // 
+            this.comboBoxSala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSala.FormattingEnabled = true;
             this.comboBoxSala.Location = new System.Drawing.Point(181, 166);
             this.comboBoxSala.Name = "comboBoxSala";

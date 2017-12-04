@@ -86,9 +86,7 @@ namespace VentaBoletosCine
 
             listaAsientos.Add(bt31);
             listaAsientos.Add(bt32);
-            listaAsientos.Add(bt33);
-
-
+            //listaAsientos.Add(bt33);
 
         }
 
@@ -100,7 +98,6 @@ namespace VentaBoletosCine
 
             this.DoubleBuffered = true;
         }
-
 
 
         private void button43_Click(object sender, EventArgs e)
@@ -320,50 +317,9 @@ namespace VentaBoletosCine
 
         private void bt33_Click(object sender, EventArgs e)
         {
-            bt33.BackColor = Color.Red;
+            //bt33.BackColor = Color.Red;
             checaSeleecionAsiento();
         }
 
-        private void bt34_Click(object sender, EventArgs e)
-        {
-            bt34.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt35_Click(object sender, EventArgs e)
-        {
-            bt35.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt36_Click(object sender, EventArgs e)
-        {
-            bt36.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt37_Click(object sender, EventArgs e)
-        {
-            bt37.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt38_Click(object sender, EventArgs e)
-        {
-            bt38.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt39_Click(object sender, EventArgs e)
-        {
-            bt39.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt40_Click(object sender, EventArgs e)
-        {
-            // bt40.BackColor = Color.Red;
-            //checaSeleecionAsiento();
-        }
     }
 }

@@ -120,6 +120,7 @@
             // cbTipoMemb
             // 
             this.cbTipoMemb.BackColor = System.Drawing.Color.PapayaWhip;
+            this.cbTipoMemb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoMemb.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoMemb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cbTipoMemb.FormattingEnabled = true;
@@ -127,7 +128,6 @@
             this.cbTipoMemb.Name = "cbTipoMemb";
             this.cbTipoMemb.Size = new System.Drawing.Size(222, 29);
             this.cbTipoMemb.TabIndex = 0;
-            this.cbTipoMemb.Text = "Sin seleccionar";
             this.cbTipoMemb.SelectionChangeCommitted += new System.EventHandler(this.cbTipoMemb_SelectionChangeCommitted);
             // 
             // label1

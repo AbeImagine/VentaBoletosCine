@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asiento.cs" />
     <Compile Include="boleto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +124,6 @@
     <Compile Include="ventaBoletos.Designer.cs">
       <DependentUpon>ventaBoletos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ventaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ventaUsuario.Designer.cs">
-      <DependentUpon>ventaUsuario.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="boleto.resx">
       <DependentUpon>boleto.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,9 +165,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ventaBoletos.resx">
       <DependentUpon>ventaBoletos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ventaUsuario.resx">
-      <DependentUpon>ventaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

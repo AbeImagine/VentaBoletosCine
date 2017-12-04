@@ -110,12 +110,49 @@ namespace VentaBoletosCine
                 reader.Close();
                 return false;
             }
-            return true;
+
+            commandtxt = "SELECT id_funcion FROM funcion WHERE id_funcion = (SELECT MAX(id_funcion) FROM funcion)";
+            command = new MySqlCommand(commandtxt, conexionBD.Connection);
+            try
+            {
+                reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    id_funcion = reader.GetInt32(0);
+                }
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                reader.Close();
+                return false;
+            }
+
+
+            for (int i = 0; i < 32; i++)
+            {
+                commandtxt = "INSERT INTO asiento (disponibilidad, num_sala, id_funcion, num_asiento) VALUES (" + true + "," + num_sala + "," + id_funcion + "," + i + ")";
+
+                command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+                try
+                {
+                    reader = command.ExecuteReader();
+                    reader.Close();
+                }
+                catch (Exception exception)
+                {
+                    reader.Close();
+                    return false;
+                }
+            }
+
+                return true;
         }
 
         public bool Eliminar(DBConnection conexionBD, int id)
         {
-            string commandtxt = "DELETE FROM pelicula WHERE id_funcion=" + id;
+            string commandtxt = "DELETE FROM funcion WHERE id_funcion=" + id;
             MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
 
             try
@@ -145,6 +182,39 @@ namespace VentaBoletosCine
                 return false;
             }
             return true;
+        }
+
+        public List<Asiento> RecuperarAsientos(DBConnection conexionBD)
+        {
+            List<Asiento> asientos = new List<Asiento>();
+
+            string commandtxt = "SELECT * FROM asiento WHERE id_funcion = " + id_funcion + "";
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Asiento a = new Asiento();
+
+                    a.id_asiento = reader.GetInt32("id_asiento");
+                    a.disponible = reader.GetBoolean("disponibilidad");
+                    a.num_sala = reader.GetInt32("num_sala");
+                    a.id_funcion = id_funcion;
+                    a.num_asiento = reader.GetInt32("num_asiento");
+
+                    asientos.Add(a);
+                }
+
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+
+            }
+            return asientos;
         }
     }
 }

@@ -263,7 +263,7 @@ namespace VentaBoletosCine
          */
         private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Space) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -278,7 +278,7 @@ namespace VentaBoletosCine
          */
         private void tbcategoria_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Space) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;

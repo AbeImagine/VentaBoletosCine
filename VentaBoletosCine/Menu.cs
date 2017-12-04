@@ -94,16 +94,6 @@ namespace VentaBoletosCine
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            ventaUsuario ventaUsuario = new ventaUsuario(conexionBD);
-            this.Hide();
-            ventaUsuario.ShowDialog();
-            this.Show();
-            this.Focus();
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             funcionesSalas funcionesSala = new funcionesSalas(conexionBD);

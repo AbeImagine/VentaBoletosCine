@@ -273,6 +273,10 @@ namespace VentaBoletosCine
                 {
                     MessageBox.Show("Eliminación exitosa");
                 }
+                else
+                {
+                    MessageBox.Show("Error en la eliminacion, aún existen registros de venta");
+                }
             }
         }
 
