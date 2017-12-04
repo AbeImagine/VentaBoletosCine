@@ -11,6 +11,17 @@ using MySql.Data.MySqlClient;
 
 namespace VentaBoletosCine
 {
+
+    /*  Clase: Capturista.
+     *  Descripción: Clase encargada de la captura de información de peliculas.
+     *  Atributos:
+     *      conexionBD: objeto conector con la Base de Datos.
+     *      comando: objeto contenedor de comandos SQL.
+     *      reader: objeto lector de Base de Datos SQL.
+     *      DA: objeto adaptador de datos de SQL.
+     *      pelicula: objeto contenedor de la información de Pelicula.
+     *      index: indice señalador de registro en navegación.
+     */
     public partial class Capturista : Form
     {
         DBConnection conexionBD;
@@ -34,6 +45,12 @@ namespace VentaBoletosCine
         private Pelicula pelicula;
         private int index;
         
+        /*  Constructor: Capturista.
+         *  Descrpición: constructor de objeto capturista.
+         *  Parámetros:
+         *      conexion: objeto conector con la Base de Datos de SQL,
+         * 
+         */
         public Capturista(DBConnection conexion)
         {
             index = -1;
@@ -43,6 +60,10 @@ namespace VentaBoletosCine
             LlenarTablaAuxiliar();
         }
 
+        /*  Método: LlenarTablaAuxiliar.
+         *  Descrpición: método encargado de llenar la tabla de registros para auxiliar en la navegación.
+         * 
+         */
         private void LlenarTablaAuxiliar()
         {
             DA = new MySqlDataAdapter();
@@ -74,14 +95,6 @@ namespace VentaBoletosCine
 
             configuraTamTexBox();
             this.DoubleBuffered = true;
-            /*
-            tbNombre.Text = "Annabelle 2: La Creación";
-            tbcategoria.Text = "B15";
-            tbTipo.Text = "TERROR";
-            tbDuracion.Text = "109 minutos";
-            tbSipnosis.Text = "Anabelle 2 sucede varios años después de la trágica muerte de la pequeña hija de un fabricante de muñecas y su esposa, quienes dan albergue en su casa a una monja y a varias niñas de un orfanato clausurado. Al poco tiempo cada uno de ellos se volverá el objetivo de Anabelle, la muñeca poseída creada por el dueño de la casa.";
-            tbCreditosRep.Text = " Actores:Talitha Bateman,Stephanie Sigman Directores: David F. Sandberg";
-             */
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -94,6 +107,10 @@ namespace VentaBoletosCine
 
         }
 
+        /*  Evento: button2_Click (Click Eliminacion)
+         *  Descrpición: evento encargado de la eliminacion en la Base de Datos.
+         * 
+         */
         private void button2_Click(object sender, EventArgs e)
         {
             DataGrid dG = new DataGrid();
@@ -110,6 +127,10 @@ namespace VentaBoletosCine
             }
         }
 
+        /*  Evento: button3_Click (Click Nuevo)
+         *  Descrpición: evento encargado de la generación de un nuevo registro.
+         * 
+         */
         private void button3_Click(object sender, EventArgs e)
         {
             pelicula = new Pelicula();
@@ -128,6 +149,10 @@ namespace VentaBoletosCine
             tbCreditosRep.Clear();
         }
 
+        /*  Evento: button1_Click (Click Guardar)
+         *  Descrpición: evento encargado de el registro de datos en la Base de Datos.
+         * 
+         */
         private void button1_Click(object sender, EventArgs e)
         {
             if ((tbNombre.Text != "") &&
@@ -192,6 +217,10 @@ namespace VentaBoletosCine
 
         }
 
+        /*  Evento: button6_Click (Click Mostrar Registros)
+         *  Descrpición: evento encargado de mostrar los registros que actualmente se encuentran en la Base de Datos
+         * 
+         */
         private void button6_Click(object sender, EventArgs e)
         {
             MySqlDataAdapter DA = new MySqlDataAdapter();
@@ -209,15 +238,10 @@ namespace VentaBoletosCine
             DG.Show();
         }
 
-        private void tbNombre_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        
-
-        
-
+        /*  Evento: tbDuracion_KeyPress (Presion de tecla en tbDuracion)
+         *  Descrpición: evento encargado de hacer validación de caracteres
+         * 
+         */
         private void tbDuracion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsNumber(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
@@ -229,6 +253,10 @@ namespace VentaBoletosCine
             cuentaDuracion = tbDuracion.Text;
         }
 
+        /*  Evento: tbNombre_KeyPress (Presion de tecla en tbNombre)
+         *  Descrpición: evento encargado de hacer validación de caracteres
+         * 
+         */
         private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
@@ -240,6 +268,10 @@ namespace VentaBoletosCine
             cuentaNombre = tbNombre.Text;
         }
 
+        /*  Evento: tbcategoria_KeyPress (Presion de tecla en tbcategoria)
+         *  Descrpición: evento encargado de hacer validación de caracteres
+         * 
+         */
         private void tbcategoria_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
@@ -253,6 +285,10 @@ namespace VentaBoletosCine
 
         }
 
+        /*  Evento: tbSinopsis_KeyPress (Presion de tecla en tbSinopsis)
+         *  Descrpición: evento encargado de hacer validación de caracteres
+         * 
+         */
         private void tbSipnosis_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -266,6 +302,10 @@ namespace VentaBoletosCine
             
         }
 
+        /*  Evento: tbSinopsis_Leave (Abandonar tbSinopsis)
+         *  Descrpición: evento encargado de hacer validación de número de caracteres.
+         * 
+         */
         private void tbSipnosis_Leave(object sender, EventArgs e)
         {
             int contSip = cuentaSinopsis.Length;
@@ -278,6 +318,11 @@ namespace VentaBoletosCine
             
         }
 
+
+        /*  Evento: tbCreditosRep_KeyPress (Presion de tecla en tbCreditosRep)
+         *  Descrpición: evento encargado de hacer validación de caracteres
+         * 
+         */
         private void tbCreditosRep_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && e.KeyChar != (char)Keys.Space))
@@ -289,6 +334,10 @@ namespace VentaBoletosCine
             cuentaCredReparto = tbCreditosRep.Text;
         }
 
+        /*  Evento: tbCreditosRep_Leave (Abandonar tbCreditosRep)
+         *  Descrpición: evento encargado de hacer validación de número de caracteres.
+         * 
+         */
         private void tbCreditosRep_Leave(object sender, EventArgs e)
         {
             int contCreditos = cuentaCredReparto.Length;
@@ -300,11 +349,10 @@ namespace VentaBoletosCine
             }
         }
 
-        private void tbSipnosis_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /*  Evento: button4_Click (Click buscar)
+         *  Descrpición: evento encargado de llamar la pantalla de busqueda.
+         * 
+         */
         private void button4_Click_1(object sender, EventArgs e)
         {
             Buscador busca;
@@ -319,6 +367,10 @@ namespace VentaBoletosCine
                 MessageBox.Show("Registro no encontrado");
         }
 
+        /*  Método: LlenaCampos.
+         *  Descrpición: método encargado de rellenar los textBox con los valores recuperados de busqueda.
+         * 
+         */
         private void LlenaCampos(int opcion, string busqueda)
         {
             pelicula = new Pelicula();
@@ -332,6 +384,10 @@ namespace VentaBoletosCine
 
         }
 
+        /*  Evento: button8_Click (Click siguiente)
+         *  Descrpición: evento encargado de moverse al siguiente registro en la navegación.
+         * 
+         */
         private void button8_Click(object sender, EventArgs e)
         {
             index++;
@@ -340,6 +396,9 @@ namespace VentaBoletosCine
             ActualizaCampos();
         }
 
+        /*  Método: ActualizarCampos
+         *  Descripción: método encargado de actualizar campos de acuerdo al registro de navegación.
+         */
         private void ActualizaCampos()
         {
             pelicula = new Pelicula();
@@ -358,6 +417,10 @@ namespace VentaBoletosCine
             tbCreditosRep.Text = pelicula.reparto;
         }
 
+        /*  Evento: btAnterior_Click (Click anterior)
+         *  Descrpición: evento encargado de moverse al registro anterior en la navegación.
+         * 
+         */
         private void btAnterior_Click(object sender, EventArgs e)
         {
             index--;
@@ -366,18 +429,30 @@ namespace VentaBoletosCine
             ActualizaCampos();
         }
 
+        /*  Evento: btPrimero_Click (Click primero)
+         *  Descrpición: evento encargado de moverse al primer registro en la navegación.
+         * 
+         */
         private void btPrimero_Click(object sender, EventArgs e)
         {
             index = 0;
             ActualizaCampos();
         }
 
+        /*  Evento: btUltimo_Click (Click primero)
+         *  Descrpición: evento encargado de moverse al último registro en la navegación.
+         * 
+         */
         private void btUltimo_Click(object sender, EventArgs e)
         {
             index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
         }
 
+        /*  Evento: button5_Click (Click actualización)
+         *  Descrpición: evento encargado de actualizar un registro de la Base de Datos.
+         * 
+         */
         private void button5_Click_1(object sender, EventArgs e)
         {
             if (pelicula.id_pelicula != -1)
@@ -393,11 +468,6 @@ namespace VentaBoletosCine
                     MessageBox.Show("Actualización exitosa");
                 }
             }
-        }
-
-        private void tbDuracion_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -116,7 +116,6 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(152, 24);
             this.tbNombre.TabIndex = 0;
-            this.tbNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNombre_KeyDown);
             this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // tbcategoria
@@ -135,7 +134,6 @@
             this.tbDuracion.Name = "tbDuracion";
             this.tbDuracion.Size = new System.Drawing.Size(107, 24);
             this.tbDuracion.TabIndex = 2;
-            this.tbDuracion.TextChanged += new System.EventHandler(this.tbDuracion_TextChanged);
             this.tbDuracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDuracion_KeyPress);
             // 
             // tbSipnosis
@@ -146,7 +144,6 @@
             this.tbSipnosis.Size = new System.Drawing.Size(330, 73);
             this.tbSipnosis.TabIndex = 3;
             this.tbSipnosis.Text = "";
-            this.tbSipnosis.TextChanged += new System.EventHandler(this.tbSipnosis_TextChanged);
             this.tbSipnosis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSipnosis_KeyPress);
             this.tbSipnosis.Leave += new System.EventHandler(this.tbSipnosis_Leave);
             // 

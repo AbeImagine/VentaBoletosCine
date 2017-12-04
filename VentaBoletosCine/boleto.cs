@@ -131,6 +131,7 @@ namespace VentaBoletosCine
             checaSeleecionAsiento();
 
         }
+
         private void bt2_Click(object sender, EventArgs e)
         {
             bt2.BackColor = Color.Red;
