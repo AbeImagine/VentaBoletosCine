@@ -59,14 +59,16 @@
             this.button6 = new System.Windows.Forms.Button();
             this.minutos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btPrimero = new System.Windows.Forms.Button();
+            this.btAnterior = new System.Windows.Forms.Button();
+            this.btSiguiente = new System.Windows.Forms.Button();
+            this.btUltimo = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // shapeContainer1
@@ -207,6 +209,7 @@
             this.button4.Text = "Buscar";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // bindingNavigator1
             // 
@@ -368,45 +371,54 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-            // button5
+            // btPrimero
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.Location = new System.Drawing.Point(507, 448);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(32, 46);
-            this.button5.TabIndex = 23;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btPrimero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btPrimero.BackgroundImage")));
+            this.btPrimero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btPrimero.Location = new System.Drawing.Point(507, 448);
+            this.btPrimero.Name = "btPrimero";
+            this.btPrimero.Size = new System.Drawing.Size(32, 46);
+            this.btPrimero.TabIndex = 23;
+            this.btPrimero.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btAnterior
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button7.Location = new System.Drawing.Point(547, 448);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(32, 46);
-            this.button7.TabIndex = 24;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btAnterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAnterior.BackgroundImage")));
+            this.btAnterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btAnterior.Location = new System.Drawing.Point(547, 448);
+            this.btAnterior.Name = "btAnterior";
+            this.btAnterior.Size = new System.Drawing.Size(32, 46);
+            this.btAnterior.TabIndex = 24;
+            this.btAnterior.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btSiguiente
             // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button8.Location = new System.Drawing.Point(585, 448);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(32, 46);
-            this.button8.TabIndex = 25;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btSiguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSiguiente.BackgroundImage")));
+            this.btSiguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btSiguiente.Location = new System.Drawing.Point(585, 448);
+            this.btSiguiente.Name = "btSiguiente";
+            this.btSiguiente.Size = new System.Drawing.Size(32, 46);
+            this.btSiguiente.TabIndex = 25;
+            this.btSiguiente.UseVisualStyleBackColor = true;
+            this.btSiguiente.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // btUltimo
             // 
-            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button9.Location = new System.Drawing.Point(626, 448);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(32, 46);
-            this.button9.TabIndex = 26;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btUltimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btUltimo.BackgroundImage")));
+            this.btUltimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btUltimo.Location = new System.Drawing.Point(626, 448);
+            this.btUltimo.Name = "btUltimo";
+            this.btUltimo.Size = new System.Drawing.Size(32, 46);
+            this.btUltimo.TabIndex = 26;
+            this.btUltimo.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 473);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 27;
             // 
             // Capturista
             // 
@@ -415,10 +427,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(761, 546);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btUltimo);
+            this.Controls.Add(this.btSiguiente);
+            this.Controls.Add(this.btAnterior);
+            this.Controls.Add(this.btPrimero);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.minutos);
             this.Controls.Add(this.button6);
@@ -444,6 +457,7 @@
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,10 +494,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label minutos;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btPrimero;
+        private System.Windows.Forms.Button btAnterior;
+        private System.Windows.Forms.Button btSiguiente;
+        private System.Windows.Forms.Button btUltimo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

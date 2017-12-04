@@ -15,10 +15,8 @@ namespace VentaBoletosCine
     {
         public int id;
         private DBConnection conexionBD;
-        //private MySqlCommand command;
-        //private MySqlDataReader reader;
-        //private MySqlDataAdapter adapter;
         private string tabla;
+        public string busqueda;
         private DataTable dT;
 
         public Buscador(DBConnection conexionBD, string table)
@@ -40,24 +38,9 @@ namespace VentaBoletosCine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            string sCommand = "SELECT * from " + tabla + " WHERE " + comboBox1.Items[comboBox1.SelectedIndex] + " = " + textBox1.Text + "";
-            adapter.SelectCommand = new MySqlCommand(sCommand, conexionBD.Connection);
-
-            dT = new DataTable();
-            adapter.Fill(dT);
-            dGV.DataSource = dT;
-             */
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                if (dataGridView1.Rows[i].Cells[comboBox1.SelectedIndex].Value.Equals(textBox1.Text))
-                {
-                    id = i;
-                    break;
-                }
-            }
+            id = comboBox1.SelectedIndex;
+            busqueda = textBox1.Text;
             this.Close();
-            
         }
     }
 }

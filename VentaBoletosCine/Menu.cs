@@ -13,15 +13,29 @@ namespace VentaBoletosCine
     public partial class Menu : Form
     {
         DBConnection conexionBD;
+        Usuario user;
 
-        public Menu(DBConnection conexionBD, bool admin)
+        public Menu(DBConnection conexionBD, Usuario us)
         {
+            user = us;
             InitializeComponent();
-            if (admin == false)
+            if (user.permisos == 0)
             {
                 button7.Visible = false;
                 button5.Visible = false;
                 button2.Visible = false;
+
+                button7.Enabled = false;
+                button5.Enabled = false;
+                button2.Enabled = false;
+
+                btControlUsuarios.Visible = false;
+                btControlUsuarios.Enabled = false;
+            }
+            else if (user.permisos == 2)
+            {
+                btControlUsuarios.Visible = false;
+                btControlUsuarios.Enabled = false;
             }
             this.conexionBD = conexionBD;
         }
@@ -29,7 +43,7 @@ namespace VentaBoletosCine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ventaBoletos  venta = new ventaBoletos(conexionBD);
+            ventaBoletos  venta = new ventaBoletos(conexionBD, user);
             this.Hide();
             venta.ShowDialog();
             this.Show();
@@ -66,7 +80,7 @@ namespace VentaBoletosCine
 
         private void button4_Click(object sender, EventArgs e)
         {
-            venLineacs venta = new venLineacs(conexionBD);
+            venLineacs venta = new venLineacs(conexionBD, user);
             this.Hide();
             venta.ShowDialog();
             this.Show();
@@ -102,6 +116,13 @@ namespace VentaBoletosCine
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ControlUsuarios control = new ControlUsuarios(conexionBD);
+            control.ShowDialog();
+            this.Focus();
         }
     }
 }

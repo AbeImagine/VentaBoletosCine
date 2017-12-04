@@ -20,6 +20,7 @@ namespace VentaBoletosCine
         private Funcion func;
         private Pelicula peli;
         private Venta venta;
+        private Usuario user;
 
         
         double efectivo = 0;
@@ -27,8 +28,9 @@ namespace VentaBoletosCine
         double precioBotelo = 50;
         double cambio = 0;
 
-        public ventaBoletos(DBConnection conexion)
+        public ventaBoletos(DBConnection conexion, Usuario us)
         {
+            user = us;
             listaetiquetas = new List<Label>();
 
             conexionBD = conexion;
@@ -254,12 +256,10 @@ namespace VentaBoletosCine
             total = total - efectivo;
             if (total <= 0)
             {
-                /*
                 venta.id_funcion = func.id_funcion;
                 venta.precio = precioTotal;
-                ui
+                venta.usuario = user.nombreUsusario;
                 venta.Registrar(conexionBD);
-                 */
 
                 total = 0;
                 dataGridView1.Rows.Clear();

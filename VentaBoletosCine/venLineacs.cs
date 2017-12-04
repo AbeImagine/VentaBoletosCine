@@ -13,9 +13,11 @@ namespace VentaBoletosCine
     public partial class venLineacs : Form
     {
         DBConnection conexionBD;
+        Usuario user;
 
-        public venLineacs(DBConnection conexion)
+        public venLineacs(DBConnection conexion, Usuario us)
         {
+            user = us;
             conexionBD = conexion;
             InitializeComponent();
         }
@@ -27,7 +29,7 @@ namespace VentaBoletosCine
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            ventaBoletos ventaBoletos = new ventaBoletos(conexionBD);
+            ventaBoletos ventaBoletos = new ventaBoletos(conexionBD, user);
             ventaBoletos.ShowDialog();
         }
     }

@@ -22,6 +22,22 @@ namespace VentaBoletosCine
             
         }
 
+        public bool Registrar(DBConnection conexionBD)
+        {
+            MySqlCommand comando = new MySqlCommand("INSERT INTO pelicula (nombre, duracion, genero, sinopsis, reparto) VALUES ('" + nombre + "'," + duracion + ",'" + genero + "','" + sinopsis + "','" + reparto + "')", conexionBD.Connection);
+            try
+            {
+                reader = comando.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exc)
+            {
+                reader.Close();
+                return false;
+            }
+            return true;
+        }
+
         public bool Recuperar(DBConnection conexionBD, int id_peli)
         {
             id_pelicula = id_peli;
@@ -46,6 +62,54 @@ namespace VentaBoletosCine
             catch (Exception e)
             {
                 reader.Close();
+                return false;
+            }
+            return true;
+        }
+
+        public bool Recuperar(DBConnection conexionBD, int opcion, string busqueda)
+        {
+            string commandtxt = "";
+
+            switch (opcion)
+            {
+                case 0:
+                    commandtxt = "SELECT * FROM pelicula WHERE id_pelicula = " + busqueda;
+                    break;
+                case 1:
+                    commandtxt = "SELECT * FROM pelicula WHERE nombre = '" + busqueda + "'";
+                    break;
+                case 2:
+                    commandtxt = "SELECT * FROM pelicula WHERE duracion = " + busqueda;
+                    break;
+                case 3:
+                    commandtxt = "SELECT * FROM pelicula WHERE genero = '" + busqueda + "'";
+                    break;
+                case 4:
+                    commandtxt = "SELECT * FROM pelicula WHERE sinopsis = '" + busqueda + "'";
+                    break;
+                case 5:
+                    commandtxt = "SELECT * FROM pelicula WHERE reparto = '" + busqueda + "'";
+                    break;
+            }
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    id_pelicula = reader.GetInt32("id_pelicula");
+                    nombre = reader.GetString("nombre");
+                    duracion = reader.GetInt32("duracion");
+                    genero = reader.GetString("genero");
+                    sinopsis = reader.GetString("sinopsis");
+                    reparto = reader.GetString("reparto");
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
                 return false;
             }
             return true;

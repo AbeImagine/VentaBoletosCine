@@ -37,6 +37,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btControlUsuarios = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,12 +136,24 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // btControlUsuarios
+            // 
+            this.btControlUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btControlUsuarios.Location = new System.Drawing.Point(20, 458);
+            this.btControlUsuarios.Name = "btControlUsuarios";
+            this.btControlUsuarios.Size = new System.Drawing.Size(254, 46);
+            this.btControlUsuarios.TabIndex = 9;
+            this.btControlUsuarios.Text = "Control de usuarios";
+            this.btControlUsuarios.UseVisualStyleBackColor = true;
+            this.btControlUsuarios.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1092, 516);
+            this.Controls.Add(this.btControlUsuarios);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button5);
@@ -170,5 +183,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btControlUsuarios;
     }
 }

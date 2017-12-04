@@ -15,6 +15,7 @@ namespace VentaBoletosCine
     {
         DBConnection conexionBD;
         MySqlDataReader reader;
+        MySqlDataAdapter DA;
         Funcion funcion;
         int precio;
 
@@ -26,7 +27,23 @@ namespace VentaBoletosCine
             FillComboBoxPelicula();
             FillComboBoxSala();
             FillComboBoxHorario();
-            textBox4.Text = precio.ToString("C");
+            tbPrecio.Text = precio.ToString("C");
+
+            dataGridView1.Visible = false;
+            LlenarTablaAuxiliar();
+        }
+
+        private void LlenarTablaAuxiliar()
+        {
+            DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from funcion";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable dataTable = new DataTable();
+            BindingSource bS = new BindingSource();
+            DA.Fill(dataTable);
+            bS.DataSource = dataTable;
+            dataGridView1.DataSource = bS;
         }
 
         private void FillComboBoxSala()
@@ -139,7 +156,7 @@ namespace VentaBoletosCine
             //this.textBox1.TabIndex = 0;
             //this.textBox2.TabIndex = 1;
             //this.textBox3.TabIndex = 2;
-            this.textBox4.TabIndex = 3;
+            this.tbPrecio.TabIndex = 3;
             //this.textBox5.TabIndex = 4;
             //this.button1.TabIndex = 5;
             this.button2.TabIndex = 5;
@@ -167,7 +184,7 @@ namespace VentaBoletosCine
             //textBox1.Enabled = false ;
             //textBox2.Enabled = false ;
             //textBox3.Enabled = false ;
-            textBox4.Enabled = false ;
+            tbPrecio.Enabled = false ;
             //textBox5.Enabled = false ;
         }
 
@@ -180,13 +197,33 @@ namespace VentaBoletosCine
             //textBox1.Enabled = false;
             //textBox2.Enabled = false;
             //textBox3.Enabled = false;
-            textBox4.Enabled = false;
+            tbPrecio.Enabled = false;
             //textBox5.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            habilitaBotones();
+            Buscador busca;
+            busca = new Buscador(conexionBD, "funcion");
+            busca.LlenarComboBox((BindingSource)dataGridView1.DataSource);
+            busca.ShowDialog();
+            if (busca.id != -1)
+            {
+                LlenaCampos(busca.id, busca.busqueda);
+            }
+            else
+                MessageBox.Show("Registro no encontrado");
+        }
+
+        private void LlenaCampos(int opcion, string busqueda)
+        {
+            funcion = new Funcion();
+            funcion.Recuperar(conexionBD, opcion, busqueda);
+
+            tbPrecio.Text = funcion.precio.ToString();
+            comboBoxHorario.Text = funcion.hora;
+            comboBoxSala.Text = funcion.num_sala.ToString();
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -213,7 +250,7 @@ namespace VentaBoletosCine
         {
             funcion = new Funcion();
 
-            if ((textBox4.Text != "") &&
+            if ((tbPrecio.Text != "") &&
                (comboBoxPeliculas.Text !="") &&
                (comboBoxSala.Text !="") &&
                (comboBoxHorario.Text != "")

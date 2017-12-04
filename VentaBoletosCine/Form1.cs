@@ -22,6 +22,7 @@ namespace VentaBoletosCine
         String sinopsis;
         MySqlCommand comando;
         MySqlDataReader reader;
+        MySqlDataAdapter DA;
 
 
         String cuentaDuracion="";
@@ -29,11 +30,30 @@ namespace VentaBoletosCine
         String cuentaGenero="";
         String cuentaSinopsis="";
         String cuentaCredReparto="";
+
+        private Pelicula pelicula;
+        private int index;
         
         public Capturista(DBConnection conexion)
         {
+            index = -1;
             conexionBD = conexion;
             InitializeComponent();
+            dataGridView1.Visible = false;
+            LlenarTablaAuxiliar();
+        }
+
+        private void LlenarTablaAuxiliar()
+        {
+            DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from pelicula";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable dataTable = new DataTable();
+            BindingSource bS = new BindingSource();
+            DA.Fill(dataTable);
+            bS.DataSource = dataTable;
+            dataGridView1.DataSource = bS;
         }
 
         /*
@@ -113,23 +133,22 @@ namespace VentaBoletosCine
                 sinopsis =tbSipnosis.Text ;
 
                 this.Refresh();
+                pelicula = new Pelicula();
 
-                comando = new MySqlCommand("INSERT INTO pelicula (nombre, duracion, genero, sinopsis, reparto) VALUES ('" + nombrePelicula + "'," + duracionPelicula + ",'" + categoriaPelicula + "','" + sinopsis + "','" + creditosRepPelicula + "')", conexionBD.Connection);
+                pelicula.nombre = nombrePelicula;
+                pelicula.genero = categoriaPelicula;
+                pelicula.duracion = int.Parse(duracionPelicula);
+                pelicula.reparto = creditosRepPelicula;
+                pelicula.sinopsis = sinopsis;
 
-                //comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
-                try
+                if (pelicula.Registrar(conexionBD) == true)
                 {
-                    reader = comando.ExecuteReader();
                     MessageBox.Show("Registro exitoso");
-                    reader.Close();
                 }
-                catch (Exception exc)
+                else
                 {
-                    MessageBox.Show(exc.Message);
+                    MessageBox.Show("Error de registro");
                 }
-
-                
-
             }
             else
                 MessageBox.Show("Ingrese todos los campos","No se puedo guardar",
@@ -275,6 +294,36 @@ namespace VentaBoletosCine
 
         }
 
-        
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Buscador busca;
+            busca = new Buscador(conexionBD, "miembro");
+            busca.LlenarComboBox((BindingSource)dataGridView1.DataSource);
+            busca.ShowDialog();
+            if (busca.id != -1)
+            {
+                LlenaCampos(busca.id, busca.busqueda);
+            }
+            else
+                MessageBox.Show("Registro no encontrado");
+        }
+
+        private void LlenaCampos(int opcion, string busqueda)
+        {
+            pelicula = new Pelicula();
+            pelicula.Recuperar(conexionBD, opcion, busqueda);
+
+            tbNombre.Text = pelicula.nombre;
+            tbDuracion.Text = pelicula.duracion.ToString();
+            tbCreditosRep.Text = pelicula.reparto;
+            tbSipnosis.Text = pelicula.sinopsis;
+            tbcategoria.Text = pelicula.genero;
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

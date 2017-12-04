@@ -22,8 +22,6 @@ namespace VentaBoletosCine
         MySqlCommand comando;
         MySqlDataAdapter DA;
 
-        DataGridView table;
-
         String nombreMembresia;
         String telefono;
         String email;
@@ -35,6 +33,8 @@ namespace VentaBoletosCine
         String cuentaEmail="";
         String cuentaUsuario="";
 
+        Miembro miembro;
+
         List<int> lista ;
 
 
@@ -45,9 +45,9 @@ namespace VentaBoletosCine
         {
             conexionBD = conexion;
             InitializeComponent();
-            cbTipoMemb.Items.Add("Regular");
-            cbTipoMemb.Items.Add("Administrador");
-            table = new DataGridView();
+            cbTipoMemb.Items.Add("Normal");
+            cbTipoMemb.Items.Add("VIP");
+            cbTipoMemb.Items.Add("Súper VIP");
 
             lista = new List<int>();
 
@@ -60,7 +60,7 @@ namespace VentaBoletosCine
             BindingSource bS = new BindingSource();
             DA.Fill(dataTable);
             bS.DataSource = dataTable;
-            table.DataSource = bS;
+            dataGridView1.DataSource = bS;
         }
 
         private void membresias_Load(object sender, EventArgs e)
@@ -74,7 +74,6 @@ namespace VentaBoletosCine
             tbApellidoM.MaxLength = 12;
             tbApellidoP.MaxLength = 12;
             tbNombre.MaxLength = 12; ;
-            tbUsuario.MaxLength = 10;
 
             activaDesactivaTextbox(false);
             
@@ -85,12 +84,8 @@ namespace VentaBoletosCine
         {
             tbApellidoM.Enabled = interruptor;
             tbEmail.Enabled = interruptor;
-            tbPass.Enabled = interruptor;
-            tbConfPass.Enabled = interruptor;
             tbNombre.Enabled = interruptor;
-            tbUsuario.Enabled = interruptor;
             tbApellidoP.Enabled = interruptor;
-            tbConfPass.Enabled = interruptor;
             maskedTextBox1.Enabled = interruptor;
         }
 
@@ -106,29 +101,20 @@ namespace VentaBoletosCine
                   (tbApellidoP.Text != "") &&
                   (maskedTextBox1.Text != "") &&
                   (tbEmail.Text != "") &&
-                  (tbPass.Text != "") &&
-                  (tbApellidoM.Text != "") &&
-                  (tbConfPass.Text != "") 
+                  (tbApellidoM.Text != "")
                 )
             {
+                miembro = new Miembro();
 
-                nombreMembresia = tbNombre.Text + " " + tbApellidoP.Text + " " + tbApellidoM.Text;
+                miembro.nombre = tbNombre.Text + " " + tbApellidoP.Text + " " + tbApellidoM.Text;
+                miembro.telefono = maskedTextBox1.Text;
+                miembro.correo = tbEmail.Text;
+                miembro.nivel = cbTipoMemb.SelectedIndex;
 
-                telefono = maskedTextBox1.Text;
-                email = tbEmail.Text;
-                password = tbPass.Text;
-                    comando = new MySqlCommand("INSERT INTO miembro (nombre, telefono, correo, contraseña, administrador, usuario) VALUES ('" + nombreMembresia + "'," + telefono + ",'" + email + "','" + tbPass.Text + "'," + cbTipoMemb.SelectedIndex + ", '" + tbUsuario.Text + "')", conexionBD.Connection);
-                    try
-                    {
-                        reader = comando.ExecuteReader();
-                        MessageBox.Show("Registro exitoso");
-                        reader.Close();
-                    }
-                    catch (Exception exc)
-                    {
-                        MessageBox.Show(exc.Message);
-                    }
-                
+                if (miembro.Registrar(conexionBD) == true)
+                {
+                    MessageBox.Show("Registro exitoso");
+                }
             }
             else
                 MessageBox.Show("No se pueden dejar campos vacios", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -142,8 +128,18 @@ namespace VentaBoletosCine
 
         private void button6_Click(object sender, EventArgs e)
         {
+            DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from miembro";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable dataTable = new DataTable();
+            BindingSource bS = new BindingSource();
+            DA.Fill(dataTable);
+            bS.DataSource = dataTable;
+            dataGridView1.DataSource = bS;
+
             DataGrid DG = new DataGrid();
-            DG.ShowData((BindingSource)table.DataSource);
+            DG.ShowData(bS);
             DG.Show();
         }
 
@@ -286,12 +282,8 @@ namespace VentaBoletosCine
         {
             tbApellidoM.Clear();
             tbEmail.Clear();
-            tbPass.Clear();
-            tbConfPass.Clear();
             tbNombre.Clear();
-            tbUsuario.Clear();
             tbApellidoP.Clear();
-            tbConfPass.Clear();
             maskedTextBox1.Clear();
             cbTipoMemb.Text = "Sin seleccionar";
            
@@ -349,7 +341,7 @@ namespace VentaBoletosCine
             if ((contUsuario <= 3))
             {
                 MessageBox.Show("Nombre de usuario demasiado corto");
-                tbUsuario.Focus();
+                //tbUsuario.Focus();
 
             }
         }
@@ -363,21 +355,7 @@ namespace VentaBoletosCine
                 e.Handled = true;
                 return;
             }
-            else
-                cuentaUsuario = tbUsuario.Text;
-            
-        }
-
-        private void tbConfPass_Leave(object sender, EventArgs e)
-        {
-
-            if (String.Compare(tbPass.Text, tbConfPass.Text) == 1)
-            {
-                MessageBox.Show("Contraseñas no coinciden");
-            }
-            else
-                MessageBox.Show("Contraseñas aceptadas");
-
+                //cuentaUsuario = tbUsuario.Text;
         }
 
         private void tbEmail_KeyPress(object sender, KeyPressEventArgs e)
@@ -427,24 +405,34 @@ namespace VentaBoletosCine
         {
             Buscador busca;
             busca = new Buscador(conexionBD, "miembro");
-            busca.LlenarComboBox((BindingSource)table.DataSource);
+            busca.LlenarComboBox((BindingSource)dataGridView1.DataSource);
             busca.ShowDialog();
             if (busca.id != -1)
             {
-                LlenaCampos(busca.id);
+                LlenaCampos(busca.id, busca.busqueda);
             }
         }
 
-        private void LlenaCampos(int id)
+        private void LlenaCampos(int num, string busqueda)
         {
-            /*
-            string nombres = (string)(table.Rows[id].Cells[1].Value);
-            string[] separacion = nombres.Split(' ');
-            tbNombre.Text = separacion[0];
-            tbApellidoP.Text = separacion[1];
-            tbApellidoM.Text = separacion[2];
-             */
-            
+            miembro = new Miembro();
+            miembro.Recuperar(conexionBD, num, busqueda);
+            string[] nombres = miembro.nombre.Split(' ');
+
+            cbTipoMemb.SelectedIndex = miembro.nivel;
+            tbNombre.Text = nombres[0];
+            if (nombres.Count() > 1)
+            {
+                tbApellidoM.Text = nombres[1];
+                tbApellidoP.Text = nombres[2];
+            }
+            tbEmail.Text = miembro.correo;
+            maskedTextBox1.Text = miembro.telefono;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -16,7 +16,6 @@ namespace VentaBoletosCine
     {
         DBConnection conexionBD;
         MySqlCommand comando;
-        MySqlDataAdapter adaptadorDatos;
         MySqlDataReader reader;
         String query;
 
@@ -65,7 +64,7 @@ namespace VentaBoletosCine
             {
                 string usuario = textBox1.Text;
                 string contraseña = textBox2.Text;
-                query = "SELECT * FROM Miembro WHERE usuario = '" + usuario + "'";
+                query = "SELECT * FROM Usuario WHERE usuario = '" + usuario + "'";
                 comando = new MySqlCommand(query, conexionBD.Connection);
 
                 try
@@ -73,11 +72,14 @@ namespace VentaBoletosCine
                     reader = comando.ExecuteReader();
                     if (reader.Read())
                     {
-                        if (reader.GetString("contraseña").Equals(contraseña))
+                        if (reader.GetString("contrasena").Equals(contraseña))
                         {
+                            Usuario user = new Usuario();
+                            user.nombreUsusario = usuario;
+                            user.contraseña = reader.GetString("contrasena");
+                            user.permisos = reader.GetInt32("permisos");
                             MessageBox.Show("Has accesado al sistema");
-                            bool b = reader.GetBoolean("administrador");
-                            Menu ventana = new Menu(conexionBD, b);
+                            Menu ventana = new Menu(conexionBD, user);
                             this.Hide();
                             reader.Close();
                             ventana.ShowDialog();
@@ -86,13 +88,16 @@ namespace VentaBoletosCine
                         }
                         else
                         {
+                            reader.Close();
                             MessageBox.Show("Contraseña incorrecta");
                         }
                     }
                 }
                 catch (Exception exception)
                 {
+                    reader.Close();
                     MessageBox.Show(exception.Message);
+                    Close();
                 }
             }
             else
