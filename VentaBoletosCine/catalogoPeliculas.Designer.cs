@@ -39,10 +39,10 @@
             this.tbDuracion = new System.Windows.Forms.TextBox();
             this.tbSipnosis = new System.Windows.Forms.RichTextBox();
             this.tbCreditosRep = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btGuardar = new System.Windows.Forms.Button();
+            this.btEliminar = new System.Windows.Forms.Button();
+            this.btNuevo = new System.Windows.Forms.Button();
+            this.btBuscar = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -64,7 +64,7 @@
             this.btSiguiente = new System.Windows.Forms.Button();
             this.btUltimo = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -158,57 +158,57 @@
             this.tbCreditosRep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCreditosRep_KeyPress);
             this.tbCreditosRep.Leave += new System.EventHandler(this.tbCreditosRep_Leave);
             // 
-            // button1
+            // btGuardar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(585, 275);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 83);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btGuardar.Image")));
+            this.btGuardar.Location = new System.Drawing.Point(585, 275);
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(75, 83);
+            this.btGuardar.TabIndex = 6;
+            this.btGuardar.Text = "Guardar";
+            this.btGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btGuardar.UseVisualStyleBackColor = true;
+            this.btGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btEliminar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(585, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 83);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Eliminar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btEliminar.Image")));
+            this.btEliminar.Location = new System.Drawing.Point(585, 364);
+            this.btEliminar.Name = "btEliminar";
+            this.btEliminar.Size = new System.Drawing.Size(75, 83);
+            this.btEliminar.TabIndex = 8;
+            this.btEliminar.Text = "Eliminar";
+            this.btEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btEliminar.UseVisualStyleBackColor = true;
+            this.btEliminar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btNuevo
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(504, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 83);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Nuevo";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btNuevo.Image")));
+            this.btNuevo.Location = new System.Drawing.Point(504, 275);
+            this.btNuevo.Name = "btNuevo";
+            this.btNuevo.Size = new System.Drawing.Size(75, 83);
+            this.btNuevo.TabIndex = 5;
+            this.btNuevo.Text = "Nuevo";
+            this.btNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btNuevo.UseVisualStyleBackColor = true;
+            this.btNuevo.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btBuscar
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(504, 364);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 83);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Buscar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
+            this.btBuscar.Location = new System.Drawing.Point(504, 364);
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(75, 83);
+            this.btBuscar.TabIndex = 7;
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // bindingNavigator1
             // 
@@ -422,18 +422,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 27;
             // 
-            // button5
+            // btActualizar
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(666, 363);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 84);
-            this.button5.TabIndex = 28;
-            this.button5.Text = "Actualizar";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.btActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btActualizar.Image")));
+            this.btActualizar.Location = new System.Drawing.Point(666, 363);
+            this.btActualizar.Name = "btActualizar";
+            this.btActualizar.Size = new System.Drawing.Size(75, 84);
+            this.btActualizar.TabIndex = 28;
+            this.btActualizar.Text = "Actualizar";
+            this.btActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btActualizar.UseVisualStyleBackColor = true;
+            this.btActualizar.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Capturista
             // 
@@ -442,7 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(761, 546);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btActualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btUltimo);
             this.Controls.Add(this.btSiguiente);
@@ -452,10 +452,10 @@
             this.Controls.Add(this.minutos);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btBuscar);
+            this.Controls.Add(this.btNuevo);
+            this.Controls.Add(this.btEliminar);
+            this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.tbCreditosRep);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tbSipnosis);
@@ -488,10 +488,10 @@
         private System.Windows.Forms.TextBox tbDuracion;
         private System.Windows.Forms.RichTextBox tbSipnosis;
         private System.Windows.Forms.RichTextBox tbCreditosRep;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btGuardar;
+        private System.Windows.Forms.Button btEliminar;
+        private System.Windows.Forms.Button btNuevo;
+        private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -515,7 +515,7 @@
         private System.Windows.Forms.Button btSiguiente;
         private System.Windows.Forms.Button btUltimo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btActualizar;
     }
 }
 

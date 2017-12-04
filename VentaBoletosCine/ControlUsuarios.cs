@@ -42,7 +42,10 @@ namespace VentaBoletosCine
          */
         private void button1_Click(object sender, EventArgs e)
         {
-            if (tbContraseña.Text.Equals(tbConfirmacion.Text))
+            if (tbContraseña.Text.Equals(tbConfirmacion.Text) &&
+                tbContraseña.Text != "" &&
+                tbNombreUsuario.Text != ""
+                )
             {
                 user.nombreUsusario = tbNombreUsuario.Text;
                 user.contraseña = tbContraseña.Text;

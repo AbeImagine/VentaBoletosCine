@@ -58,6 +58,8 @@ namespace VentaBoletosCine
             InitializeComponent();
             dataGridView1.Visible = false;
             LlenarTablaAuxiliar();
+            btGuardar.Enabled = false;
+            btActualizar.Enabled = false;
         }
 
         /*  Método: LlenarTablaAuxiliar.
@@ -135,6 +137,8 @@ namespace VentaBoletosCine
         {
             pelicula = new Pelicula();
             limpiaRegistro();
+            btGuardar.Enabled = true;
+            btActualizar.Enabled = false;
         }
 
         /*
@@ -362,6 +366,8 @@ namespace VentaBoletosCine
             if (busca.id != -1)
             {
                 LlenaCampos(busca.id, busca.busqueda);
+                btActualizar.Enabled = true;
+                btGuardar.Enabled = false;
             }
             else
                 MessageBox.Show("Registro no encontrado");
@@ -394,6 +400,8 @@ namespace VentaBoletosCine
             if (index == dataGridView1.Rows.Count - 1)
                 index = 0;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         /*  Método: ActualizarCampos
@@ -427,6 +435,8 @@ namespace VentaBoletosCine
             if (index < 0)
                 index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         /*  Evento: btPrimero_Click (Click primero)
@@ -437,6 +447,8 @@ namespace VentaBoletosCine
         {
             index = 0;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         /*  Evento: btUltimo_Click (Click primero)
@@ -447,6 +459,8 @@ namespace VentaBoletosCine
         {
             index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         /*  Evento: button5_Click (Click actualización)

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(funcionesSalas));
-            this.button2 = new System.Windows.Forms.Button();
+            this.btBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,33 +42,33 @@
             this.comboBoxHorario = new System.Windows.Forms.ComboBox();
             this.comboBoxSala = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btNuevo = new System.Windows.Forms.Button();
+            this.btEliminar = new System.Windows.Forms.Button();
+            this.btGuardar = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btBuscar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(432, 115);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 83);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Buscar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button3_Click);
+            this.btBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
+            this.btBuscar.Location = new System.Drawing.Point(432, 115);
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(75, 83);
+            this.btBuscar.TabIndex = 6;
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -191,44 +191,44 @@
             this.pictureBox2.TabIndex = 98;
             this.pictureBox2.TabStop = false;
             // 
-            // button6
+            // btNuevo
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(432, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 80);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Nuevo";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btNuevo.Image")));
+            this.btNuevo.Location = new System.Drawing.Point(432, 25);
+            this.btNuevo.Name = "btNuevo";
+            this.btNuevo.Size = new System.Drawing.Size(75, 80);
+            this.btNuevo.TabIndex = 4;
+            this.btNuevo.Text = "Nuevo";
+            this.btNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btNuevo.UseVisualStyleBackColor = true;
+            this.btNuevo.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // btEliminar
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(513, 115);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 83);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Eliminar";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btEliminar.Image")));
+            this.btEliminar.Location = new System.Drawing.Point(513, 115);
+            this.btEliminar.Name = "btEliminar";
+            this.btEliminar.Size = new System.Drawing.Size(75, 83);
+            this.btEliminar.TabIndex = 7;
+            this.btEliminar.Text = "Eliminar";
+            this.btEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btEliminar.UseVisualStyleBackColor = true;
+            this.btEliminar.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btGuardar
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(513, 24);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 81);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Guardar";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btGuardar.Image")));
+            this.btGuardar.Location = new System.Drawing.Point(513, 24);
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(75, 81);
+            this.btGuardar.TabIndex = 5;
+            this.btGuardar.Text = "Guardar";
+            this.btGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btGuardar.UseVisualStyleBackColor = true;
+            this.btGuardar.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -296,18 +296,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 104;
             // 
-            // button11
+            // btActualizar
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(594, 115);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 83);
-            this.button11.TabIndex = 105;
-            this.button11.Text = "Actualizar";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btActualizar.Image")));
+            this.btActualizar.Location = new System.Drawing.Point(594, 115);
+            this.btActualizar.Name = "btActualizar";
+            this.btActualizar.Size = new System.Drawing.Size(75, 83);
+            this.btActualizar.TabIndex = 105;
+            this.btActualizar.Text = "Actualizar";
+            this.btActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btActualizar.UseVisualStyleBackColor = true;
+            this.btActualizar.Click += new System.EventHandler(this.button11_Click);
             // 
             // funcionesSalas
             // 
@@ -315,16 +315,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(706, 374);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.btActualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btNuevo);
+            this.Controls.Add(this.btEliminar);
+            this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.comboBoxSala);
             this.Controls.Add(this.comboBoxHorario);
             this.Controls.Add(this.comboBoxPeliculas);
@@ -337,7 +337,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btBuscar);
             this.Name = "funcionesSalas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funciones ";
@@ -352,7 +352,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbPrecio;
         private System.Windows.Forms.Label label6;
@@ -366,9 +366,9 @@
         private System.Windows.Forms.ComboBox comboBoxSala;
         private System.Windows.Forms.PictureBox pictureBox2;
         //private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btNuevo;
+        private System.Windows.Forms.Button btEliminar;
+        private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button3;
@@ -376,7 +376,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btActualizar;
         //private System.Windows.Forms.Button button5;
     }
 }

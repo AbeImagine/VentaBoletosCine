@@ -86,7 +86,7 @@
             this.cbPermisos.FormattingEnabled = true;
             this.cbPermisos.Location = new System.Drawing.Point(120, 149);
             this.cbPermisos.Name = "cbPermisos";
-            this.cbPermisos.Size = new System.Drawing.Size(42, 21);
+            this.cbPermisos.Size = new System.Drawing.Size(100, 21);
             this.cbPermisos.TabIndex = 6;
             // 
             // label4

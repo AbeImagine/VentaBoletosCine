@@ -32,6 +32,8 @@ namespace VentaBoletosCine
 
             dataGridView1.Visible = false;
             LlenarTablaAuxiliar();
+            btGuardar.Enabled = false;
+            btActualizar.Enabled = false;
         }
 
         private void LlenarTablaAuxiliar()
@@ -128,7 +130,7 @@ namespace VentaBoletosCine
             this.tbPrecio.TabIndex = 3;
             //this.textBox5.TabIndex = 4;
             //this.button1.TabIndex = 5;
-            this.button2.TabIndex = 5;
+            this.btBuscar.TabIndex = 5;
             //this.button3.TabIndex = 5;
             //this.button4.TabIndex = 5;
             
@@ -179,6 +181,8 @@ namespace VentaBoletosCine
             if (busca.id != -1)
             {
                 LlenaCampos(busca.id, busca.busqueda);
+                btActualizar.Enabled = true;
+                btGuardar.Enabled = false;
             }
             else
                 MessageBox.Show("Registro no encontrado");
@@ -198,6 +202,11 @@ namespace VentaBoletosCine
         private void button6_Click(object sender, EventArgs e)
         {
             funcion = new Funcion();
+            comboBoxHorario.Text = "";
+            comboBoxPeliculas.Text = "";
+            comboBoxSala.Text = "";
+            btGuardar.Enabled = true;
+            btActualizar.Enabled = false;
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -307,6 +316,8 @@ namespace VentaBoletosCine
             if (index == dataGridView1.Rows.Count - 1)
                 index = 0;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void button4_Click_2(object sender, EventArgs e)
@@ -315,18 +326,24 @@ namespace VentaBoletosCine
             if (index < 0)
                 index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             index = 0;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void ActualizaCampos()

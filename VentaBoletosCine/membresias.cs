@@ -63,6 +63,9 @@ namespace VentaBoletosCine
             DA.Fill(dataTable);
             bS.DataSource = dataTable;
             dataGridView1.DataSource = bS;
+
+            btGuardar.Enabled = false;
+            btActualizar.Enabled = false;
         }
 
         private void membresias_Load(object sender, EventArgs e)
@@ -274,7 +277,8 @@ namespace VentaBoletosCine
             miembro = new Miembro();
             limpiaTodo();
             activaDesactivaTextbox(false);
-
+            btGuardar.Enabled = true;
+            btActualizar.Enabled = false;
         }
 
         /*
@@ -412,6 +416,8 @@ namespace VentaBoletosCine
             if (busca.id != -1)
             {
                 LlenaCampos(busca.id, busca.busqueda);
+                btActualizar.Enabled = true;
+                btGuardar.Enabled = false;
             }
         }
 
@@ -454,6 +460,8 @@ namespace VentaBoletosCine
             if (index == dataGridView1.Rows.Count - 1)
                 index = 0;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -462,18 +470,24 @@ namespace VentaBoletosCine
             if (index < 0)
                 index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             index = 0;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             index = dataGridView1.Rows.Count - 2;
             ActualizaCampos();
+            btActualizar.Enabled = true;
+            btGuardar.Enabled = false;
         }
 
         private void ActualizaCampos()
