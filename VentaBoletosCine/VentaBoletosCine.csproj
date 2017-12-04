@@ -74,11 +74,11 @@
       <DependentUpon>DataGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="DBconnection.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="catalogoPeliculas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="catalogoPeliculas.Designer.cs">
+      <DependentUpon>catalogoPeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcion.cs" />
     <Compile Include="funcionesSalas.cs">
@@ -138,8 +138,11 @@
     <EmbeddedResource Include="ControlUsuarios.resx">
       <DependentUpon>ControlUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="DataGrid.resx">
+      <DependentUpon>DataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="catalogoPeliculas.resx">
+      <DependentUpon>catalogoPeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="funcionesSalas.resx">
       <DependentUpon>funcionesSalas.cs</DependentUpon>

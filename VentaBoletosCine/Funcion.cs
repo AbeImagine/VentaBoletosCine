@@ -20,7 +20,7 @@ namespace VentaBoletosCine
 
         public Funcion()
         {
-
+            id_funcion = -1;
         }
 
         public bool Recuperar(DBConnection conexionBD, int id_func)
@@ -113,5 +113,38 @@ namespace VentaBoletosCine
             return true;
         }
 
+        public bool Eliminar(DBConnection conexionBD, int id)
+        {
+            string commandtxt = "DELETE FROM pelicula WHERE id_funcion=" + id;
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool Actualizar(DBConnection conexionBD)
+        {
+            string commandtxt = "UPDATE funcion SET id_pelicula=" + id_pelicula + ", hora='" + hora + "', precio=" + precio + ", num_sala=" + num_sala + "' WHERE id_funcion=" + id_funcion;
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

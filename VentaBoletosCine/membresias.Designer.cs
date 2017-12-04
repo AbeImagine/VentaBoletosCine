@@ -89,7 +89,7 @@
             this.tbApellidoP.Location = new System.Drawing.Point(211, 227);
             this.tbApellidoP.Name = "tbApellidoP";
             this.tbApellidoP.Size = new System.Drawing.Size(301, 24);
-            this.tbApellidoP.TabIndex = 3;
+            this.tbApellidoP.TabIndex = 2;
             this.tbApellidoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoP_KeyPress);
             this.tbApellidoP.Leave += new System.EventHandler(this.tbApellidoP_Leave);
             // 
@@ -197,7 +197,7 @@
             this.tbApellidoM.Location = new System.Drawing.Point(211, 277);
             this.tbApellidoM.Name = "tbApellidoM";
             this.tbApellidoM.Size = new System.Drawing.Size(301, 24);
-            this.tbApellidoM.TabIndex = 2;
+            this.tbApellidoM.TabIndex = 3;
             this.tbApellidoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbApellidoM_KeyPress);
             this.tbApellidoM.Leave += new System.EventHandler(this.tbApellidoM_Leave);
             // 
@@ -238,6 +238,7 @@
             this.button2.Text = "Eliminar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -254,13 +255,13 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(701, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 83);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Editar";
+            this.button1.Text = "Actualizar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -326,6 +327,7 @@
             this.button9.Size = new System.Drawing.Size(32, 46);
             this.button9.TabIndex = 57;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -336,6 +338,7 @@
             this.button8.Size = new System.Drawing.Size(32, 46);
             this.button8.TabIndex = 56;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -346,6 +349,7 @@
             this.button7.Size = new System.Drawing.Size(32, 46);
             this.button7.TabIndex = 55;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button10
             // 
@@ -356,6 +360,7 @@
             this.button10.Size = new System.Drawing.Size(32, 46);
             this.button10.TabIndex = 54;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // dataGridView1
             // 
@@ -364,6 +369,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 58;
+            this.dataGridView1.Visible = false;
             // 
             // membresias
             // 

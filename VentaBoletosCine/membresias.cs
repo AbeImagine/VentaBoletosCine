@@ -37,6 +37,8 @@ namespace VentaBoletosCine
 
         List<int> lista ;
 
+        private int index;
+
 
         //Variable para comprobar que el email es verdadero 
         bool invalid = false;
@@ -118,7 +120,6 @@ namespace VentaBoletosCine
             }
             else
                 MessageBox.Show("No se pueden dejar campos vacios", "Error de registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -211,7 +212,7 @@ namespace VentaBoletosCine
 
         private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -223,7 +224,7 @@ namespace VentaBoletosCine
         private void tbApellidoM_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -239,7 +240,7 @@ namespace VentaBoletosCine
         {
 
 
-            if ((!char.IsLetter(e.KeyChar)) && ( e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
                
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
@@ -256,8 +257,8 @@ namespace VentaBoletosCine
          */
         private void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            
-            if ((!char.IsNumber( (char)e.KeyData )) && ( e.KeyCode != Keys.Back))
+
+            if ((!char.IsLetter((char)e.KeyValue)) && (((char)e.KeyValue != (char)Keys.Back) && ((char)e.KeyValue != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar números");
                 e.Handled = true;
@@ -270,6 +271,7 @@ namespace VentaBoletosCine
 
         private void button3_Click(object sender, EventArgs e)
         {
+            miembro = new Miembro();
             limpiaTodo();
             activaDesactivaTextbox(false);
 
@@ -432,7 +434,91 @@ namespace VentaBoletosCine
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (miembro.id_miembro != -1)
+            {
+                miembro.nivel = cbTipoMemb.SelectedIndex;
+                miembro.nombre = tbNombre.Text + " " + tbApellidoP.Text + " " + tbApellidoM.Text;
+                miembro.telefono = maskedTextBox1.Text;
+                miembro.correo = tbEmail.Text;
 
+                if (miembro.Actualizar(conexionBD) == true)
+                {
+                    MessageBox.Show("Actualización exitosa");
+                }
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            index++;
+            if (index == dataGridView1.Rows.Count - 1)
+                index = 0;
+            ActualizaCampos();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            index--;
+            if (index < 0)
+                index = dataGridView1.Rows.Count - 2;
+            ActualizaCampos();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            index = 0;
+            ActualizaCampos();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            index = dataGridView1.Rows.Count - 2;
+            ActualizaCampos();
+        }
+
+        private void ActualizaCampos()
+        {
+            miembro = new Miembro();
+
+            miembro.id_miembro = (int)dataGridView1.Rows[index].Cells[0].Value;
+            miembro.nombre = (string)dataGridView1.Rows[index].Cells[1].Value;
+            miembro.telefono = dataGridView1.Rows[index].Cells[2].Value.ToString();
+            miembro.correo = (string)dataGridView1.Rows[index].Cells[3].Value;
+            miembro.nivel = (int)dataGridView1.Rows[index].Cells[4].Value;
+
+            string nom = miembro.nombre;
+            string[] nombres = nom.Split(' ');
+            tbNombre.Text = nombres[0];
+            if (nombres.Count() > 1)
+            {
+                tbApellidoP.Text = nombres[1];
+                tbApellidoM.Text = nombres[2];
+            }
+            else
+            {
+                tbApellidoP.Text = "";
+                tbApellidoM.Text = "";
+            }
+
+            maskedTextBox1.Text = miembro.telefono;
+            tbEmail.Text = miembro.correo;
+            cbTipoMemb.SelectedIndex = miembro.nivel;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGrid dG = new DataGrid();
+            dG.GetData((BindingSource)dataGridView1.DataSource);
+            dG.ShowDialog();
+            miembro = new Miembro();
+
+            if (dG.id != -1)
+            {
+                if (miembro.Eliminar(conexionBD, dG.id) == true)
+                {
+                    MessageBox.Show("Eliminación exitosa");
+                }
+            }
         }
 
     }

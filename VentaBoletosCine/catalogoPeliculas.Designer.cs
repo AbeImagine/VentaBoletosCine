@@ -64,6 +64,7 @@
             this.btSiguiente = new System.Windows.Forms.Button();
             this.btUltimo = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -163,9 +164,9 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(585, 277);
+            this.button1.Location = new System.Drawing.Point(585, 275);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 81);
+            this.button1.Size = new System.Drawing.Size(75, 83);
             this.button1.TabIndex = 6;
             this.button1.Text = "Guardar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -341,9 +342,9 @@
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(666, 306);
+            this.button6.Location = new System.Drawing.Point(666, 275);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 116);
+            this.button6.Size = new System.Drawing.Size(75, 83);
             this.button6.TabIndex = 9;
             this.button6.Text = "Mostrar Registros";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -380,6 +381,7 @@
             this.btPrimero.Size = new System.Drawing.Size(32, 46);
             this.btPrimero.TabIndex = 23;
             this.btPrimero.UseVisualStyleBackColor = true;
+            this.btPrimero.Click += new System.EventHandler(this.btPrimero_Click);
             // 
             // btAnterior
             // 
@@ -390,6 +392,7 @@
             this.btAnterior.Size = new System.Drawing.Size(32, 46);
             this.btAnterior.TabIndex = 24;
             this.btAnterior.UseVisualStyleBackColor = true;
+            this.btAnterior.Click += new System.EventHandler(this.btAnterior_Click);
             // 
             // btSiguiente
             // 
@@ -411,6 +414,7 @@
             this.btUltimo.Size = new System.Drawing.Size(32, 46);
             this.btUltimo.TabIndex = 26;
             this.btUltimo.UseVisualStyleBackColor = true;
+            this.btUltimo.Click += new System.EventHandler(this.btUltimo_Click);
             // 
             // dataGridView1
             // 
@@ -420,6 +424,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 27;
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(666, 363);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 84);
+            this.button5.TabIndex = 28;
+            this.button5.Text = "Actualizar";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // Capturista
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
@@ -427,6 +444,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(761, 546);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btUltimo);
             this.Controls.Add(this.btSiguiente);
@@ -499,6 +517,7 @@
         private System.Windows.Forms.Button btSiguiente;
         private System.Windows.Forms.Button btUltimo;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

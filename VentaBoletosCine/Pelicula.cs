@@ -19,7 +19,7 @@ namespace VentaBoletosCine
 
         public Pelicula()
         {
-            
+            id_pelicula = -1;
         }
 
         public bool Registrar(DBConnection conexionBD)
@@ -115,5 +115,38 @@ namespace VentaBoletosCine
             return true;
         }
 
+        public bool Actualizar(DBConnection conexionBD)
+        {
+            string commandtxt = "UPDATE pelicula SET nombre='" + nombre + "', duracion=" + duracion + ", genero='" + genero + "', sinopsis='" + sinopsis + "', reparto='" + reparto + "' WHERE id_pelicula=" + id_pelicula;
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool Eliminar(DBConnection conexionBD, int id)
+        {
+            string commandtxt = "DELETE FROM pelicula WHERE id_pelicula=" + id;
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

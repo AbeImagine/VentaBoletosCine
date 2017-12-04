@@ -18,6 +18,7 @@ namespace VentaBoletosCine
         MySqlDataAdapter DA;
         Funcion funcion;
         int precio;
+        private int index;
 
         public funcionesSalas(DBConnection conexion)
         {
@@ -96,47 +97,15 @@ namespace VentaBoletosCine
 
         private void FillComboBoxHorario()
         {
-            int aux = 10;
+            int aux = 4;
             string saux;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
             {
                 saux = (i * aux) + ":00";
                 comboBoxHorario.Items.Add(saux);
             }
         }
 
-        /*
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if( (textBox4.Text != "" )&&
-                comboBoxPeliculas.Items[comboBoxPeliculas.SelectedIndex] != null &&
-                comboBoxSala.Items[comboBoxSala.SelectedIndex] != null &&
-                comboBoxHorario.Items[comboBoxHorario.SelectedIndex] != null
-                )
-            {
-                int horario = (int)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
-                int num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
-                int id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
-
-                string commandtxt = "INSERT INTO  (hora, num_sala, id_pelicula) VALUES (" + horario + "," + num_sala + "," + id_pelicula + ")";
-                MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
-
-                try
-                {
-                    MySqlDataReader reader = command.ExecuteReader();
-                    MessageBox.Show("Registro exitoso");
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show(e.Message);
-                }
-            }
-            else
-            MessageBox.Show("Ingrese todos los datos para poder guardar el registro");
-
-        }
-        */
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar)&& e.KeyChar !='\b')
@@ -228,7 +197,7 @@ namespace VentaBoletosCine
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            funcion = new Funcion();
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -284,7 +253,18 @@ namespace VentaBoletosCine
 
         private void button7_Click(object sender, EventArgs e)
         {
+            DataGrid dG = new DataGrid();
+            dG.GetData((BindingSource)dataGridView1.DataSource);
+            dG.ShowDialog();
+            funcion = new Funcion();
 
+            if (dG.id != -1)
+            {
+                if (funcion.Eliminar(conexionBD, dG.id) == true)
+                {
+                    MessageBox.Show("Eliminación exitosa");
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -319,6 +299,65 @@ namespace VentaBoletosCine
             DataGrid DG = new DataGrid();
             DG.ShowData(bSource);
             DG.Show();
+        }
+
+        private void button3_Click_3(object sender, EventArgs e)
+        {
+            index++;
+            if (index == dataGridView1.Rows.Count - 1)
+                index = 0;
+            ActualizaCampos();
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+            index--;
+            if (index < 0)
+                index = dataGridView1.Rows.Count - 2;
+            ActualizaCampos();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            index = 0;
+            ActualizaCampos();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            index = dataGridView1.Rows.Count - 2;
+            ActualizaCampos();
+        }
+
+        private void ActualizaCampos()
+        {
+            funcion = new Funcion();
+
+            funcion.id_funcion = (int)dataGridView1.Rows[index].Cells[0].Value;
+            funcion.hora = (string)dataGridView1.Rows[index].Cells[1].Value;
+            funcion.num_sala = (int)dataGridView1.Rows[index].Cells[2].Value;
+            funcion.id_pelicula = (int)dataGridView1.Rows[index].Cells[3].Value;
+            funcion.precio = (int)dataGridView1.Rows[index].Cells[4].Value;
+
+            tbPrecio.Text = funcion.precio.ToString();
+            comboBoxHorario.Text = funcion.hora;
+            comboBoxSala.Text = funcion.num_sala.ToString();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (funcion.id_funcion != -1)
+            {
+                funcion.id_pelicula = (int)comboBoxPeliculas.SelectedIndex + 1;
+                funcion.hora = (string)comboBoxHorario.Items[comboBoxHorario.SelectedIndex];
+                funcion.num_sala = (int)comboBoxSala.Items[comboBoxSala.SelectedIndex];
+                funcion.precio = int.Parse(tbPrecio.Text);
+
+                if (funcion.Actualizar(conexionBD) == true)
+                {
+                    MessageBox.Show("Actualización exitosa");
+                }
+            }
         }
     }
 }

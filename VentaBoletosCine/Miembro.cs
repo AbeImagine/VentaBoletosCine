@@ -16,6 +16,11 @@ namespace VentaBoletosCine
         public int nivel { get; set; }
         private MySqlDataReader reader;
 
+        public Miembro()
+        {
+            id_miembro = -1;
+        }
+
         public bool Registrar(DBConnection conexionBD)
         {
             string commandtxt = "INSERT INTO miembro (nombre, telefono, correo, nivel) VALUES ('" + nombre + "', " + telefono + ",'" + correo + "'," + nivel + ")";
@@ -83,5 +88,38 @@ namespace VentaBoletosCine
             return true;
         }
 
+        public bool Eliminar(DBConnection conexionBD, int id)
+        {
+            string commandtxt = "DELETE FROM miembro WHERE id_miembro=" + id;
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool Actualizar(DBConnection conexionBD)
+        {
+            string commandtxt = "UPDATE miembro SET nombre='" + nombre + "', telefono=" + telefono + ", correo='" + correo + "', nivel=" + nivel + " WHERE id_miembro=" + id_miembro;
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

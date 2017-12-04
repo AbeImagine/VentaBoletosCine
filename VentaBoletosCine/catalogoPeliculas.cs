@@ -96,12 +96,23 @@ namespace VentaBoletosCine
 
         private void button2_Click(object sender, EventArgs e)
         {
-            limpiaRegistro();
+            DataGrid dG = new DataGrid();
+            dG.GetData((BindingSource)dataGridView1.DataSource);
+            dG.ShowDialog();
+            pelicula = new Pelicula();
+
+            if (dG.id != -1)
+            {
+                if (pelicula.Eliminar(conexionBD, dG.id) == true)
+                {
+                    MessageBox.Show("Eliminación exitosa");
+                }
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            pelicula = new Pelicula();
             limpiaRegistro();
         }
 
@@ -209,7 +220,7 @@ namespace VentaBoletosCine
 
         private void tbDuracion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar números");
                 e.Handled = true;
@@ -220,7 +231,7 @@ namespace VentaBoletosCine
 
         private void tbNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -231,7 +242,7 @@ namespace VentaBoletosCine
 
         private void tbcategoria_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -245,7 +256,7 @@ namespace VentaBoletosCine
         private void tbSipnosis_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) || e.KeyChar != (char)Keys.Space))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && e.KeyChar != (char)Keys.Space))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -269,7 +280,7 @@ namespace VentaBoletosCine
 
         private void tbCreditosRep_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) || e.KeyChar != (char)Keys.Space))
+            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && e.KeyChar != (char)Keys.Space))
             {
                 MessageBox.Show("Solo esta permitido ingresar letras");
                 e.Handled = true;
@@ -323,7 +334,65 @@ namespace VentaBoletosCine
 
         private void button8_Click(object sender, EventArgs e)
         {
+            index++;
+            if (index == dataGridView1.Rows.Count - 1)
+                index = 0;
+            ActualizaCampos();
+        }
 
+        private void ActualizaCampos()
+        {
+            pelicula = new Pelicula();
+
+            pelicula.nombre = (string)dataGridView1.Rows[index].Cells[1].Value;
+            pelicula.id_pelicula = (int)dataGridView1.Rows[index].Cells[0].Value;
+            pelicula.genero = (string)dataGridView1.Rows[index].Cells[3].Value;
+            pelicula.duracion = (int)dataGridView1.Rows[index].Cells[2].Value;
+            pelicula.sinopsis = (string)dataGridView1.Rows[index].Cells[4].Value;
+            pelicula.reparto = (string)dataGridView1.Rows[index].Cells[5].Value;
+
+            tbNombre.Text = pelicula.nombre;
+            tbDuracion.Text = pelicula.duracion.ToString();
+            tbcategoria.Text = pelicula.genero;
+            tbSipnosis.Text = pelicula.sinopsis;
+            tbCreditosRep.Text = pelicula.reparto;
+        }
+
+        private void btAnterior_Click(object sender, EventArgs e)
+        {
+            index--;
+            if (index < 0)
+                index = dataGridView1.Rows.Count - 2;
+            ActualizaCampos();
+        }
+
+        private void btPrimero_Click(object sender, EventArgs e)
+        {
+            index = 0;
+            ActualizaCampos();
+        }
+
+        private void btUltimo_Click(object sender, EventArgs e)
+        {
+            index = dataGridView1.Rows.Count - 2;
+            ActualizaCampos();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (pelicula.id_pelicula != -1)
+            {
+                pelicula.nombre = tbNombre.Text;
+                pelicula.genero = tbcategoria.Text;
+                pelicula.duracion = int.Parse(tbDuracion.Text);
+                pelicula.sinopsis = tbSipnosis.Text;
+                pelicula.reparto = tbCreditosRep.Text;
+
+                if (pelicula.Actualizar(conexionBD) == true)
+                {
+                    MessageBox.Show("Actualización exitosa");
+                }
+            }
         }
     }
 }

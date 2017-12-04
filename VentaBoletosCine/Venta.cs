@@ -22,7 +22,7 @@ namespace VentaBoletosCine
 
         public bool Registrar(DBConnection conexionBD)
         {
-            string commandtxt = "INSERT INTO venta (usuario_venta, id_funcion, precio) VALUES (" + usuario + "," + id_funcion + "," + precio + ")";
+            string commandtxt = "INSERT INTO venta (usuario_venta, id_funcion, precio) VALUES ('" + usuario + "'," + id_funcion + "," + precio + ")";
             MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
 
             try
