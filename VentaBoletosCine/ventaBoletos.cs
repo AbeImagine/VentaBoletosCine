@@ -44,6 +44,19 @@ namespace VentaBoletosCine
             timer1.Enabled = true;
 
             FillComboBoxFunc();
+
+            CambiarControles(false);
+        }
+
+        private void CambiarControles(bool p)
+        {
+            btAgregar.Enabled = p;
+            btRegistrar.Enabled = p;
+            btCancelar.Enabled = p;
+            bt100.Enabled = p;
+            bt50.Enabled = p;
+            bt200.Enabled = p;
+            bt500.Enabled = p;
         }
 
         private void FillComboBoxFunc()
@@ -373,6 +386,7 @@ namespace VentaBoletosCine
 
         private void cbNumSala_SelectedIndexChanged(object sender, EventArgs e)
         {
+            CambiarControles(true);
             func = new Funcion();
             peli = new Pelicula();
 

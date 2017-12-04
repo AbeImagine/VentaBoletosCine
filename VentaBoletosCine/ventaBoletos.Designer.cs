@@ -44,8 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btAgregar = new System.Windows.Forms.Button();
+            this.btCancelar = new System.Windows.Forms.Button();
             this.cbIdFunc = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +62,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btRegistrar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lb1 = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
@@ -248,27 +248,27 @@
             this.Nombre.Text = "Hora:";
             this.Nombre.Click += new System.EventHandler(this.Nombre_Click);
             // 
-            // button3
+            // btAgregar
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(899, 239);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 72);
-            this.button3.TabIndex = 57;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAgregar.Location = new System.Drawing.Point(899, 239);
+            this.btAgregar.Name = "btAgregar";
+            this.btAgregar.Size = new System.Drawing.Size(84, 72);
+            this.btAgregar.TabIndex = 57;
+            this.btAgregar.Text = "Agregar";
+            this.btAgregar.UseVisualStyleBackColor = true;
+            this.btAgregar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btCancelar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(899, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 72);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancelar.Location = new System.Drawing.Point(899, 315);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(84, 72);
+            this.btCancelar.TabIndex = 56;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
             // cbIdFunc
             // 
@@ -431,16 +431,16 @@
             this.label6.TabIndex = 70;
             this.label6.Text = "Precio:";
             // 
-            // button5
+            // btRegistrar
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(899, 165);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 71);
-            this.button5.TabIndex = 73;
-            this.button5.Text = "Registrar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRegistrar.Location = new System.Drawing.Point(899, 165);
+            this.btRegistrar.Name = "btRegistrar";
+            this.btRegistrar.Size = new System.Drawing.Size(84, 71);
+            this.btRegistrar.TabIndex = 73;
+            this.btRegistrar.Text = "Registrar";
+            this.btRegistrar.UseVisualStyleBackColor = true;
+            this.btRegistrar.Click += new System.EventHandler(this.button5_Click);
             // 
             // timer1
             // 
@@ -1102,7 +1102,7 @@
             this.Controls.Add(this.lb3);
             this.Controls.Add(this.lb2);
             this.Controls.Add(this.lb1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btRegistrar);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbDuracion);
@@ -1111,8 +1111,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbIdFunc);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btAgregar);
+            this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.tbNumasiento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbFecha);
@@ -1164,8 +1164,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btAgregar;
+        private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.ComboBox cbIdFunc;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox tbCambio;
@@ -1182,7 +1182,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btRegistrar;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Label lb2;
