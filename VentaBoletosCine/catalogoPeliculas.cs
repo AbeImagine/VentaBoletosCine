@@ -220,7 +220,7 @@ namespace VentaBoletosCine
 
         private void tbDuracion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((!char.IsLetter(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
+            if ((!char.IsNumber(e.KeyChar)) && ((e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)Keys.Back)))
             {
                 MessageBox.Show("Solo esta permitido ingresar números");
                 e.Handled = true;
@@ -393,6 +393,11 @@ namespace VentaBoletosCine
                     MessageBox.Show("Actualización exitosa");
                 }
             }
+        }
+
+        private void tbDuracion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

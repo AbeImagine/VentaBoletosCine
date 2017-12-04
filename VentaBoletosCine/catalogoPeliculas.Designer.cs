@@ -135,6 +135,7 @@
             this.tbDuracion.Name = "tbDuracion";
             this.tbDuracion.Size = new System.Drawing.Size(107, 24);
             this.tbDuracion.TabIndex = 2;
+            this.tbDuracion.TextChanged += new System.EventHandler(this.tbDuracion_TextChanged);
             this.tbDuracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDuracion_KeyPress);
             // 
             // tbSipnosis
