@@ -11,6 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace VentaBoletosCine
 {
+    /*  Clase: DataGrid.
+     *  Descripción: 
+     * 
+     */
     public partial class DataGrid : Form
     {
         private bool eliminate;

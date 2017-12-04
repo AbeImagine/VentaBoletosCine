@@ -11,11 +11,22 @@ using MySql.Data.MySqlClient;
 
 namespace VentaBoletosCine
 {
+    /*  Clase: ControlUsuarios
+     *  Descripción: clase encargada de el registro de nuevos usuarios en el sistema.
+     *  Atributos:
+     *      user: variable auxiliar de Usuario para la inserción de datos.
+     *      conexiónBD: objeto concetor con la Base de Datos.
+     */
     public partial class ControlUsuarios : Form
     {
         private Usuario user;
         private DBConnection conexionBD;
 
+        /*  Constructor: ControlUsuarios.
+         *  Descripcion: constructor de la clase de control de usuarios.
+         *  Parámetros:
+         *      conexion: objeto conector con la Base de Datos.
+         */
         public ControlUsuarios(DBConnection conexion)
         {
             conexionBD = conexion;
@@ -26,6 +37,9 @@ namespace VentaBoletosCine
             cbPermisos.Items.Add("Supervisor");
         }
 
+        /*  Evento: button1_Click (Click registro)
+         *  Descripción: evento encargado de registrar un usuario nuevo en la Base de Datos.
+         */
         private void button1_Click(object sender, EventArgs e)
         {
             if (tbContraseña.Text.Equals(tbConfirmacion.Text))
