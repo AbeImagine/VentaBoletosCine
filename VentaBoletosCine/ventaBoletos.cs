@@ -50,6 +50,7 @@ namespace VentaBoletosCine
             FillComboBoxFunc();
 
             CambiarControles(false);
+            btCancelar.Enabled = true;
         }
 
         private void CambiarControles(bool p)
@@ -217,7 +218,7 @@ namespace VentaBoletosCine
         {
             if (listaetiquetas[numAsiento].BackColor == Color.Red)
             {
-                MessageBox.Show("Asiento ocupado");
+                //MessageBox.Show("Asiento ocupado");
             }
             else
             {
@@ -228,7 +229,6 @@ namespace VentaBoletosCine
                 btRegistrar.Enabled = true;
                 btAgregar.Enabled = false;
             }
-              
         }
 
         public void OcuparAsiento(int numAsiento)
@@ -399,6 +399,8 @@ namespace VentaBoletosCine
             if (dataGridView1.Rows.Count == 1)
             {
                 MessageBox.Show("No se ha registrado ningun boleto");
+                cbIdFunc.Enabled = true;
+                btRegistrar.Enabled = false;
             }
             else
             {
@@ -407,6 +409,8 @@ namespace VentaBoletosCine
                 total = 0;
                 tbTotal.Text = Convert.ToString( total.ToString("C"));
             }
+            LiberarAsientos();
+            OcuparAsientos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -424,7 +428,7 @@ namespace VentaBoletosCine
         {
             CambiarControles(true);
             btRegistrar.Enabled = false;
-            btCancelar.Enabled = false;
+            btCancelar.Enabled = true;
             func = new Funcion();
             peli = new Pelicula();
 
@@ -448,18 +452,27 @@ namespace VentaBoletosCine
             tbPrecio.Text = func.precio.ToString();
 
             cbIdFunc.Enabled = false;
-
+            asientosAReservar.Clear();
         }
 
         private void OcuparAsientos()
         {
             asientos.Clear();
+            LiberarAsientos();
             asientos = func.RecuperarAsientos(conexionBD);
 
             for (int i = 0; i < asientos.Count; i++)
             {
                 if(asientos[i].disponible == false)
                     OcuparAsiento(asientos[i].num_asiento);
+            }
+        }
+
+        private void LiberarAsientos()
+        {
+            foreach (Label et in listaetiquetas)
+            {
+                et.BackColor = Color.Blue;
             }
         }
     }

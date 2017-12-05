@@ -125,6 +125,7 @@ namespace VentaBoletosCine
                 if (pelicula.Eliminar(conexionBD, dG.id) == true)
                 {
                     MessageBox.Show("Eliminación exitosa");
+                    LlenarTablaAuxiliar();
                 }
             }
         }
@@ -184,6 +185,7 @@ namespace VentaBoletosCine
                 if (pelicula.Registrar(conexionBD) == true)
                 {
                     MessageBox.Show("Registro exitoso");
+                    LlenarTablaAuxiliar();
                 }
                 else
                 {

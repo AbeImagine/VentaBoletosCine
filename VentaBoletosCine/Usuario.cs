@@ -31,7 +31,7 @@ namespace VentaBoletosCine
             }
             catch (Exception exception)
             {
-                reader.Close();
+                //reader.Close();
                 return false;
             }
             return true;

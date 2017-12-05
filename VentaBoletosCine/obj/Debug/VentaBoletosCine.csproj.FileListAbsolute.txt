@@ -31,7 +31,6 @@ C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\V
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Properties.Resources.resources
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.venLineacs.resources
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
-C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaUsuario.resources
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.exe
 C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\VentaBoletosCine.pdb
@@ -43,3 +42,6 @@ C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\Ven
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Buscador.resources
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ControlUsuarios.resources
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.Buscador.resources
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ControlUsuarios.resources
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.DataGrid.resources

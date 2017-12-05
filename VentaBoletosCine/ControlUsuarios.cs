@@ -55,6 +55,10 @@ namespace VentaBoletosCine
                 {
                     MessageBox.Show("Registro exitoso");
                 }
+                else
+                {
+                    MessageBox.Show("Error en el registro / Usuario duplicado");
+                }
             }
             else
             {

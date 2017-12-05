@@ -39,7 +39,7 @@ namespace VentaBoletosCine
                 if (listaColoresAsientos[cont].BackColor == listaAsientos[cont].BackColor)
                 {
                     listaColoresAsientos[cont].BackColor = listaAsientos[cont].BackColor;
-                    MessageBox.Show("Ya esta ocupado");
+                    //MessageBox.Show("Ya esta ocupado");
                 }
                 else
                 {
@@ -88,6 +88,12 @@ namespace VentaBoletosCine
             listaAsientos.Add(bt32);
             //listaAsientos.Add(bt33);
 
+            for (int i = 0; i < listaColoresAsientos.Count; i++)
+            {
+                listaAsientos[i].BackColor = listaColoresAsientos[i].BackColor;
+                if (listaAsientos[i].BackColor == Color.Red)
+                    listaAsientos[i].Enabled = false;
+            }
         }
 
         private void boleto_Load(object sender, EventArgs e)

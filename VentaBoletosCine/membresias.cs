@@ -68,6 +68,19 @@ namespace VentaBoletosCine
             btActualizar.Enabled = false;
         }
 
+        private void LlenarTablaAuxiliar()
+        {
+            DA = new MySqlDataAdapter();
+            string sqlSelectAll = "SELECT * from miembro";
+            DA.SelectCommand = new MySqlCommand(sqlSelectAll, conexionBD.Connection);
+
+            DataTable dataTable = new DataTable();
+            BindingSource bS = new BindingSource();
+            DA.Fill(dataTable);
+            bS.DataSource = dataTable;
+            dataGridView1.DataSource = bS;
+        }
+
         private void membresias_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
@@ -119,6 +132,7 @@ namespace VentaBoletosCine
                 if (miembro.Registrar(conexionBD) == true)
                 {
                     MessageBox.Show("Registro exitoso");
+                    LlenarTablaAuxiliar();
                 }
             }
             else
@@ -531,6 +545,7 @@ namespace VentaBoletosCine
                 if (miembro.Eliminar(conexionBD, dG.id) == true)
                 {
                     MessageBox.Show("Eliminación exitosa");
+                    LlenarTablaAuxiliar();
                 }
             }
         }

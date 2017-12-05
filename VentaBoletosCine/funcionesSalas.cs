@@ -191,11 +191,14 @@ namespace VentaBoletosCine
         private void LlenaCampos(int opcion, string busqueda)
         {
             funcion = new Funcion();
+            Pelicula peli = new Pelicula();
             funcion.Recuperar(conexionBD, opcion, busqueda);
+            peli.Recuperar(conexionBD, funcion.id_pelicula);
 
             tbPrecio.Text = funcion.precio.ToString();
             comboBoxHorario.Text = funcion.hora;
             comboBoxSala.Text = funcion.num_sala.ToString();
+            comboBoxPeliculas.Text = peli.nombre;
 
         }
 
@@ -242,6 +245,7 @@ namespace VentaBoletosCine
                 if (funcion.Registrar(conexionBD) == true)
                 {
                     MessageBox.Show("Registro exitoso");
+                    LlenarTablaAuxiliar();
                 }
                 else
                     MessageBox.Show("Error en el registro");
@@ -272,6 +276,7 @@ namespace VentaBoletosCine
                 if (funcion.Eliminar(conexionBD, dG.id) == true)
                 {
                     MessageBox.Show("Eliminación exitosa");
+                    LlenarTablaAuxiliar();
                 }
                 else
                 {
@@ -353,6 +358,7 @@ namespace VentaBoletosCine
         private void ActualizaCampos()
         {
             funcion = new Funcion();
+            Pelicula peli = new Pelicula();
 
             funcion.id_funcion = (int)dataGridView1.Rows[index].Cells[0].Value;
             funcion.hora = (string)dataGridView1.Rows[index].Cells[1].Value;
@@ -360,9 +366,12 @@ namespace VentaBoletosCine
             funcion.id_pelicula = (int)dataGridView1.Rows[index].Cells[3].Value;
             funcion.precio = (int)dataGridView1.Rows[index].Cells[4].Value;
 
+            peli.Recuperar(conexionBD, funcion.id_pelicula);
+
             tbPrecio.Text = funcion.precio.ToString();
             comboBoxHorario.Text = funcion.hora;
             comboBoxSala.Text = funcion.num_sala.ToString();
+            comboBoxPeliculas.Text = peli.nombre;
         }
 
         private void button11_Click(object sender, EventArgs e)
