@@ -264,6 +264,10 @@ namespace VentaBoletosCine
 
         }
 
+
+        /*
+         * Elimina una funcino de la base de datos
+        */
         private void button7_Click(object sender, EventArgs e)
         {
             DataGrid dG = new DataGrid();
@@ -302,6 +306,9 @@ namespace VentaBoletosCine
             DG.Show();
         }
 
+        /*
+         * Muestra la informacion de las funciones
+        */
         private void button1_Click_1(object sender, EventArgs e)
         {
             MySqlDataAdapter DA = new MySqlDataAdapter();

@@ -43,7 +43,7 @@ namespace VentaBoletosCine
                 if (String.IsNullOrEmpty(databaseName))
                     result = false;
                 //string connstring = string.Format("Server=localhost; database={0}; UID=UserName; password=your password", databaseName);
-                string connstring = string.Format("Server=localhost; database={0}; UID=root; password=3MM@nu3l", databaseName);
+                string connstring = string.Format("Server=localhost; database={0}; UID=root; password=root", databaseName);
                 connection = new MySqlConnection(connstring);
                 connection.Open();
                 result = true;

@@ -332,7 +332,7 @@ namespace VentaBoletosCine
         {
             int contApellidoM = cuentaApellidoM.Length;
 
-            if ((contApellidoM <= 3))
+            if ((contApellidoM < 3))
             {
                 MessageBox.Show("Apellido materno demasiado corto");
                 tbApellidoM.Focus();
@@ -344,7 +344,7 @@ namespace VentaBoletosCine
         {
             int contApellidoP = cuentaApellidoP.Length;
 
-            if ((contApellidoP <= 3))
+            if ((contApellidoP < 3))
             {
                 MessageBox.Show("Apellido paterno demasiado corto");
                 tbApellidoP.Focus();

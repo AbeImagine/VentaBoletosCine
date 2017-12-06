@@ -19,12 +19,14 @@ namespace VentaBoletosCine
     {
         private bool eliminate;
         public int id;
+        public string uid;
 
         public DataGrid()
         {
             InitializeComponent();
             eliminate = false;
             id = -1;
+            uid = "a";
         }
 
         public void ShowData(BindingSource bSource)
@@ -40,11 +42,33 @@ namespace VentaBoletosCine
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (eliminate)
+            try
             {
-                id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-                this.Close();
+                if (eliminate)
+                {
+                    id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    //this.Close();
+                }
             }
+            catch (Exception)
+            {
+                //throw;
+            }
+
+            try
+            {
+                if (eliminate)
+                {
+                    uid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    //this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                //throw;
+            }
+
+            this.Close();
         }
     }
 }

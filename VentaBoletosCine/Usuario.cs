@@ -14,6 +14,11 @@ namespace VentaBoletosCine
         public int permisos { get; set; }
         private MySqlDataReader reader;
 
+        MySqlDataAdapter DA;
+        Funcion funcion;
+        int precio;
+        private int index;
+
         public Usuario()
         {
 
@@ -37,5 +42,21 @@ namespace VentaBoletosCine
             return true;
         }
 
+        public bool Eliminar(DBConnection conexionBD, string id)
+        {
+            string commandtxt = "DELETE FROM usuario WHERE usuario='" + id + "'";
+            MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);
+
+            try
+            {
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception exception)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
