@@ -77,19 +77,19 @@ namespace VentaBoletosCine
                     commandtxt = "SELECT * FROM pelicula WHERE id_pelicula = " + busqueda;
                     break;
                 case 1:
-                    commandtxt = "SELECT * FROM pelicula WHERE nombre = '" + busqueda + "'";
+                    commandtxt = "SELECT * FROM pelicula WHERE nombre like '%" + busqueda + "%'";
                     break;
                 case 2:
                     commandtxt = "SELECT * FROM pelicula WHERE duracion = " + busqueda;
                     break;
                 case 3:
-                    commandtxt = "SELECT * FROM pelicula WHERE genero = '" + busqueda + "'";
+                    commandtxt = "SELECT * FROM pelicula WHERE genero like '%" + busqueda + "%'";
                     break;
                 case 4:
-                    commandtxt = "SELECT * FROM pelicula WHERE sinopsis = '" + busqueda + "'";
+                    commandtxt = "SELECT * FROM pelicula WHERE sinopsis like '%" + busqueda + "%'";
                     break;
                 case 5:
-                    commandtxt = "SELECT * FROM pelicula WHERE reparto = '" + busqueda + "'";
+                    commandtxt = "SELECT * FROM pelicula WHERE reparto like '%" + busqueda + "%'";
                     break;
             }
             MySqlCommand command = new MySqlCommand(commandtxt, conexionBD.Connection);

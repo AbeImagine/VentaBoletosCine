@@ -54,13 +54,13 @@ namespace VentaBoletosCine
                     commandtxt = "SELECT * FROM miembro WHERE id_miembro = " + busqueda;
                     break;
                 case 1:
-                    commandtxt = "SELECT * FROM miembro WHERE nombre = " + busqueda;
+                    commandtxt = "SELECT * FROM miembro WHERE nombre like '%" + busqueda + "%'";
                     break;
                 case 2:
                     commandtxt = "SELECT * FROM miembro WHERE telefono = " + busqueda;
                     break;
                 case 3:
-                    commandtxt = "SELECT * FROM miembro WHERE correo = " + busqueda;
+                    commandtxt = "SELECT * FROM miembro WHERE correo like  '%" + busqueda + "%'";
                     break;
                 case 4:
                     commandtxt = "SELECT * FROM miembro WHERE nivel = " + busqueda;

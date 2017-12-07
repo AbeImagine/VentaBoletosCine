@@ -89,3 +89,14 @@ C:\Users\ayrto\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosC
 C:\Users\ayrto\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.venLineacs.resources
 C:\Users\ayrto\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.ventaBoletos.resources
 C:\Users\ayrto\Desktop\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.csproj.GenerateResource.Cache
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.reporteVenta.resources
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\MigraDoc.DocumentObjectModel.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\MigraDoc.Rendering.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\MigraDoc.RtfRendering.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\PdfSharp.Charting.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\PdfSharp.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.Rendering.resources.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\PdfSharp.Charting.resources.dll
