@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
-            this.btAgregar = new System.Windows.Forms.Button();
+            this.btAsientos = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.cbIdFunc = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -62,7 +62,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btRegistrar = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lb1 = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
@@ -116,6 +115,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.nUDCantBol = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,15 +133,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDCantBol)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(582, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(589, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(334, 115);
+            this.pictureBox2.Size = new System.Drawing.Size(334, 112);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -249,23 +251,23 @@
             this.Nombre.Text = "Hora:";
             this.Nombre.Click += new System.EventHandler(this.Nombre_Click);
             // 
-            // btAgregar
+            // btAsientos
             // 
-            this.btAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAgregar.Location = new System.Drawing.Point(899, 239);
-            this.btAgregar.Name = "btAgregar";
-            this.btAgregar.Size = new System.Drawing.Size(84, 72);
-            this.btAgregar.TabIndex = 57;
-            this.btAgregar.Text = "Agregar";
-            this.btAgregar.UseVisualStyleBackColor = true;
-            this.btAgregar.Click += new System.EventHandler(this.button3_Click);
+            this.btAsientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAsientos.Location = new System.Drawing.Point(881, 240);
+            this.btAsientos.Name = "btAsientos";
+            this.btAsientos.Size = new System.Drawing.Size(102, 72);
+            this.btAsientos.TabIndex = 57;
+            this.btAsientos.Text = "Asientos";
+            this.btAsientos.UseVisualStyleBackColor = true;
+            this.btAsientos.Click += new System.EventHandler(this.btAsientos_Click);
             // 
             // btCancelar
             // 
             this.btCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancelar.Location = new System.Drawing.Point(899, 315);
+            this.btCancelar.Location = new System.Drawing.Point(881, 315);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(84, 72);
+            this.btCancelar.Size = new System.Drawing.Size(102, 72);
             this.btCancelar.TabIndex = 56;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
@@ -359,6 +361,7 @@
             this.tbTotal.Size = new System.Drawing.Size(152, 31);
             this.tbTotal.TabIndex = 62;
             this.tbTotal.Text = "$0.00";
+            //this.tbTotal.TextChanged += new System.EventHandler(this.tbTotal_TextChanged);
             // 
             // label4
             // 
@@ -434,17 +437,6 @@
             this.label6.Size = new System.Drawing.Size(62, 18);
             this.label6.TabIndex = 70;
             this.label6.Text = "Precio:";
-            // 
-            // btRegistrar
-            // 
-            this.btRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRegistrar.Location = new System.Drawing.Point(899, 165);
-            this.btRegistrar.Name = "btRegistrar";
-            this.btRegistrar.Size = new System.Drawing.Size(84, 71);
-            this.btRegistrar.TabIndex = 73;
-            this.btRegistrar.Text = "Registrar";
-            this.btRegistrar.UseVisualStyleBackColor = true;
-            this.btRegistrar.Click += new System.EventHandler(this.button5_Click);
             // 
             // timer1
             // 
@@ -1051,12 +1043,34 @@
             this.pictureBox3.TabIndex = 131;
             this.pictureBox3.TabStop = false;
             // 
+            // nUDCantBol
+            // 
+            this.nUDCantBol.Location = new System.Drawing.Point(701, 216);
+            this.nUDCantBol.Name = "nUDCantBol";
+            this.nUDCantBol.Size = new System.Drawing.Size(113, 20);
+            this.nUDCantBol.TabIndex = 144;
+            this.nUDCantBol.ValueChanged += new System.EventHandler(this.nUDCantBol_ValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(530, 218);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(165, 18);
+            this.label10.TabIndex = 145;
+            this.label10.Text = "Cantidad de Boletos:";
+            // 
             // ventaBoletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1006, 684);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.nUDCantBol);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox13);
@@ -1106,7 +1120,6 @@
             this.Controls.Add(this.lb3);
             this.Controls.Add(this.lb2);
             this.Controls.Add(this.lb1);
-            this.Controls.Add(this.btRegistrar);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbDuracion);
@@ -1115,7 +1128,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbIdFunc);
-            this.Controls.Add(this.btAgregar);
+            this.Controls.Add(this.btAsientos);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.tbNumasiento);
             this.Controls.Add(this.label5);
@@ -1149,6 +1162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDCantBol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1168,7 +1182,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.Button btAgregar;
+        private System.Windows.Forms.Button btAsientos;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.ComboBox cbIdFunc;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -1186,7 +1200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button btRegistrar;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Label lb2;
@@ -1240,6 +1253,8 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.NumericUpDown nUDCantBol;
+        private System.Windows.Forms.Label label10;
 
     }
 }

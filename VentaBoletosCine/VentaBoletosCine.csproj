@@ -34,8 +34,23 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MigraDoc.DocumentObjectModel">
+      <HintPath>..\..\..\..\..\..\Dropbox\Abromi\PDFsharp-MigraDocFoundation-Assemblies-1_32\GDI+\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering">
+      <HintPath>..\..\..\..\..\..\Dropbox\Abromi\PDFsharp-MigraDocFoundation-Assemblies-1_32\GDI+\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.RtfRendering">
+      <HintPath>..\..\..\..\..\..\Dropbox\Abromi\PDFsharp-MigraDocFoundation-Assemblies-1_32\GDI+\MigraDoc.RtfRendering.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\..\..\..\..\Dropbox\Abromi\PDFsharp-MigraDocFoundation-Assemblies-1_32\GDI+\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting">
+      <HintPath>..\..\..\..\..\..\Dropbox\Abromi\PDFsharp-MigraDocFoundation-Assemblies-1_32\GDI+\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -110,6 +125,12 @@
     <Compile Include="Pelicula.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporteVenta.Designer.cs">
+      <DependentUpon>reporteVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="venLineacs.cs">
       <SubType>Form</SubType>
@@ -160,6 +181,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reporteVenta.resx">
+      <DependentUpon>reporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="venLineacs.resx">
       <DependentUpon>venLineacs.cs</DependentUpon>
     </EmbeddedResource>

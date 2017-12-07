@@ -80,7 +80,7 @@ namespace VentaBoletosCine
 
         private void button4_Click(object sender, EventArgs e)
         {
-            venLineacs venta = new venLineacs(conexionBD, user);
+            venLineacs venta = new reporteVenta(conexionBD, user);
             this.Hide();
             venta.ShowDialog();
             this.Show();

@@ -17,18 +17,19 @@ namespace VentaBoletosCine
         List<Button> listaAsientos;
 
         public List<Label> listaColoresAsientos;
-
+        public int boletosTotal;
+        public int contaBoletos=0;
         int numAsiento = 0;
         public delegate void delegadoPasaDato(int valor);
         public event delegadoPasaDato eventoPasaNumBoleto;
 
 
-        public boleto(DBConnection conexion, List<Label> lista)
+        public boleto(DBConnection conexion, List<Label> lista, int cantBoletos)
         {
             conexion = conexionBD;
             listaAsientos = new List<Button>();
             listaColoresAsientos = lista;
-
+            boletosTotal = cantBoletos;
             InitializeComponent();
         }
 
@@ -106,226 +107,58 @@ namespace VentaBoletosCine
         }
 
 
-        private void button43_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             revisa();
             checaSeleecionAsiento();
+            this.Close();
+            
 
         }
 
         public void checaSeleecionAsiento()
         {
-            foreach (var listaAux in listaAsientos)
+            if(contaBoletos <= boletosTotal)
             {
-                if (listaAux.BackColor == Color.Red)
+                foreach (var listaAux in listaAsientos)
                 {
-                    numAsiento = listaAsientos.IndexOf(listaAux);
-                    eventoPasaNumBoleto(numAsiento);
-                    this.Close();
+                    if (listaAux.BackColor == Color.Green)
+                    {
+                        
+                        numAsiento = listaAsientos.IndexOf(listaAux);
+                        eventoPasaNumBoleto(numAsiento);
+                        //this.Close();
+                    }
+
                 }
-
             }
-
+           
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bt1_Click(object sender, EventArgs e)
         {
-            bt1.BackColor = Color.Red;
-            checaSeleecionAsiento();
+            Button b = (Button)sender;
+            if (b.BackColor == Color.Blue)
+            {
+                if (contaBoletos <= boletosTotal - 1)
+                {
+                    contaBoletos++;
+                    b.BackColor = Color.Green;
+                    numAsiento = listaAsientos.IndexOf(b);
+                    eventoPasaNumBoleto(numAsiento);
+                }
+            }
+            else if(b.BackColor == Color.Green)
+            {
+                contaBoletos--;
+                b.BackColor = Color.Blue;
+                numAsiento = listaAsientos.IndexOf(b);
+                eventoPasaNumBoleto(numAsiento);
+            }
+            //checaSeleecionAsiento();
+         }
 
-        }
-
-        private void bt2_Click(object sender, EventArgs e)
-        {
-            bt2.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt3_Click(object sender, EventArgs e)
-        {
-            bt3.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt4_Click(object sender, EventArgs e)
-        {
-            bt4.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt5_Click(object sender, EventArgs e)
-        {
-            bt5.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt6_Click(object sender, EventArgs e)
-        {
-            bt6.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt7_Click(object sender, EventArgs e)
-        {
-            bt7.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt8_Click(object sender, EventArgs e)
-        {
-            bt8.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt9_Click(object sender, EventArgs e)
-        {
-            bt9.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt10_Click(object sender, EventArgs e)
-        {
-            bt10.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt11_Click(object sender, EventArgs e)
-        {
-            bt11.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt12_Click(object sender, EventArgs e)
-        {
-            bt12.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt13_Click(object sender, EventArgs e)
-        {
-            bt13.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt14_Click(object sender, EventArgs e)
-        {
-            bt14.BackColor = Color.Red;
-        }
-
-        private void bt15_Click(object sender, EventArgs e)
-        {
-            bt15.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt16_Click(object sender, EventArgs e)
-        {
-            bt16.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt17_Click(object sender, EventArgs e)
-        {
-            bt17.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt18_Click(object sender, EventArgs e)
-        {
-            bt18.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt19_Click(object sender, EventArgs e)
-        {
-            bt19.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt20_Click(object sender, EventArgs e)
-        {
-            bt20.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt21_Click(object sender, EventArgs e)
-        {
-            bt21.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt22_Click(object sender, EventArgs e)
-        {
-            bt22.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt23_Click(object sender, EventArgs e)
-        {
-            bt23.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt24_Click(object sender, EventArgs e)
-        {
-            bt24.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt25_Click(object sender, EventArgs e)
-        {
-            bt25.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt26_Click(object sender, EventArgs e)
-        {
-            bt26.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt27_Click(object sender, EventArgs e)
-        {
-            bt27.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt28_Click(object sender, EventArgs e)
-        {
-            bt28.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt29_Click(object sender, EventArgs e)
-        {
-            bt29.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt30_Click(object sender, EventArgs e)
-        {
-            bt30.BackColor = Color.Red;
-            checaSeleecionAsiento();
-
-        }
-
-        private void bt31_Click(object sender, EventArgs e)
-        {
-            bt31.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt32_Click(object sender, EventArgs e)
-        {
-            bt32.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
-        private void bt33_Click(object sender, EventArgs e)
-        {
-            //bt33.BackColor = Color.Red;
-            checaSeleecionAsiento();
-        }
-
+       
+        
     }
 }
