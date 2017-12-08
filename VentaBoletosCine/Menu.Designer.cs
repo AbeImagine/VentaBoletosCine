@@ -38,6 +38,8 @@
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btControlUsuarios = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +79,6 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(254, 150);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Reporte de venta";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -133,27 +134,55 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(7, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1073, 510);
+            this.pictureBox1.Size = new System.Drawing.Size(1073, 542);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // btControlUsuarios
             // 
-            this.btControlUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btControlUsuarios.Location = new System.Drawing.Point(20, 458);
+            this.btControlUsuarios.BackColor = System.Drawing.Color.Chocolate;
+            this.btControlUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btControlUsuarios.BackgroundImage")));
+            this.btControlUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btControlUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btControlUsuarios.Location = new System.Drawing.Point(769, 159);
             this.btControlUsuarios.Name = "btControlUsuarios";
-            this.btControlUsuarios.Size = new System.Drawing.Size(254, 46);
+            this.btControlUsuarios.Size = new System.Drawing.Size(254, 108);
             this.btControlUsuarios.TabIndex = 9;
-            this.btControlUsuarios.Text = "Control de usuarios";
-            this.btControlUsuarios.UseVisualStyleBackColor = true;
+            this.btControlUsuarios.UseVisualStyleBackColor = false;
             this.btControlUsuarios.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(53, 454);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(171, 87);
+            this.button3.TabIndex = 10;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Location = new System.Drawing.Point(239, 454);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(171, 87);
+            this.button6.TabIndex = 11;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1092, 516);
+            this.ClientSize = new System.Drawing.Size(1092, 540);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btControlUsuarios);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox3);
@@ -185,5 +214,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btControlUsuarios;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
     }
 }

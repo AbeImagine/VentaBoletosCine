@@ -100,3 +100,9 @@ C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\Ven
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\USUSRIO\Documents\UASLP\Ing. SW B\VentaBoletosCine\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.Rendering.resources.dll
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Emmanuel\Documents\GitHub\VentaBoletosCine\VentaBoletosCine\obj\Debug\VentaBoletosCine.reporteVenta.resources

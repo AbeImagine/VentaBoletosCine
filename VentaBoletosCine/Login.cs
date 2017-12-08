@@ -36,11 +36,11 @@ namespace VentaBoletosCine
 
             if (conexionBD.IsConnected())
             {
-                MessageBox.Show("Conexion lograda");
+                MessageBox.Show("Conexion lograda","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Conexion fallida");
+                MessageBox.Show("Conexion fallida", "Información", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
         }
@@ -78,11 +78,11 @@ namespace VentaBoletosCine
                             user.nombreUsusario = usuario;
                             user.contraseña = reader.GetString("contrasena");
                             user.permisos = reader.GetInt32("permisos");
-                            MessageBox.Show("Has accesado al sistema");
+                            MessageBox.Show("Has accesado al sistema", "Bienvenido(a)", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Menu ventana = new Menu(conexionBD, user);
                             this.Hide();
                             reader.Close();
-                            ventana.ShowDialog();
+                            ventana.ShowDialog(this);
                             this.Show();
                             this.Focus();
                         }
@@ -148,6 +148,11 @@ namespace VentaBoletosCine
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

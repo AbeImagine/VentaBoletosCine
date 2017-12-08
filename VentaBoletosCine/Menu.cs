@@ -114,5 +114,18 @@ namespace VentaBoletosCine
             control.ShowDialog();
             this.Focus();
         }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog(this);
+            this.Focus();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

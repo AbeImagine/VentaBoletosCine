@@ -60,5 +60,10 @@ namespace VentaBoletosCine
             busqueda = textBox1.Text;
             this.Close();
         }
+
+        private void Buscador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

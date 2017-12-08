@@ -291,7 +291,7 @@
             this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
             this.rectangleShape1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.rectangleShape1.Location = new System.Drawing.Point(10, 88);
+            this.rectangleShape1.Location = new System.Drawing.Point(9, 88);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(666, 461);
             // 
